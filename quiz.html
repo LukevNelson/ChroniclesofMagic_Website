@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skulduggery Pleasant Personality Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Discover Your Magical Profile</h1>
+  </header>
+
+    <p>Take the quiz to find out your Skulduggery Pleasant profile!</p>
+  <nav>
+    <ul>
+      <li><a href="quiz.html">Take the Quiz</a></li>
+      <li><a href="results.html">View Profiles</a></li>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+    </nav>
+  <main>
+    <form id="quizForm">
+      <div class="question">
+        <label>What drives you most?</label><br>
+        <input type="radio" name="q1" value="power" required> Power<br>
+        <input type="radio" name="q1" value="knowledge"> Knowledge<br>
+        <input type="radio" name="q1" value="justice"> Justice<br>
+        <input type="radio" name="q1" value="freedom"> Freedom<br>
+      </div>
+      <div class="question">
+        <label>Pick a color that resonates with you:</label><br>
+        <input type="radio" name="q2" value="black" required> Black<br>
+        <input type="radio" name="q2" value="blue"> Blue<br>
+        <input type="radio" name="q2" value="red"> Red<br>
+        <input type="radio" name="q2" value="silver"> Silver<br>
+      </div>
+      <div class="question">
+        <label>How do you solve problems?</label><br>
+        <input type="radio" name="q3" value="logic" required> Logic<br>
+        <input type="radio" name="q3" value="intuition"> Intuition<br>
+        <input type="radio" name="q3" value="force"> Force<br>
+        <input type="radio" name="q3" value="persuasion"> Persuasion<br>
+      </div>
+      <div class="question">
+        <label>First Name: <input type="text" name="firstName" required></label>
+      </div>
+      <div class="question">
+        <label>Last Name: <input type="text" name="lastName" required></label>
+      </div>
+      <div class="question">
+        <label>Age: <input type="number" name="age" min="10" max="100" required></label>
+      </div>
+      <button type="submit">See My Profile</button>
+    </form>
+  </main>
+  <script type="module" src="quiz.js"></script>
+</body>
+</html>

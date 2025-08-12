@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Magical Profile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Your Skulduggery Pleasant Profiles</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="quiz.html">Take the Quiz</a></li>
+      <li><a href="results.html">View Profiles</a></li>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+    </nav>
+
+    <p>Here are the profiles of all users who have taken the quiz:</p>
+  <main>
+    <div id="adminPanel">
+      <input type="text" id="adminUsername" placeholder="Admin username">
+      <input type="password" id="adminPassword" placeholder="Admin password">
+      <button id="loginBtn">Login</button>
+    </div>
+    <table id="profileTable">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Taken Name</th>
+        <th>Magical Discipline</th>
+        <th>Species</th>
+      </tr>
+      <!-- Rows will be inserted by results.js -->
+    </table>
+  </main>
+  <script type="module" src="results.js"></script>
+</body>
+</html>
