@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T.O.M.E. - Universal Lore Archive</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lore.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>T.O.M.E.</h1>
+                <span>The Omniverse of Magical Education</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="quiz.html" class="nav-link">Take Quiz</a></li>
+                <li><a href="lore.html" class="nav-link active">Lore</a></li>
+                <li><a href="disciplines.html" class="nav-link">Disciplines</a></li>
+                <li><a href="species.html" class="nav-link">Species</a></li>
+                <li><a href="database.html" class="nav-link">Player Database</a></li>
+                <li><a href="index.html#universe" class="nav-link">Universe</a></li>
+                <li><a href="index.html#app" class="nav-link">Mobile App</a></li>
+                <li><a href="index.html#game" class="nav-link">Fan Project</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Comprehensive Lore Container -->
+    <div style="padding: 2rem; background: var(--primary-black); min-height: 100vh; padding-top: 120px;">
+        <h1 style="color: var(--accent-gold); text-align: center; font-family: var(--font-heading); margin-bottom: 2rem;">
+            🏛️ T.O.M.E. Comprehensive Lore System
+        </h1>
+        
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <!-- Species Lore Section -->
+            <section style="margin-bottom: 3rem;">
+                <h2 style="color: var(--accent-gold); font-family: var(--font-heading); margin-bottom: 1rem;">
+                    📚 Species Comprehensive Lore
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+                    <button class="btn btn-primary" onclick="showSpeciesLore('human')">Human Lore</button>
+                    <button class="btn btn-primary" onclick="showSpeciesLore('vampire')">Vampire Lore</button>
+                    <button class="btn btn-primary" onclick="showSpeciesLore('werewolf')">Werewolf Lore</button>
+                    <button class="btn btn-primary" onclick="showSpeciesLore('sorcerer')">Sorcerer Lore</button>
+                </div>
+            </section>
+
+            <!-- World History Section -->
+            <section style="margin-bottom: 3rem;">
+                <h2 style="color: var(--accent-gold); font-family: var(--font-heading); margin-bottom: 1rem;">
+                    ⚔️ Magical World History
+                </h2>
+                <button class="btn btn-secondary" onclick="showWorldHistory()" style="margin-bottom: 1rem;">
+                    View Complete Timeline
+                </button>
+            </section>
+
+            <!-- Ancient Mythology Section -->
+            <section style="margin-bottom: 3rem;">
+                <h2 style="color: var(--accent-gold); font-family: var(--font-heading); margin-bottom: 1rem;">
+                    🌟 Ancient Mythology
+                </h2>
+                <button class="btn btn-secondary" onclick="showMythology()" style="margin-bottom: 1rem;">
+                    Explore Creation Myths & Prophecies
+                </button>
+            </section>
+
+            <!-- Magical Disciplines Section -->
+            <section style="margin-bottom: 3rem;">
+                <h2 style="color: var(--accent-gold); font-family: var(--font-heading); margin-bottom: 1rem;">
+                    🔮 Magical Discipline Origins
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+                    <button class="btn btn-primary" onclick="showDisciplineLore('elemental')">Elemental Magic</button>
+                    <button class="btn btn-primary" onclick="showDisciplineLore('adept')">Adept Magic</button>
+                    <button class="btn btn-primary" onclick="showDisciplineLore('necromancy')">Necromancy</button>
+                </div>
+            </section>
+
+            <!-- Geographic Lore Section -->
+            <section style="margin-bottom: 3rem;">
+                <h2 style="color: var(--accent-gold); font-family: var(--font-heading); margin-bottom: 1rem;">
+                    🏰 Magical Geography
+                </h2>
+                <button class="btn btn-secondary" onclick="showGeography()" style="margin-bottom: 1rem;">
+                    Explore Magical Cities & Dimensional Planes
+                </button>
+            </section>
+
+            <!-- Display Area -->
+            <div id="lore-display" style="background: var(--secondary-black); border-radius: 12px; padding: 2rem; margin-top: 2rem; display: none;">
+                <div id="lore-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/comprehensive-lore.js"></script>
+    
+    <script>
+        function showSpeciesLore(species) {
+            const lore = window.ComprehensiveLore.getComprehensiveSpeciesLore(species);
+            const display = document.getElementById('lore-display');
+            const content = document.getElementById('lore-content');
+            
+            content.innerHTML = `
+                <div class="lore-header">
+                    <h2 style="color: var(--accent-gold); font-family: var(--font-heading); margin-bottom: 1rem;">
+                        ${lore.name} - Comprehensive Lore
+                    </h2>
+                    <p style="color: var(--text-gray); margin-bottom: 2rem;">${lore.quickDescription}</p>
+                </div>
+
+                <div class="full-lore-section">
+                    <h3 style="color: var(--accent-gold); margin-bottom: 1rem;">${lore.origins.title}</h3>
+                    <p style="color: var(--text-gray); line-height: 1.6;">${lore.origins.text}</p>
+                </div>
+
+                <div class="full-lore-section">
+                    <h3 style="color: var(--accent-gold); margin-bottom: 1rem;">${lore.ancientHistory.title}</h3>
+                    <p style="color: var(--text-gray); line-height: 1.6;">${lore.ancientHistory.text}</p>
+                </div>
+
+                <div class="full-lore-section">
+                    <h3 style="color: var(--accent-gold); margin-bottom: 1rem;">${lore.culturalDevelopment.title}</h3>
+                    <p style="color: var(--text-gray); line-height: 1.6;">${lore.culturalDevelopment.text}</p>
+                </div>
+
+                <div class="full-lore-section">
+                    <h3 style="color: var(--accent-gold); margin-bottom: 1rem;">Relationships with Other Species</h3>
+                    <div class="relationships-grid">
+                        ${Object.entries(lore.relationships || {}).map(([relSpecies, rel]) => `
+                            <div class="relationship-card">
+                                <h4 style="color: var(--accent-gold); margin-bottom: 0.5rem;">${relSpecies.charAt(0).toUpperCase() + relSpecies.slice(1)}</h4>
+                                <div class="status-badge ${rel.status.toLowerCase().replace(/\\s+/g, '-')}" style="margin-bottom: 0.75rem;">${rel.status}</div>
+                                <p style="color: var(--text-gray); margin: 0;">${rel.description}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <div class="full-lore-section">
+                    <h3 style="color: var(--accent-gold); margin-bottom: 1rem;">Notable Quotes</h3>
+                    <div class="quotes-collection">
+                        ${(lore.notableQuotes || []).map(quote => `
+                            <blockquote class="full-lore-quote" style="margin-bottom: 1rem;">${quote}</blockquote>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            
+            display.style.display = 'block';
+            display.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showWorldHistory() {
+            const timeline = window.ComprehensiveLore.getMagicalWorldTimeline();
+            const display = document.getElementById('lore-display');
+            const content = document.getElementById('lore-content');
+            
+            content.innerHTML = `
+                <div class="lore-header">
+                    <h2 style="color: var(--accent-gold); font-family: var(--font-heading); margin-bottom: 1rem;">
+                        ${timeline.title}
+                    </h2>
+                    <p style="color: var(--text-gray); margin-bottom: 2rem;">${timeline.description}</p>
+                </div>
+
+                ${Object.entries(timeline.ages).map(([ageKey, age]) => `
+                    <div class="full-lore-section" style="background: ${age.background}; padding: 1.5rem; border-radius: 10px; margin-bottom: 2rem;">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 0.5rem;">${age.name}</h3>
+                        <h4 style="color: var(--text-white); margin-bottom: 1rem;">${age.timeframe}</h4>
+                        <p style="color: var(--text-gray); margin-bottom: 1.5rem;">${age.description}</p>
+                        
+                        <div style="margin-top: 1rem;">
+                            ${age.majorEvents.map(event => `
+                                <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid var(--accent-gold);">
+                                    <h5 style="color: var(--accent-gold); margin-bottom: 0.5rem;">${event.year} - ${event.event}</h5>
+                                    <p style="color: var(--text-gray); margin: 0;">${event.description}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `).join('')}
+            `;
+            
+            display.style.display = 'block';
+            display.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showMythology() {
+            const mythology = window.ComprehensiveLore.getAncientMythology();
+            const display = document.getElementById('lore-display');
+            const content = document.getElementById('lore-content');
+            
+            content.innerHTML = `
+                <div class="lore-header">
+                    <h2 style="color: var(--accent-gold); font-family: var(--font-heading); margin-bottom: 1rem;">
+                        ${mythology.title}
+                    </h2>
+                    <p style="color: var(--text-gray); margin-bottom: 2rem;">${mythology.subtitle}</p>
+                </div>
+
+                <div class="full-lore-section">
+                    <h3 style="color: var(--accent-gold); margin-bottom: 1rem;">${mythology.creation.title}</h3>
+                    ${Object.entries(mythology.creation.legends).map(([key, legend]) => `
+                        <div style="background: rgba(212, 175, 55, 0.1); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                            <h4 style="color: var(--accent-gold); margin-bottom: 1rem;">${legend.name}</h4>
+                            <p style="color: var(--text-gray); line-height: 1.6;">${legend.text}</p>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <div class="full-lore-section">
+                    <h3 style="color: var(--accent-gold); margin-bottom: 1rem;">${mythology.prophecies.title}</h3>
+                    ${Object.entries(mythology.prophecies.predictions).map(([key, prophecy]) => `
+                        <div style="background: rgba(212, 175, 55, 0.1); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                            <h4 style="color: var(--accent-gold); margin-bottom: 1rem;">${prophecy.name}</h4>
+                            <p style="color: var(--text-gray); line-height: 1.6; margin-bottom: 1rem;">${prophecy.text}</p>
+                            <p style="color: var(--accent-gold); font-style: italic;">Current Status: ${prophecy.currentStatus}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            display.style.display = 'block';
+            display.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showDisciplineLore(discipline) {
+            const lore = window.ComprehensiveLore.getMagicalDisciplineLore(discipline);
+            if (!lore) {
+                alert('Lore for this discipline is still being documented...');
+                return;
+            }
+            
+            const display = document.getElementById('lore-display');
+            const content = document.getElementById('lore-content');
+            
+            content.innerHTML = `
+                <div class="lore-header">
+                    <h2 style="color: var(--accent-gold); font-family: var(--font-heading); margin-bottom: 1rem;">
+                        ${lore.name} - ${lore.subtitle}
+                    </h2>
+                </div>
+
+                <div class="full-lore-section">
+                    <h3 style="color: var(--accent-gold); margin-bottom: 1rem;">${lore.discovery.title}</h3>
+                    <p style="color: var(--text-gray); line-height: 1.6;">${lore.discovery.text}</p>
+                </div>
+
+                <div class="full-lore-section">
+                    <h3 style="color: var(--accent-gold); margin-bottom: 1rem;">${lore.ancientHistory.title}</h3>
+                    <p style="color: var(--text-gray); line-height: 1.6;">${lore.ancientHistory.text}</p>
+                </div>
+
+                <div class="full-lore-section">
+                    <h3 style="color: var(--accent-gold); margin-bottom: 1rem;">${lore.schools.title}</h3>
+                    ${Object.entries(lore.schools).filter(([key, school]) => key !== 'title').map(([key, school]) => `
+                        <div style="background: rgba(212, 175, 55, 0.1); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem;">
+                            <h4 style="color: var(--accent-gold); margin-bottom: 0.5rem;">${school.name}</h4>
+                            <p style="color: var(--text-white); margin-bottom: 0.5rem;"><strong>Founded:</strong> ${school.founded}</p>
+                            <p style="color: var(--text-white); margin-bottom: 0.5rem;"><strong>Philosophy:</strong> ${school.philosophy}</p>
+                            <p style="color: var(--text-gray);">${school.description}</p>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <div class="full-lore-section">
+                    <h3 style="color: var(--accent-gold); margin-bottom: 1rem;">Legendary Practitioners</h3>
+                    ${lore.legendaryPractitioners.map(practitioner => `
+                        <div style="background: rgba(212, 175, 55, 0.1); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <h4 style="color: var(--accent-gold); margin-bottom: 0.5rem;">${practitioner.name}</h4>
+                            <p style="color: var(--text-white); margin-bottom: 0.5rem;"><strong>Era:</strong> ${practitioner.era}</p>
+                            <p style="color: var(--text-gray);">${practitioner.achievement}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            display.style.display = 'block';
+            display.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showGeography() {
+            const geography = window.ComprehensiveLore.getMagicalGeography();
+            const display = document.getElementById('lore-display');
+            const content = document.getElementById('lore-content');
+            
+            content.innerHTML = `
+                <div class="lore-header">
+                    <h2 style="color: var(--accent-gold); font-family: var(--font-heading); margin-bottom: 1rem;">
+                        ${geography.title}
+                    </h2>
+                    <p style="color: var(--text-gray); margin-bottom: 2rem;">${geography.subtitle}</p>
+                </div>
+
+                <div class="full-lore-section">
+                    <h3 style="color: var(--accent-gold); margin-bottom: 1rem;">Major Magical Cities</h3>
+                    ${Object.entries(geography.materialPlane.majorCities).map(([key, city]) => `
+                        <div style="background: rgba(212, 175, 55, 0.1); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                            <h4 style="color: var(--accent-gold); margin-bottom: 0.5rem;">${city.name}</h4>
+                            <p style="color: var(--text-white); margin-bottom: 0.5rem;"><strong>Founded:</strong> ${city.founded}</p>
+                            <p style="color: var(--text-white); margin-bottom: 0.5rem;"><strong>Population:</strong> ${city.population}</p>
+                            <p style="color: var(--text-white); margin-bottom: 1rem;"><strong>Government:</strong> ${city.government}</p>
+                            <p style="color: var(--text-gray); line-height: 1.6; margin-bottom: 1rem;">${city.description}</p>
+                            
+                            <div style="margin-top: 1rem;">
+                                <h5 style="color: var(--accent-gold); margin-bottom: 0.5rem;">Notable Features:</h5>
+                                <ul style="color: var(--text-gray);">
+                                    ${city.notableFeatures.map(feature => `<li>${feature}</li>`).join('')}
+                                </ul>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <div class="full-lore-section">
+                    <h3 style="color: var(--accent-gold); margin-bottom: 1rem;">Dimensional Planes</h3>
+                    ${Object.entries(geography.dimensionalPlanes).filter(([key, plane]) => key !== 'title' && key !== 'description').map(([key, plane]) => `
+                        <div style="background: rgba(212, 175, 55, 0.1); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                            <h4 style="color: var(--accent-gold); margin-bottom: 0.5rem;">${plane.name}</h4>
+                            <p style="color: var(--text-white); margin-bottom: 0.5rem;"><strong>Rulers:</strong> ${plane.rulers}</p>
+                            <p style="color: var(--text-white); margin-bottom: 1rem;"><strong>Primary Forces:</strong> ${plane.primaryForces}</p>
+                            <p style="color: var(--text-gray); line-height: 1.6;">${plane.description}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            display.style.display = 'block';
+            display.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

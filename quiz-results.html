@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Magical Profile | T.O.M.E.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/quiz-results.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-text">T.O.M.E.</span>
+                <span class="brand-subtitle">The Omniverse of Magical Education</span>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="books.html" class="nav-link">Books</a></li>
+                <li class="nav-item"><a href="characters.html" class="nav-link">Characters</a></li>
+                <li class="nav-item"><a href="magic-system.html" class="nav-link">Magic</a></li>
+                <li class="nav-item"><a href="species.html" class="nav-link">Species</a></li>
+                <li class="nav-item"><a href="codex.html" class="nav-link">Codex</a></li>
+                <li class="nav-item"><a href="quiz.html" class="nav-link active">Quiz</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Results Container -->
+    <div class="results-container">
+        <!-- Header Section -->
+        <section class="results-header">
+            <div class="magical-border">
+                <h1 id="character-title">Your Magical Identity</h1>
+                <div class="identity-card">
+                    <div class="identity-info">
+                        <div class="name-display">
+                            <h2 id="taken-name">Loading...</h2>
+                            <p id="true-name-hint">True Name: [Protected by Ancient Magic]</p>
+                        </div>
+                        <div class="classification">
+                            <span id="species-badge" class="badge species-badge">Loading...</span>
+                            <span id="discipline-badge" class="badge discipline-badge">Loading...</span>
+                        </div>
+                    </div>
+                    <div class="portrait-section">
+                        <div class="magical-portrait">
+                            <i id="character-icon" class="fas fa-user-secret"></i>
+                            <div class="aura-effect"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Character Story -->
+        <section class="character-story">
+            <h2><i class="fas fa-scroll"></i> Your Chronicle</h2>
+            
+            <div class="story-section" id="origins-section">
+                <h3><i class="fas fa-seedling"></i> Origins & Early Life</h3>
+                <div class="story-content">
+                    <p id="origins-text">Loading your origin story...</p>
+                </div>
+            </div>
+
+            <div class="story-section" id="training-section">
+                <h3><i class="fas fa-book-open"></i> Magical Development</h3>
+                <div class="story-content">
+                    <p id="training-text">Loading your training background...</p>
+                </div>
+            </div>
+
+            <div class="story-section" id="motivation-section">
+                <h3><i class="fas fa-compass"></i> Driving Purpose</h3>
+                <div class="story-content">
+                    <p id="motivation-text">Loading your motivations...</p>
+                </div>
+            </div>
+
+            <div class="story-section" id="current-section">
+                <h3><i class="fas fa-star"></i> Present Circumstances</h3>
+                <div class="story-content">
+                    <p id="current-text">Loading your current situation...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Abilities & Traits -->
+        <section class="abilities-traits">
+            <div class="abilities-grid">
+                <div class="ability-card">
+                    <h3><i class="fas fa-magic"></i> Magical Abilities</h3>
+                    <ul id="abilities-list">
+                        <li>Loading abilities...</li>
+                    </ul>
+                </div>
+                
+                <div class="trait-card">
+                    <h3><i class="fas fa-gem"></i> Strengths</h3>
+                    <ul id="strengths-list">
+                        <li>Loading strengths...</li>
+                    </ul>
+                </div>
+                
+                <div class="challenge-card">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Challenges</h3>
+                    <ul id="challenges-list">
+                        <li>Loading challenges...</li>
+                    </ul>
+                </div>
+                
+                <div class="quirk-card">
+                    <h3><i class="fas fa-smile"></i> Notable Quirks</h3>
+                    <ul id="quirks-list">
+                        <li>Loading quirks...</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personality Analysis -->
+        <section class="personality-analysis">
+            <h2><i class="fas fa-brain"></i> Personality Analysis</h2>
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <h4>Magical Approach</h4>
+                    <div class="approach-bars">
+                        <div class="bar-item">
+                            <span>Elemental</span>
+                            <div class="progress-bar">
+                                <div id="elemental-bar" class="progress-fill elemental"></div>
+                            </div>
+                            <span id="elemental-percent">0%</span>
+                        </div>
+                        <div class="bar-item">
+                            <span>Adept</span>
+                            <div class="progress-bar">
+                                <div id="adept-bar" class="progress-fill adept"></div>
+                            </div>
+                            <span id="adept-percent">0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-card">
+                    <h4>Combat Style</h4>
+                    <div class="approach-bars">
+                        <div class="bar-item">
+                            <span>Aggressive</span>
+                            <div class="progress-bar">
+                                <div id="aggressive-bar" class="progress-fill aggressive"></div>
+                            </div>
+                            <span id="aggressive-percent">0%</span>
+                        </div>
+                        <div class="bar-item">
+                            <span>Defensive</span>
+                            <div class="progress-bar">
+                                <div id="defensive-bar" class="progress-fill defensive"></div>
+                            </div>
+                            <span id="defensive-percent">0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-card">
+                    <h4>Learning Style</h4>
+                    <div class="approach-bars">
+                        <div class="bar-item">
+                            <span>Scholarly</span>
+                            <div class="progress-bar">
+                                <div id="scholarly-bar" class="progress-fill scholarly"></div>
+                            </div>
+                            <span id="scholarly-percent">0%</span>
+                        </div>
+                        <div class="bar-item">
+                            <span>Intuitive</span>
+                            <div class="progress-bar">
+                                <div id="intuitive-bar" class="progress-fill intuitive"></div>
+                            </div>
+                            <span id="intuitive-percent">0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-card">
+                    <h4>Social Role</h4>
+                    <div class="approach-bars">
+                        <div class="bar-item">
+                            <span>Leader</span>
+                            <div class="progress-bar">
+                                <div id="leader-bar" class="progress-fill leader"></div>
+                            </div>
+                            <span id="leader-percent">0%</span>
+                        </div>
+                        <div class="bar-item">
+                            <span>Follower</span>
+                            <div class="progress-bar">
+                                <div id="follower-bar" class="progress-fill follower"></div>
+                            </div>
+                            <span id="follower-percent">0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-card">
+                    <h4>Moral Alignment</h4>
+                    <div class="approach-bars">
+                        <div class="bar-item">
+                            <span>Light</span>
+                            <div class="progress-bar">
+                                <div id="light-bar" class="progress-fill light"></div>
+                            </div>
+                            <span id="light-percent">0%</span>
+                        </div>
+                        <div class="bar-item">
+                            <span>Dark</span>
+                            <div class="progress-bar">
+                                <div id="dark-bar" class="progress-fill dark"></div>
+                            </div>
+                            <span id="dark-percent">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations -->
+        <section class="recommendations">
+            <h2><i class="fas fa-lightbulb"></i> Recommended Reading & Exploration</h2>
+            <div class="recommendations-grid">
+                <div class="recommendation-card">
+                    <h4><i class="fas fa-book"></i> Books for You</h4>
+                    <div id="book-recommendations">
+                        <p>Loading personalized book recommendations...</p>
+                    </div>
+                </div>
+                
+                <div class="recommendation-card">
+                    <h4><i class="fas fa-users"></i> Similar Characters</h4>
+                    <div id="character-recommendations">
+                        <p>Loading characters you might relate to...</p>
+                    </div>
+                </div>
+                
+                <div class="recommendation-card">
+                    <h4><i class="fas fa-magic"></i> Explore Your Discipline</h4>
+                    <div id="discipline-recommendations">
+                        <p>Loading discipline information...</p>
+                    </div>
+                </div>
+                
+                <div class="recommendation-card">
+                    <h4><i class="fas fa-globe"></i> Your Species Guide</h4>
+                    <div id="species-recommendations">
+                        <p>Loading species information...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Actions -->
+        <section class="result-actions">
+            <div class="action-buttons">
+                <button class="btn btn-primary" onclick="downloadProfile()">
+                    <i class="fas fa-download"></i> Download Profile
+                </button>
+                <button class="btn btn-secondary" onclick="shareProfile()">
+                    <i class="fas fa-share"></i> Share Results
+                </button>
+                <button class="btn btn-outline" onclick="retakeQuiz()">
+                    <i class="fas fa-redo"></i> Retake Quiz
+                </button>
+                <button class="btn btn-outline" onclick="exploreWebsite()">
+                    <i class="fas fa-compass"></i> Explore T.O.M.E.
+                </button>
+            </div>
+        </section>
+
+        <!-- Character Certificate -->
+        <section class="character-certificate" id="certificate">
+            <div class="certificate-border">
+                <div class="certificate-header">
+                    <h2>T.O.M.E. Character Certificate</h2>
+                    <p>The Omniverse of Magical Education</p>
+                </div>
+                <div class="certificate-body">
+                    <h3>This certifies that</h3>
+                    <div class="certificate-name" id="cert-name">Character Name</div>
+                    <p>has completed the comprehensive magical personality assessment and been classified as:</p>
+                    <div class="certificate-classification">
+                        <span id="cert-species">Species</span> • <span id="cert-discipline">Discipline</span>
+                    </div>
+                    <div class="certificate-date">
+                        Assessed on <span id="cert-date"></span>
+                    </div>
+                </div>
+                <div class="certificate-footer">
+                    <div class="magical-seal">
+                        <i class="fas fa-stamp"></i>
+                    </div>
+                    <p>Verified by the Council of Magical Assessment</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-content">
+            <div class="magical-spinner">
+                <i class="fas fa-magic"></i>
+            </div>
+            <h3>Analyzing Your Magical Essence...</h3>
+            <p>Please wait while we process your personality profile</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/quiz-results.js"></script>
+    <script>
+        // Initialize results page
+        document.addEventListener('DOMContentLoaded', function() {
+            loadCharacterProfile();
+        });
+    </script>
+</body>
+</html>

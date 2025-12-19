@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Creation Hub - Skulduggery Pleasant Universe</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .welcome-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .welcome-title {
+            font-size: 4rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .welcome-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .mode-selection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .mode-card {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 15px;
+            padding: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .mode-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .mode-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        
+        .mode-title {
+            font-size: 1.8rem;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .mode-description {
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        
+        .mode-features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .mode-features li {
+            color: var(--text-primary);
+            margin: 8px 0;
+            font-size: 0.9rem;
+        }
+        
+        .mode-features li:before {
+            content: "✨ ";
+            color: var(--accent-gold);
+        }
+        
+        .database-preview {
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 40px 0;
+        }
+        
+        .database-title {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .database-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .preview-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: transparent;
+            border: 2px solid var(--accent-gold);
+            border-radius: 8px;
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .preview-link:hover {
+            background: var(--accent-gold);
+            color: var(--bg-primary);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <h1 class="welcome-title">🎭 Create Your Magical Identity</h1>
+        <p class="welcome-subtitle">
+            Discover your place in the Skulduggery Pleasant Universe and prepare for your magical journey.
+            Choose your path below to begin character creation.
+        </p>
+        
+        <div class="mode-selection">
+            <a href="character-creation.html" class="mode-card">
+                <div class="mode-icon">🆕</div>
+                <div class="mode-title">Full Character Creation</div>
+                <div class="mode-description">
+                    Complete character builder with game integration, discipline selection, and gameplay previews.
+                </div>
+                <ul class="mode-features">
+                    <li>Choose your real identity and age</li>
+                    <li>Select your magical discipline</li>
+                    <li>Complete personality assessment</li>
+                    <li>Pick your taken name</li>
+                    <li>See gameplay impact preview</li>
+                    <li>Full game integration ready</li>
+                </ul>
+            </a>
+            
+            <a href="quiz.html" class="mode-card">
+                <div class="mode-icon">⚡</div>
+                <div class="mode-title">Quick Personality Quiz</div>
+                <div class="mode-description">
+                    Classic Skulduggery Pleasant personality test with cloud database sync.
+                </div>
+                <ul class="mode-features">
+                    <li>Classic quiz experience</li>
+                    <li>Personality-based results</li>
+                    <li>Choose your taken name</li>
+                    <li>Cloud database sync</li>
+                    <li>Perfect for quick creation</li>
+                </ul>
+            </a>
+        </div>
+        
+        <div class="database-preview">
+            <div class="database-title">🔥 Real-Time Cloud Database</div>
+            <div class="database-description">
+                All character profiles are saved to our Firebase cloud database, enabling real cross-device 
+                synchronization and multiplayer functionality. Your magical identity persists across all 
+                devices and is ready for integration with the full Skulduggery Pleasant game experience.
+                <br><br>
+                <strong>Current Status:</strong> <span id="profileCount">Loading...</span> magical identities discovered
+            </div>
+            <a href="database.html" class="preview-link">View All Profiles</a>
+        </div>
+        
+        <div style="margin-top: 40px; color: var(--text-secondary); font-size: 0.9rem;">
+            <p>
+                <strong>New Users:</strong> Start with "Full Character Creation" for the complete experience<br>
+                <strong>Returning Users:</strong> Use "Quick Personality Quiz" if you just want to create another identity
+            </p>
+        </div>
+    </div>
+    
+    <!-- Firebase Modular Init — load only on http/https to avoid file:// CORS -->
+    <script>
+        (function(){
+            try {
+                if (location.protocol === 'http:' || location.protocol === 'https:') {
+                    var s = document.createElement('script');
+                    s.type = 'module';
+                    s.src = 'js/firebase-init.js';
+                    document.head.appendChild(s);
+                } else {
+                    console.warn('[firebase-init] Skipping modular init on file:// protocol');
+                }
+            } catch (e) {
+                console.warn('[firebase-init] dynamic load failed', e);
+            }
+        })();
+    </script>
+    <script src="js/firebase-config.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-compat-database.js"></script>
+    <script src="js/firebase-adapters.js"></script>
+    <script src="js/firebase-database.js"></script>
+    <script>
+        // Initialize Firebase and show profile count
+        document.addEventListener('DOMContentLoaded', async function() {
+            try {
+                // Initialize Firebase database
+                if (typeof FIREBASE_CONFIG !== 'undefined') {
+                    window.firebaseDB = new FirebaseDatabase();
+                    await window.firebaseDB.initialize();
+                    
+                    // Listen for profile updates
+                    window.firebaseDB.addListener((profiles) => {
+                        const count = profiles.length;
+                        document.getElementById('profileCount').textContent = 
+                            count === 0 ? 'No' : count.toString();
+                    });
+                } else {
+                    document.getElementById('profileCount').textContent = 'Database offline';
+                }
+            } catch (error) {
+                console.error('Failed to initialize Firebase:', error);
+                document.getElementById('profileCount').textContent = 'Database error';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "rules": {
+    "quiz-profiles": {
+      ".read": "true",
+      "$id": {
+        ".read": "true",
+        ".write": "auth != null && (!data.exists() || newData.child('id').val() == $id) && (!data.exists() || data.child('ownerUid').val() == auth.uid || data.child('ownerUid').val() == null) && newData.child('version').val() >= (data.child('version').val() == null ? 0 : data.child('version').val())",
+        "ownerUid": { ".write": "auth != null && !data.exists() && newData.val() == auth.uid" },
+        "version": { ".write": "auth != null && (!data.exists() || newData.val() > data.val())" },
+        "stats": {
+          ".read": "true",
+          ".write": false
+        }
+      }
+    },
+    "pairing": {
+      "$code": {
+        ".read": "auth != null",
+        ".write": "auth != null && (!data.exists() || data.child('expiresAt').val() < now)"
+      }
+    },
+    "taken-names": {
+      "$k": {
+        ".read": "auth != null",
+        ".write": "auth != null && !data.exists() && newData.exists()"
+      }
+    }
+  }
+}

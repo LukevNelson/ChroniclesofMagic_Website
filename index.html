@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>T.O.M.E. - The Omniverse of Magical Education</title>
+    <meta name="description" content="T.O.M.E. - The ultimate information hub for Derek Landy's Skulduggery Pleasant Universe. Discover books, characters, lore, and magical education resources.">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/visual-enhancements.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Firebase modular initialization — load only on http/https to avoid file:// CORS -->
+    <script>
+        (function(){
+            try {
+                if (location.protocol === 'http:' || location.protocol === 'https:') {
+                    var s = document.createElement('script');
+                    s.type = 'module';
+                    s.src = 'js/firebase-init.js';
+                    document.head.appendChild(s);
+                } else {
+                    console.warn('[firebase-init] Skipping modular init on file:// protocol');
+                }
+            } catch (e) {
+                console.warn('[firebase-init] dynamic load failed', e);
+            }
+        })();
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-text">T.O.M.E.</span>
+                <span class="brand-subtitle">The Omniverse of Magical Education</span>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="books.html" class="nav-link">Books</a></li>
+                <li class="nav-item"><a href="characters.html" class="nav-link">Characters</a></li>
+                <li class="nav-item"><a href="magic-system.html" class="nav-link">Magic</a></li>
+                <li class="nav-item"><a href="species.html" class="nav-link">Species</a></li>
+                <li class="nav-item"><a href="codex.html" class="nav-link">Codex</a></li>
+                <li class="nav-item"><a href="quiz.html" class="nav-link">Quiz</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="magic-particles"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to <span class="highlight">T.O.M.E.</span></h1>
+            <p class="hero-subtitle">The complete transmedia experience - Learn on web, train on mobile, play in UE5, master in VR</p>
+            <div class="platform-badges">
+                <span class="platform-badge web">🌐 Web Portal</span>
+                <span class="platform-badge mobile">📱 Mobile App</span>
+                <span class="platform-badge game">🎮 UE5 Game</span>
+                <span class="platform-badge vr">🥽 VR Ready</span>
+            </div>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="window.location.href='quiz.html'">Start Your Journey</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('ecosystem')">See How It Works</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Universe Information Section -->
+    <section id="universe" class="universe-section">
+        <div class="container">
+            <h2 class="section-title">The Skulduggery Pleasant Universe</h2>
+            <p class="universe-intro"></p>
+                Dive deep into the lore, characters, and magic of Derek Landy's world. Choose a category below to start exploring, or use the search to quickly find what interests you!
+            </p>
+            <div class="universe-search">
+                <input type="text" id="universeSearchInput" placeholder="Search books, characters, magic..." />
+                <button class="btn btn-primary" onclick="searchUniverse()">Search</button>
+            </div>
+            <div class="universe-grid">
+                <div class="universe-card">
+                    <div class="card-icon">📚</div>
+                    <h3>Books & Series</h3>
+                    <p>Explore all 15 books in the main series, plus spin-offs and short stories. From Skulduggery Pleasant to Dead or Alive.</p>
+                    <button class="btn btn-outline" onclick="window.location.href='lore.html#books'">View Books</button>
+                </div>
+                <div class="universe-card">
+                    <div class="card-icon">👥</div>
+                    <h3>Characters</h3>
+                    <p>Meet Skulduggery Pleasant, Valkyrie Cain, and hundreds of other magical characters from sorcerers to monsters.</p>
+                    <button class="btn btn-outline" onclick="window.location.href='database.html'">Character Database</button>
+                </div>
+                <div class="universe-card">
+                    <div class="card-icon">🌟</div>
+                    <h3>Magic System</h3>
+                    <p>Learn about Elemental magic, Adept disciplines, True Names, and the intricate magical world Derek Landy created.</p>
+                    <button class="btn btn-outline" onclick="window.location.href='disciplines.html'">Magic Guide</button>
+                </div>
+                <div class="universe-card">
+                    <div class="card-icon">📰</div>
+                    <h3>Latest News</h3>
+                    <p>Stay updated with the latest book releases, author interviews, and community events.</p>
+                    <button class="btn btn-outline" onclick="window.location.href='#news'">Read News</button>
+                </div>
+            </div>
+            <div id="universeSearchResults" class="universe-search-results" style="display:none;"></div>
+        </div>
+    </section>
+
+    <!-- Featured Content Section -->
+    <section class="featured-content">
+        <div class="container">
+            <h2>Featured Content</h2>
+            
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="assets/images/characters/skulduggery-pleasant.jpg" alt="Skulduggery Pleasant" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">
+                        💀
+                    </div>
+                    <div class="gallery-caption">
+                        Skulduggery Pleasant - The legendary skeleton detective
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/characters/valkyrie-cain.jpg" alt="Valkyrie Cain" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">
+                        ⚡
+                    </div>
+                    <div class="gallery-caption">
+                        Valkyrie Cain - Young sorcerer and Skulduggery's partner
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/magic/elemental-magic.jpg" alt="Elemental Magic" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">
+                        🔥
+                    </div>
+                    <div class="gallery-caption">
+                        Elemental Magic - Master the four classical elements
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/locations/sanctuary-dublin.jpg" alt="Dublin Sanctuary" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">
+                        🏛️
+                    </div>
+                    <div class="gallery-caption">
+                        Dublin Sanctuary - Center of magical law enforcement
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-showcase">
+                                        <div class="gallery-item">
+                            <div class="gallery-placeholder">
+                                <a href="gallery-demo.html">Magic System Explained — full media</a>
+                            </div>
+                        </div>
+
+                        <div class="video-description">Complete guide to magical disciplines</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Book Series Overview</div>
+                        <div class="video-description">Timeline and reading guide for all 15 books</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Game Development Updates</div>
+                        <div class="video-description">Latest progress on the UE5 game project</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screenshot Galleries -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="assets/images/screenshots/website-homepage.jpg" alt="Website Homepage" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">🖥️</div>
+                    <div class="gallery-caption">
+                        T.O.M.E. Website - Interactive magical education platform
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/screenshots/character-database.jpg" alt="Character Database" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">👥</div>
+                    <div class="gallery-caption">
+                        Character Database - Comprehensive character profiles
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/screenshots/magic-simulator.jpg" alt="Magic Simulator" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">🔮</div>
+                    <div class="gallery-caption">
+                        Interactive Magic System - Practice spells online
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/screenshots/quiz-system.jpg" alt="Quiz System" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">❓</div>
+                    <div class="gallery-caption">
+                        Knowledge Quiz - Test your magical world expertise
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Video Demonstrations -->
+            <div class="magic-demo">
+                <div class="demo-header">
+                    <span class="demo-icon">🎬</span>
+                    <span class="demo-title">Video Tutorial Series</span>
+                </div>
+                <div class="demo-content">
+                    <div class="demo-description">
+                        Complete video tutorial series covering every aspect of the Skulduggery Pleasant universe, from beginner introductions to advanced lore analysis.
+                    </div>
+                    <div class="demo-visual">
+                        <div class="video-placeholder">
+                            <div class="play-button"></div>
+                            <div>Tutorial Series</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Community Content Videos -->
+            <div class="video-showcase">
+                <div class="video-placeholder">
+                    <div class="play-button"></div>
+                    <div class="video-title">Community Spotlight</div>
+                    <div class="video-description">Fan art showcases, theory discussions, and community-created content featuring the best contributions from Skulduggery Pleasant fans worldwide.</div>
+                </div>
+            </div>
+
+            <!-- Original Family Historical Interaction Screenshots -->
+            <section class="family-interactions-section">
+                <h2 class="gallery-section-title">👑 Original Family Historical Moments</h2>
+                
+                <!-- Ancient Council Meetings -->
+                <div class="screenshot-section">
+                    <h3>🏛️ Divine Council Sessions</h3>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/interactions/primordial-council-chamber.jpg" alt="Primordial Council Chamber" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🏛️</div>
+                            <div class="gallery-caption">
+                                The Eight Siblings in their magnificent divine council chamber
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/interactions/species-creation-debate.jpg" alt="Species Creation Debate" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">⚖️</div>
+                            <div class="gallery-caption">
+                                Heated debate over species creation responsibilities and limits
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/interactions/magical-law-establishment.jpg" alt="Magical Law Establishment" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">📜</div>
+                            <div class="gallery-caption">
+                                Establishing the fundamental laws governing magical reality
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/interactions/world-division-ceremony.jpg" alt="World Division Ceremony" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🌍</div>
+                            <div class="gallery-caption">
+                                Dividing the world into domains and spheres of influence
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sibling Alliances and Conflicts -->
+                <div class="screenshot-section">
+                    <h3>⚔️ Family Alliances & Conflicts</h3>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/interactions/merlin-morgana-bond.jpg" alt="Merlin and Morgana's Sacred Bond" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">❤️</div>
+                            <div class="gallery-caption">
+                                Merlin and Morgana's unbreakable sibling bond and collaboration
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/interactions/light-vs-darkness-conflict.jpg" alt="Light vs Darkness Conflict" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">⚡</div>
+                            <div class="gallery-caption">
+                                Epic conflict between the Siblings of Light and Death
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/interactions/chaos-vs-order-battle.jpg" alt="Chaos vs Order Battle" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🌪️</div>
+                            <div class="gallery-caption">
+                                The Sibling of Chaos clashing with the Sibling of Memory
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/interactions/family-reconciliation.jpg" alt="Family Reconciliation" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🕊️</div>
+                            <div class="gallery-caption">
+                                Moments of peace and reconciliation between warring siblings
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Historical Collaborations -->
+                <div class="screenshot-section">
+                    <h3>🤝 Legendary Collaborations</h3>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/interactions/arthur-blessing-ceremony.jpg" alt="Arthur Pendragon Blessing" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">👑</div>
+                            <div class="gallery-caption">
+                                Merlin and Morgana jointly blessing Arthur Pendragon's bloodline
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/interactions/excalibur-forging.jpg" alt="Excalibur Forging" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">⚔️</div>
+                            <div class="gallery-caption">
+                                Multiple siblings combining their powers to forge Excalibur
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/interactions/great-barrier-creation.jpg" alt="Great Barrier Creation" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🛡️</div>
+                            <div class="gallery-caption">
+                                Creating the great barrier between mortal and magical worlds
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/interactions/sanctuary-foundation.jpg" alt="First Sanctuary Foundation" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🏛️</div>
+                            <div class="gallery-caption">
+                                Establishing the first Sanctuary with combined divine authority
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Great Disappearance -->
+                <div class="screenshot-section">
+                    <h3>🌌 The Great Disappearance</h3>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/interactions/final-family-gathering.jpg" alt="Final Family Gathering" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🌅</div>
+                            <div class="gallery-caption">
+                                The last known gathering of all eight siblings together
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/interactions/transcendence-ritual.jpg" alt="Transcendence Ritual" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">✨</div>
+                            <div class="gallery-caption">
+                                The mysterious ritual that led to their disappearance
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/interactions/dimensional-rift-opening.jpg" alt="Dimensional Rift Opening" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🌀</div>
+                            <div class="gallery-caption">
+                                Opening dimensional rifts to unknown realms
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/interactions/legacy-preservation.jpg" alt="Legacy Preservation" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">📜</div>
+                            <div class="gallery-caption">
+                                Ensuring their legacy and bloodlines would survive
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="book-covers">
+                <div class="book-cover">
+                    <img src="assets/images/books/skulduggery-pleasant-1.jpg" alt="Skulduggery Pleasant Book 1" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Book 1<br>Skulduggery Pleasant</div>';">
+                </div>
+                <div class="book-cover">
+                    <img src="assets/images/books/playing-with-fire.jpg" alt="Playing with Fire" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Book 2<br>Playing with Fire</div>';">
+                </div>
+                <div class="book-cover">
+                    <img src="assets/images/books/the-faceless-ones.jpg" alt="The Faceless Ones" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Book 3<br>The Faceless Ones</div>';">
+                </div>
+                <div class="book-cover">
+                    <img src="assets/images/books/dark-days.jpg" alt="Dark Days" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Book 4<br>Dark Days</div>';">
+                </div>
+                <div class="book-cover">
+                    <img src="assets/images/books/mortal-coil.jpg" alt="Mortal Coil" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Book 5<br>Mortal Coil</div>';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Simple search functionality (demo)
+        function searchUniverse() {
+            const input = document.getElementById('universeSearchInput').value.trim().toLowerCase();
+            const resultsDiv = document.getElementById('universeSearchResults');
+            if (!input) {
+                resultsDiv.style.display = 'none';
+                resultsDiv.innerHTML = '';
+                return;
+            }
+            // Demo data
+            const data = [
+                { type: 'Book', name: 'Skulduggery Pleasant', link: 'lore.html#books' },
+                { type: 'Character', name: 'Valkyrie Cain', link: 'database.html' },
+                { type: 'Magic', name: 'Elemental Magic', link: 'disciplines.html' },
+                { type: 'News', name: 'New Book Release', link: '#news' }
+            ];
+            const results = data.filter(item => item.name.toLowerCase().includes(input));
+            if (results.length === 0) {
+                resultsDiv.innerHTML = '<p>No results found.</p>';
+            } else {
+                resultsDiv.innerHTML = results.map(item =>
+                    `<div class="search-result"><strong>${item.type}:</strong> <a href="${item.link}">${item.name}</a></div>`
+                ).join('');
+            }
+            resultsDiv.style.display = 'block';
+        }
+    </script>
+
+    <!-- Mobile App Section -->
+    <section id="app" class="app-section">
+        <div class="container">
+            <div class="app-content">
+                <div class="app-text">
+                    <h2 class="section-title">Mobile Training Hub</h2>
+                    <p class="app-description">Train your magical abilities daily and watch your progress sync to the UE5 game in real-time.</p>
+                    <div class="app-features">
+                        <div class="feature">
+                            <div class="feature-icon">⚡</div>
+                            <div class="feature-text">
+                                <h4>Magical Skill Training</h4>
+                                <p>Practice spells and disciplines with AR visualization - progress unlocks game abilities.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">�</div>
+                            <div class="feature-text">
+                                <h4>Daily Challenges</h4>
+                                <p>Complete training missions that directly improve your character's power in the UE5 game.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">�</div>
+                            <div class="feature-text">
+                                <h4>Social Training</h4>
+                                <p>Train with friends, form guilds, and compete - all connections carry over to the game.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">🏆</div>
+                            <div class="feature-text">
+                                <h4>Cross-Platform Progress</h4>
+                                <p>Achievements unlock across web, mobile, and game - train anywhere, benefit everywhere.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sync-indicator">
+                        <div class="sync-status">
+                            <i class="fas fa-sync fa-spin"></i>
+                            <span>Real-time sync with T.O.M.E. Web Portal & UE5 Game</span>
+                        </div>
+                    </div>
+                    <div class="app-download">
+                        <button class="btn btn-primary">Download for iOS</button>
+                        <button class="btn btn-primary">Download for Android</button>
+                    </div>
+                </div>
+                <div class="app-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="app-preview">
+                                <h3>App Preview</h3>
+                                <p>Beautiful, intuitive interface designed for Skulduggery Pleasant fans</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transmedia Experience Section -->
+    <section id="ecosystem" class="ecosystem-section">
+        <div class="container">
+            <div class="ecosystem-header">
+                <h2 class="section-title">One Universe, Multiple Platforms</h2>
+                <p class="section-subtitle">Your magical education journey spans web, mobile, and gaming - all connected in real-time</p>
+            </div>
+
+            <div class="platform-ecosystem">
+                <div class="ecosystem-center">
+                    <div class="sync-hub">
+                        <i class="fas fa-sync fa-spin"></i>
+                        <span>Real-Time Sync</span>
+                    </div>
+                </div>
+
+                <div class="platform-node web-platform" data-platform="web">
+                    <div class="platform-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>T.O.M.E. Web Portal</h3>
+                    <p>Learn theory, study lore, plan your magical path</p>
+                    <div class="platform-features">
+                        <span>📚 Complete Knowledge Base</span>
+                        <span>🎯 Character Planning</span>
+                        <span>🧭 Discipline Selection</span>
+                    </div>
+                </div>
+
+                <div class="platform-node mobile-platform" data-platform="mobile">
+                    <div class="platform-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Practice App</h3>
+                    <p>Daily training, skill development, on-the-go learning</p>
+                    <div class="platform-features">
+                        <span>⚡ Skill Training</span>
+                        <span>📱 AR Spell Practice</span>
+                        <span>🏆 Social Challenges</span>
+                    </div>
+                </div>
+
+                <div class="platform-node game-platform" data-platform="game">
+                    <div class="platform-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>UE5 Immersive Game</h3>
+                    <p>Apply your training in stunning 3D magical combat</p>
+                    <div class="platform-features">
+                        <span>🎮 3D Magic Combat</span>
+                        <span>🌍 Explore Iconic Locations</span>
+                        <span>👥 Multiplayer Adventures</span>
+                    </div>
+                </div>
+
+                <div class="platform-node vr-platform" data-platform="vr">
+                    <div class="platform-icon">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <h3>VR Extension</h3>
+                    <p>Total immersion with natural magic casting</p>
+                    <div class="platform-features">
+                        <span>🤲 Hand Tracking Magic</span>
+                        <span>🌟 1:1 Scale Environments</span>
+                        <span>🎭 Direct Character Interaction</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="integration-flow">
+                <h3>How Your Progress Flows Between Platforms</h3>
+                <div class="flow-steps">
+                    <div class="flow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <i class="fas fa-laptop"></i>
+                            <h4>Study on Web</h4>
+                            <p>Learn about Fire magic theory and techniques</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h4>Train on Mobile</h4>
+                            <p>Practice Fire spells and build muscle memory</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <i class="fas fa-gamepad"></i>
+                            <h4>Apply in Game</h4>
+                            <p>Use enhanced Fire magic in 3D combat</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <i class="fas fa-vr-cardboard"></i>
+                            <h4>Master in VR</h4>
+                            <p>Perfect technique with full-body immersion</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fan Game Section -->
+    <section id="game" class="game-section">
+        <div class="container">
+            <div class="game-content">
+                <div class="game-mockup">
+                    <div class="game-frame">
+                        <div class="game-screen">
+                            <div class="game-preview">
+                                <h3>Unreal Engine 5</h3>
+                                <p>Experience the magic like never before</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-text">
+                    <h2 class="section-title">Enhanced by Your Training</h2>
+                    <p class="game-description">Your progress from the web portal and mobile app directly enhances your gaming experience with unlocked abilities and enhanced powers.</p>
+                    <div class="game-features">
+                        <div class="feature">
+                            <div class="feature-icon">⚡</div>
+                            <div class="feature-text">
+                                <h4>Training Unlocks Power</h4>
+                                <p>Your mobile app training directly enhances your magical abilities in the 3D game world.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">🎯</div>
+                            <div class="feature-text">
+                                <h4>Knowledge Gives Advantages</h4>
+                                <p>Characters you've studied and locations you've learned about provide gameplay bonuses.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">�</div>
+                            <div class="feature-text">
+                                <h4>Cross-Platform Achievements</h4>
+                                <p>Unlock rewards across all platforms - achievements earned anywhere benefit everywhere.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">👥</div>
+                            <div class="feature-text">
+                                <h4>Unified Community</h4>
+                                <p>Your friends list, guilds, and social connections span web, mobile, and game.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="integration-example">
+                        <h4>Example: Fire Magic Mastery</h4>
+                        <div class="example-flow">
+                            <div class="example-step">
+                                <span class="platform-badge web">Web</span>
+                                <p>Study Fire magic theory</p>
+                            </div>
+                            <div class="example-arrow">→</div>
+                            <div class="example-step">
+                                <span class="platform-badge mobile">Mobile</span>
+                                <p>Train Fire spells to Level 20</p>
+                            </div>
+                            <div class="example-arrow">→</div>
+                            <div class="example-step">
+                                <span class="platform-badge game">Game</span>
+                                <p>Unlock Master-tier Fire magic</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-status">
+                        <div class="status-badge">In Development</div>
+                        <p>Follow our development journey and get exclusive updates!</p>
+                        <div class="game-actions">
+                            <button class="btn btn-primary">Join Beta</button>
+                            <button class="btn btn-outline">Development Blog</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Join the Community</h2>
+            <p class="contact-description">Connect with fellow fans and stay updated on all things Skulduggery Pleasant</p>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Newsletter</h3>
+                    <p>Get the latest updates delivered to your inbox</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" class="email-input">
+                        <button class="btn btn-primary">Subscribe</button>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>Discord</h3>
+                    <p>Join our Discord server for discussions and community events</p>
+                    <button class="btn btn-outline">Join Discord</button>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <h3>Social Media</h3>
+                    <p>Follow us for daily updates and fan content</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">TikTok</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Skulduggery Pleasant Universe</h3>
+                    <p>Unofficial fan site dedicated to Derek Landy's amazing series. All rights belong to their respective owners.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#universe">Universe Guide</a></li>
+                        <li><a href="#app">Mobile App</a></li>
+                        <li><a href="#game">Fan Project</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Projects</h4>
+                    <ul>
+                        <li><a href="#app">Flutter Mobile App</a></li>
+                        <li><a href="#game">UE5 Fan Game</a></li>
+                        <li><a href="#">Community Forums</a></li>
+                        <li><a href="#">Fan Art Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Copyright Notice</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 T.O.M.E. - The Omniverse of Magical Education. Not affiliated with Derek Landy or HarperCollins.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/mobile-enhancements.js"></script>
+    <script src="js/mobile-fix.js"></script>
+</body>
+</html>

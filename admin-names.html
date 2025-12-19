@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Admin — Taken Names</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <h1>Taken Names — Admin</h1>
+    <p>View and manage taken names stored in Firebase.</p>
+   <div id="status">Initializing...</div>
+  <div id="admin-controls" style="margin:8px 0;"></div>
+  <pre id="raw-json" style="display:none; background:#f7f7f7; padding:8px; border:1px solid #ddd; max-height:240px; overflow:auto;"></pre>
+    <div id="live-indicators" style="margin:8px 0; font-size:13px;"></div>
+    <section style="margin-top:12px;">
+      <h2>Activity Log</h2>
+      <div id="admin-log" style="background:#111; color:#0f0; padding:8px; font-family:monospace; font-size:12px; max-height:260px; overflow:auto; white-space:pre-wrap;"></div>
+    </section>
+    <table id="taken-names-table">
+      <thead><tr><th>First</th><th>Last</th><th>Full</th><th>Reserved At</th><th>Actions</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <!--
+      For safety, Firebase initialization is disabled by default in shared code.
+      To enable initialization for this admin page (for example, to recreate the
+      deleted Realtime Database), set `window.ALLOW_FIREBASE_INIT = true` in the
+      browser console and reload the page. This avoids accidental writes while
+      you prepare the new database in the Firebase console.
+    -->
+    <script src="js/admin-names.js"></script>
+  </main>
+</body>
+</html>

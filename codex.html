@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>The Codex - Ancient Lore & Mythology | Skulduggery Pleasant Hub</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/codex.css">
+    <link rel="stylesheet" href="css/visual-enhancements.css">
+    <link rel="stylesheet" href="css/advanced-media.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-text">Skulduggery Pleasant</span>
+                <span class="brand-subtitle">The Codex</span>
+            </div>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="books.html" class="nav-link">Books</a></li>
+                <li class="nav-item"><a href="characters.html" class="nav-link">Characters</a></li>
+                <li class="nav-item"><a href="magic-system.html" class="nav-link">Magic</a></li>
+                <li class="nav-item"><a href="codex.html" class="nav-link active">Codex</a></li>
+                <li class="nav-item"><a href="quiz.html" class="nav-link">Quiz</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="codex-hero">
+        <div class="hero-content">
+            <div class="ancient-symbol">⚜</div>
+            <h1 class="hero-title">The Codex Primordialis</h1>
+            <p class="hero-subtitle">Ancient Lore, Divine Mysteries, and Forgotten Truths</p>
+        </div>
+        <div class="hero-background"></div>
+    </div>
+
+    <div class="codex-container">
+        <div class="codex-sidebar">
+            <div class="search-section">
+                <input type="text" id="codex-search" class="search-input" placeholder="Search the archives..." autocomplete="off">
+                <button class="search-btn">🔍</button>
+            </div>
+
+            <div class="filter-section">
+                <h3>Categories</h3>
+                <div class="filter-grid">
+                    <button class="filter-btn active" data-filter="all">All Entries</button>
+                    <button class="filter-btn" data-filter="media">Media</button>
+                    <button class="filter-btn" data-filter="divine">Divine</button>
+                    <button class="filter-btn" data-filter="cosmic">Cosmic</button>
+                    <button class="filter-btn" data-filter="human-relations">Human Relations</button>
+                    <button class="filter-btn" data-filter="historical">Historical</button>
+                    <button class="filter-btn" data-filter="location">Location</button>
+                    <button class="filter-btn" data-filter="misinformation">Misinformation</button>
+                    <button class="filter-btn" data-filter="military">Military</button>
+                    <button class="filter-btn" data-filter="creative">Creative</button>
+                </div>
+            </div>
+
+            <div class="timeline-section">
+                <h3>Era Timeline</h3>
+                <div class="timeline-item">
+                    <div class="timeline-dot cosmic"></div>
+                    <span>Pre-History: The Primordials</span>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot divine"></div>
+                    <span>First Emergence: Original Family</span>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot historical"></div>
+                    <span>Ancient Times: Divine Echoes</span>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot modern"></div>
+                    <span>Medieval: False Originals</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="codex-main">
+            <div class="codex-header">
+                <h2>Archive Entries</h2>
+                <div class="view-controls">
+                    <button class="view-btn active" data-view="grid">⊞ Grid</button>
+                    <button class="view-btn" data-view="list">☰ List</button>
+                </div>
+            </div>
+
+            <!-- Global Media Wrapper: restrict media visibility to Media/All filters -->
+            <div class="codex-global-media">
+            <!-- Enhanced Codex Image Galleries -->
+            <div class="codex-image-galleries enhanced-section">
+                <h3>📚 Ancient Artifacts & Manuscripts</h3>
+                
+                <!-- Ancient Texts & Scrolls -->
+                <div class="gallery-subsection">
+                    <h4>Sacred Texts & Ancient Scrolls</h4>
+                    <p>Original manuscripts and divine inscriptions containing primordial knowledge</p>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img loading="lazy" src="images/codex/primordial-text.jpg" alt="Primordial Creation Text" class="gallery-image">
+                            <div class="gallery-placeholder">
+                                <i class="fas fa-scroll"></i>
+                                <span>Primordial Creation Text<br>First Era Inscription</span>
+                            </div>
+                            <div class="gallery-caption">
+                                <h3 class="gallery-title">The Genesis Scroll</h3>
+                                <p>Original account of the Primordials' emergence and cosmic formation</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img loading="lazy" src="images/codex/original-family-chronicle.jpg" alt="Original Family Chronicle" class="gallery-image">
+                            <div class="gallery-placeholder">
+                                <i class="fas fa-book-open"></i>
+                                <span>Family Chronicle<br>Divine Bloodline Record</span>
+                            </div>
+                            <div class="gallery-caption">
+                                <h3 class="gallery-title">The True Chronicle</h3>
+                                <p>Authenticated record of the Original Family's divine lineage</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img loading="lazy" src="images/codex/ancient-prophecies.jpg" alt="Ancient Prophecies" class="gallery-image">
+                            <div class="gallery-placeholder">
+                                <i class="fas fa-eye"></i>
+                                <span>Prophetic Texts<br>Future Visions</span>
+                            </div>
+                            <div class="gallery-caption">
+                                <h3 class="gallery-title">The Sight Prophecies</h3>
+                                <p>Ancient predictions about the fate of supernatural species</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img loading="lazy" src="images/codex/magical-theory-manuscripts.jpg" alt="Magical Theory Manuscripts" class="gallery-image">
+                            <div class="gallery-placeholder">
+                                <i class="fas fa-flask"></i>
+                                <span>Magical Theory<br>Ancient Research</span>
+                            </div>
+                            <div class="gallery-caption">
+                                <h3 class="gallery-title">Arcane Theorems</h3>
+                                <p>Fundamental principles of magic discovered by early scholars</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ancient Artifacts & Relics -->
+                <div class="gallery-subsection">
+                    <h4>Divine Artifacts & Sacred Relics</h4>
+                    <p>Physical remnants of divine power and ancient magical implements</p>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img loading="lazy" src="images/codex/primordial-crown.jpg" alt="Primordial Crown" class="gallery-image">
+                            <div class="gallery-placeholder">
+                                <i class="fas fa-crown"></i>
+                                <span>Primordial Crown<br>Cosmic Authority</span>
+                            </div>
+                            <div class="gallery-caption">
+                                <h3 class="gallery-title">The First Crown</h3>
+                                <p>Symbol of ultimate cosmic authority worn by the Primordial rulers</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img loading="lazy" src="images/codex/divine-chalice.jpg" alt="Divine Chalice" class="gallery-image">
+                            <div class="gallery-placeholder">
+                                <i class="fas fa-wine-glass"></i>
+                                <span>Sacred Chalice<br>Divine Essence</span>
+                            </div>
+                            <div class="gallery-caption">
+                                <h3 class="gallery-title">The Eternal Chalice</h3>
+                                <p>Vessel used in the Original Family's divine transformation ritual</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img loading="lazy" src="images/codex/ancient-compass.jpg" alt="Ancient Mystical Compass" class="gallery-image">
+                            <div class="gallery-placeholder">
+                                <i class="fas fa-compass"></i>
+                                <span>Mystical Compass<br>Reality Navigation</span>
+                            </div>
+                            <div class="gallery-caption">
+                                <h3 class="gallery-title">The Plane Walker</h3>
+                                <p>Artifact allowing travel between dimensional planes</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img loading="lazy" src="images/codex/power-crystal.jpg" alt="Power Amplification Crystal" class="gallery-image">
+                            <div class="gallery-placeholder">
+                                <i class="fas fa-gem"></i>
+                                <span>Power Crystal<br>Energy Amplifier</span>
+                            </div>
+                            <div class="gallery-caption">
+                                <h3 class="gallery-title">The Echo Stone</h3>
+                                <p>Crystal that amplifies and focuses divine magical energy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sacred Locations & Sites -->
+                <div class="gallery-subsection">
+                    <h4>Sacred Sites & Ancient Locations</h4>
+                    <p>Holy grounds and mystical locations of historical significance</p>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img loading="lazy" src="images/codex/primordial-temple.jpg" alt="Primordial Temple" class="gallery-image">
+                            <div class="gallery-placeholder">
+                                <i class="fas fa-university"></i>
+                                <span>Primordial Temple<br>First Sacred Site</span>
+                            </div>
+                            <div class="gallery-caption">
+                                <h3 class="gallery-title">The First Temple</h3>
+                                <p>Original place of worship built by the cosmic entities</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img loading="lazy" src="images/codex/original-family-altar.jpg" alt="Original Family Altar" class="gallery-image">
+                            <div class="gallery-placeholder">
+                                <i class="fas fa-fire-altar"></i>
+                                <span>Divine Altar<br>Transformation Site</span>
+                            </div>
+                            <div class="gallery-caption">
+                                <h3 class="gallery-title">The Transformation Altar</h3>
+                                <p>Sacred site where the Original Family received their divine gifts</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img loading="lazy" src="images/codex/ancient-library.jpg" alt="Ancient Mystical Library" class="gallery-image">
+                            <div class="gallery-placeholder">
+                                <i class="fas fa-book-reader"></i>
+                                <span>Ancient Library<br>Knowledge Repository</span>
+                            </div>
+                            <div class="gallery-caption">
+                                <h3 class="gallery-title">The Infinite Library</h3>
+                                <p>Mystical repository containing all magical knowledge ever recorded</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img loading="lazy" src="images/codex/nexus-convergence.jpg" alt="Magical Nexus Point" class="gallery-image">
+                            <div class="gallery-placeholder">
+                                <i class="fas fa-crosshairs"></i>
+                                <span>Nexus Point<br>Power Convergence</span>
+                            </div>
+                            <div class="gallery-caption">
+                                <h3 class="gallery-title">The Great Convergence</h3>
+                                <p>Point where all magical ley lines intersect across dimensions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enhanced Codex Video Archive -->
+            <div class="video-content-section">
+                <h3>📼 Ancient Knowledge Video Archive</h3>
+                
+                <!-- Historical Documentaries -->
+                <div class="video-gallery">
+                    <div class="video-item-enhanced">
+                        <div class="video-embed">
+                            <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME" data-autoplay="false"></div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title-enhanced">Primordial History Unveiled</h3>
+                            <p class="video-description-enhanced">Complete documentary on the cosmic entities that preceded all existence, their role in reality formation, and the true origin of magical energy itself</p>
+                            <span class="video-duration">45:32</span>
+                        </div>
+                    </div>
+
+                    <div class="video-item-enhanced">
+                        <div class="video-embed">
+                            <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME2" data-autoplay="false"></div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title-enhanced">Original Family Chronicles</h3>
+                            <p class="video-description-enhanced">Authenticated documentary revealing the true divine bloodline and the Original Family's transformation from mortal to divine beings through Primordial blessing</p>
+                            <span class="video-duration">38:17</span>
+                        </div>
+                    </div>
+
+                    <div class="video-item-enhanced">
+                        <div class="video-embed">
+                            <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME3" data-autoplay="false"></div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title-enhanced">The False Originals Deception</h3>
+                            <p class="video-description-enhanced">Investigation into the medieval conspiracy that created false vampire histories and how the Mikaelsons' story was fabricated to hide true divine origins</p>
+                            <span class="video-duration">29:44</span>
+                        </div>
+                    </div>
+
+                    <div class="video-item-enhanced">
+                        <div class="video-embed">
+                            <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME4" data-autoplay="false"></div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title-enhanced">Divine Echo Phenomena Explained</h3>
+                            <p class="video-description-enhanced">Scientific analysis of how Original Family members manifest divine power through echoes, and why certain bloodlines retain stronger connections to primordial energy</p>
+                            <span class="video-duration">33:28</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Archaeological Evidence Videos -->
+                <h4>🏺 Archaeological Evidence & Excavations</h4>
+                <div class="video-gallery">
+                    <div class="video-item-enhanced">
+                        <div class="video-embed">
+                            <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME5" data-autoplay="false"></div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title-enhanced">Primordial Temple Excavations</h3>
+                            <p class="video-description-enhanced">Live footage from archaeological digs at the First Temple sites, revealing artifacts that predate known human civilization</p>
+                            <span class="video-duration">52:15</span>
+                        </div>
+                    </div>
+
+                    <div class="video-item-enhanced">
+                        <div class="video-embed">
+                            <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME6" data-autoplay="false"></div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title-enhanced">Divine Artifact Analysis</h3>
+                            <p class="video-description-enhanced">Laboratory examination of artifacts recovered from Original Family sites, including energy readings and magical resonance testing</p>
+                            <span class="video-duration">41:09</span>
+                        </div>
+                    </div>
+
+                    <div class="video-item-enhanced">
+                        <div class="video-embed">
+                            <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME7" data-autoplay="false"></div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title-enhanced">Nexus Point Mapping Expedition</h3>
+                            <p class="video-description-enhanced">Expedition to locate and document magical convergence points across multiple dimensions, with real-time energy measurements</p>
+                            <span class="video-duration">36:52</span>
+                        </div>
+                    </div>
+
+                    <div class="video-item-enhanced">
+                        <div class="video-embed">
+                            <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME8" data-autoplay="false"></div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title-enhanced">Ancient Text Decryption Process</h3>
+                            <p class="video-description-enhanced">Step-by-step process of translating and deciphering the primordial language found in the oldest magical texts</p>
+                            <span class="video-duration">27:33</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expert Scholar Lectures -->
+                <div class="video-showcase">
+                        <div class="video-embed">
+                            <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME9" data-autoplay="false"></div>
+                        </div>
+                    <div class="video-title">Master Archivist Lecture Series</div>
+                    <div class="video-description">Comprehensive historical analysis from the world's leading magical historians, covering the complete timeline from Primordial emergence to modern day magical society.</div>
+                </div>
+
+                <!-- Archaeological Evidence -->
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                            <div class="video-embed">
+                                <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME10" data-autoplay="false"></div>
+                            </div>
+                        <div class="video-title">Primordial Artifact Excavation</div>
+                        <div class="video-description">Ancient relic discoveries</div>
+                    </div>
+                    <div class="gallery-item">
+                            <div class="video-embed">
+                                <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME11" data-autoplay="false"></div>
+                            </div>
+                        <div class="video-title">Original Family Temple Sites</div>
+                        <div class="video-description">Sacred location investigations</div>
+                    </div>
+                    <div class="gallery-item">
+                            <div class="video-embed">
+                                <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME12" data-autoplay="false"></div>
+                            </div>
+                        <div class="video-title">Divine Echo Manifestation Sites</div>
+                        <div class="video-description">Power nexus mapping</div>
+                    </div>
+                    <div class="gallery-item">
+                            <div class="video-embed">
+                                <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME13" data-autoplay="false"></div>
+                            </div>
+                        <div class="video-title">Mythological Cross-References</div>
+                        <div class="video-description">Cultural legend connections</div>
+                    </div>
+                </div>
+
+                <!-- Interactive Timeline Videos -->
+                <div class="magic-demo">
+                    <div class="demo-header">
+                        <span class="demo-icon">⏰</span>
+                        <span class="demo-title">Interactive Timeline Explorer</span>
+                    </div>
+                    <div class="demo-content">
+                        <div class="demo-description">
+                            Navigate through the complete chronological history of the magical world with interactive videos covering key events, turning points, and character developments.
+                        </div>
+                        <div class="demo-visual">
+                            <div class="video-embed">
+                                <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME14" data-autoplay="false"></div>
+                            </div>
+                            <div>Timeline Explorer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Character Profile Deep Dives -->
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                            <div class="video-embed">
+                                <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME15" data-autoplay="false"></div>
+                            </div>
+                        <div class="video-title">Skulduggery Pleasant Biography</div>
+                        <div class="video-description">Moved to <a href="skulduggery-pleasant.html">Skulduggery Pleasant</a> page for full media and screenshots</div>
+                    </div>
+                    <div class="gallery-item">
+                            <div class="video-embed">
+                                <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME16" data-autoplay="false"></div>
+                            </div>
+                        <div class="video-title">Valkyrie Cain Evolution</div>
+                        <div class="video-description">Moved to <a href="characters/valkyrie-cain.html">Valkyrie Cain</a> page for full media and screenshots</div>
+                    </div>
+                    <div class="gallery-item">
+                            <div class="video-embed">
+                                <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME17" data-autoplay="false"></div>
+                            </div>
+                        <div class="video-title">Merlin &amp; Morgana Chronicles</div>
+                        <div class="video-description">Moved to <a href="leonardo-merlin.html">Merlin / Leonardo</a> page for related media and imagery</div>
+                    </div>
+                    <div class="gallery-item">
+                            <div class="video-embed">
+                                <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME18" data-autoplay="false"></div>
+                            </div>
+                        <div class="video-title">Arthur Pendragon Legacy</div>
+                        <div class="video-description">Moved to <a href="arthur-pendragon.html">Arthur Pendragon</a> page for full media and screenshots</div>
+                    </div>
+                </div>
+
+                <!-- Lost Knowledge Recovery -->
+                <div class="video-showcase">
+                    <div class="video-embed">
+                        <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME19" data-autoplay="false"></div>
+                    </div>
+                    <div class="video-title">Lost Knowledge Recovery Project</div>
+                    <div class="video-description">Archaeological expeditions to recover lost magical knowledge, including forbidden texts, ancient rituals, and deleted historical records from the pre-medieval era.</div>
+                </div>
+
+                <!-- Mythology vs Reality Analysis -->
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                            <div class="video-embed">
+                                <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME20" data-autoplay="false"></div>
+                            </div>
+                        <div class="video-title">Greek Mythology Connections</div>
+                        <div class="video-description">Ancient pantheon relationships</div>
+                    </div>
+                    <div class="gallery-item">
+                            <div class="video-embed">
+                                <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME21" data-autoplay="false"></div>
+                            </div>
+                        <div class="video-title">Nordic Legend Analysis</div>
+                        <div class="video-description">Asgardian influence studies</div>
+                    </div>
+                    <div class="gallery-item">
+                            <div class="video-embed">
+                                <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME22" data-autoplay="false"></div>
+                            </div>
+                        <div class="video-title">Egyptian Divine Parallels</div>
+                        <div class="video-description">Pharaonic magic connections</div>
+                    </div>
+                    <div class="gallery-item">
+                            <div class="video-embed">
+                                <div class="video-placeholder" data-type="youtube" data-id="REPLACE_ME23" data-autoplay="false"></div>
+                            </div>
+                        <div class="video-title">Celtic Druid Heritage</div>
+                        <div class="video-description">Nature magic evolution</div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+            <div class="codex-entries" id="codex-entries">
+                <!-- Entries will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Entry Modal -->
+    <div class="modal-overlay" id="entry-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body" id="modal-body">
+                <!-- Entry details will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/codex.js"></script>
+    <script src="js/advanced-media.js"></script>
+    <script src="js/video-loader.js"></script>
+</body>
+</html>

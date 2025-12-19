@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Conflicts Admin</title>
+<style>
+body { font-family: system-ui,Segoe UI,Roboto,Helvetica,Arial; background:#0b0b0b; color:#eee; padding:20px; }
+.container { max-width:1100px; margin:0 auto; }
+.card { background:#111; padding:12px; border-radius:8px; margin-bottom:12px; }
+.key { font-weight:700; }
+.btn { background:#2b6cff; border:none; color:white; padding:6px 10px; border-radius:6px; cursor:pointer; }
+.btn:active{ transform:translateY(1px); }
+.row { display:flex; gap:12px; align-items:flex-start; }
+.col { flex:1; }
+.pre { font-family: monospace; background:#060606; padding:8px; border-radius:6px; color:#cfcfcf; max-height:240px; overflow:auto; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Persistent Conflicts Admin</h1>
+<p>This page shows recorded conflicts in <code>quizProfilesConflicts</code>. Use the actions to resolve and push/restore profiles.</p>
+<div id="list"></div>
+<div style="margin-top:18px"><button id="refresh" class="btn">Refresh</button> <button id="clear-all" class="btn" style="background:#aa2222">Clear All Conflicts</button></div>
+</div>
+<script>
+function load() {
+    const key = 'quizProfilesConflicts';
+    const listEl = document.getElementById('list');
+    listEl.innerHTML = '';
+    let conflicts = JSON.parse(localStorage.getItem(key) || '[]');
+    if (!Array.isArray(conflicts) || conflicts.length === 0) {
+        listEl.innerHTML = '<div class="card">No conflicts recorded.</div>';
+        return;
+    }
+    conflicts.forEach((c, idx) => {
+        const card = document.createElement('div'); card.className='card';
+        const title = document.createElement('div'); title.innerHTML = `<span class="key">#${idx+1}</span> id: <code>${(c.id||(c.local && c.local.id) || '(unknown)')}</code>`;
+        const row = document.createElement('div'); row.className='row';
+        const cloudCol = document.createElement('div'); cloudCol.className='col';
+        const localCol = document.createElement('div'); localCol.className='col';
+        cloudCol.innerHTML = '<div style="font-weight:600">Cloud</div><pre class="pre">'+(JSON.stringify(c.cloud||{},null,2))+'</pre>';
+        localCol.innerHTML = '<div style="font-weight:600">Local</div><pre class="pre">'+(JSON.stringify(c.local||{},null,2))+'</pre>';
+        row.appendChild(cloudCol); row.appendChild(localCol);
+        const actions = document.createElement('div'); actions.style.marginTop='8px';
+        const keepLocal = document.createElement('button'); keepLocal.className='btn'; keepLocal.textContent='Keep Local';
+        const keepCloud = document.createElement('button'); keepCloud.className='btn'; keepCloud.textContent='Keep Cloud'; keepCloud.style.marginLeft='8px';
+        const mergeBtn = document.createElement('button'); mergeBtn.className='btn'; mergeBtn.textContent='Merge (Local wins)'; mergeBtn.style.marginLeft='8px';
+        actions.appendChild(keepLocal); actions.appendChild(keepCloud); actions.appendChild(mergeBtn);
+        card.appendChild(title); card.appendChild(row); card.appendChild(actions);
+        listEl.appendChild(card);
+
+        keepLocal.addEventListener('click', async () => {
+            try {
+                const profile = c.local;
+                if (!profile) return;
+                if (window.firebaseDB && typeof window.firebaseDB.patchProfile === 'function') {
+                    if (c.cloud && c.cloud.id) await window.firebaseDB.patchProfile(String(profile.id), profile);
+                    else await window.firebaseDB.addProfile(profile);
+                } else {
+                    // fallback: upsert localStorage
+                    const quiz = JSON.parse(localStorage.getItem('quizProfiles')||'[]'); const i = quiz.findIndex(p => p && p.id === profile.id);
+                    if (i>=0) quiz[i]=profile; else quiz.push(profile); localStorage.setItem('quizProfiles', JSON.stringify(quiz));
+                }
+                conflicts.splice(idx,1); localStorage.setItem(key, JSON.stringify(conflicts)); load();
+            } catch(e){ console.warn(e); alert('Keep Local failed: '+(e && e.message)); }
+        });
+        keepCloud.addEventListener('click', () => {
+            try { const profile = c.cloud; if (!profile) return; const quiz = JSON.parse(localStorage.getItem('quizProfiles')||'[]'); const i = quiz.findIndex(p=>p&&p.id===profile.id); if(i>=0) quiz[i]=profile; else quiz.push(profile); localStorage.setItem('quizProfiles', JSON.stringify(quiz)); conflicts.splice(idx,1); localStorage.setItem(key, JSON.stringify(conflicts)); load(); } catch(e){console.warn(e);}
+        });
+        mergeBtn.addEventListener('click', async () => {
+            try {
+                const local = c.local||{}; const cloud = c.cloud||{};
+                function threeWayMerge(localObj, cloudObj) {
+                    if (!localObj || typeof localObj !== 'object') return localObj;
+                    const out = {};
+                    const keys = new Set([...(Object.keys(cloudObj||{})), ...(Object.keys(localObj||{}))]);
+                    keys.forEach(k => {
+                        const lv = localObj[k]; const cv = cloudObj[k];
+                        if (Array.isArray(lv) || Array.isArray(cv)) {
+                            const a = Array.isArray(lv)?lv.slice():[]; const b = Array.isArray(cv)?cv.slice():[]; const seen=new Set(); const outArr=[]; a.concat(b).forEach(item=>{ try{ const sig = typeof item==='object'?JSON.stringify(item):String(item); if(!seen.has(sig)){ seen.add(sig); outArr.push(item);} }catch(e){ outArr.push(item);} }); out[k]=outArr;
+                        } else if (lv && typeof lv === 'object' && cv && typeof cv === 'object') { out[k]=threeWayMerge(lv,cv); } else { out[k] = (lv !== undefined && lv !== null && lv !== '') ? lv : cv; }
+                    });
+                    return out;
+                }
+                const merged = threeWayMerge(local, cloud);
+                const delta = {};
+                Object.keys(merged||{}).forEach(k=>{ if(k==='id'||k==='cloudSynced') return; try{ if(JSON.stringify(merged[k])!==JSON.stringify(cloud[k])) delta[k]=merged[k]; }catch(e){ delta[k]=merged[k]; } });
+                if (window.firebaseDB && typeof window.firebaseDB.patchProfile === 'function') {
+                    if (Object.keys(delta).length) await window.firebaseDB.patchProfile(String(local.id||cloud.id), delta);
+                }
+                const quiz = JSON.parse(localStorage.getItem('quizProfiles')||'[]'); const id = String(local.id||cloud.id); const i = quiz.findIndex(p=>p&&p.id===id); if(i>=0) { quiz[i] = Object.assign({}, quiz[i], merged); } else { quiz.push(merged); } localStorage.setItem('quizProfiles', JSON.stringify(quiz));
+                conflicts.splice(idx,1); localStorage.setItem(key, JSON.stringify(conflicts)); load();
+            } catch(e){ console.warn(e); alert('Merge failed: '+(e&&e.message)); }
+        });
+    });
+}
+
+document.getElementById('refresh').addEventListener('click', load);
+document.getElementById('clear-all').addEventListener('click', () => { if(!confirm('Clear all conflict records?')) return; localStorage.removeItem('quizProfilesConflicts'); load(); });
+
+load();
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integration Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ccc; }
+        button { margin: 5px; padding: 10px 15px; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Character Creation → Quiz Integration Test</h1>
+    
+    <div class="test-section">
+        <h2>1. Simulate Character Creation Data</h2>
+        <button onclick="createTestData()">Create Test Character Data</button>
+        <div id="test-data-result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>2. Test Quiz Data Detection</h2>
+        <button onclick="testQuizDetection()">Test Quiz Detection</button>
+        <div id="quiz-detection-result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>3. Open Quiz with Character Creation Mode</h2>
+        <a href="quiz.html?mode=character_creation" target="_blank">
+            <button>Open Quiz with Character Creation Data</button>
+        </a>
+    </div>
+    
+    <div class="test-section">
+        <h2>4. Clear Test Data</h2>
+        <button onclick="clearTestData()">Clear LocalStorage</button>
+    </div>
+
+    <script>
+        function createTestData() {
+            const testData = {
+                givenFirstName: 'Test',
+                givenLastName: 'User',
+                age: 25,
+                location: 'ireland',
+                chosenDiscipline: 'elemental',
+                personalityType: '',
+                gameImpacts: {}
+            };
+            
+            localStorage.setItem('characterCreationData', JSON.stringify(testData));
+            
+            document.getElementById('test-data-result').innerHTML = 
+                '<span class="success">✅ Test character data created: ' + JSON.stringify(testData, null, 2) + '</span>';
+        }
+        
+        function testQuizDetection() {
+            const data = localStorage.getItem('characterCreationData');
+            if (data) {
+                try {
+                    const parsed = JSON.parse(data);
+                    document.getElementById('quiz-detection-result').innerHTML = 
+                        '<span class="success">✅ Character creation data found and parsed successfully:<br><pre>' + 
+                        JSON.stringify(parsed, null, 2) + '</pre></span>';
+                } catch (error) {
+                    document.getElementById('quiz-detection-result').innerHTML = 
+                        '<span class="error">❌ Error parsing data: ' + error.message + '</span>';
+                }
+            } else {
+                document.getElementById('quiz-detection-result').innerHTML = 
+                    '<span class="error">❌ No character creation data found in localStorage</span>';
+            }
+        }
+        
+        function clearTestData() {
+            localStorage.removeItem('characterCreationData');
+            document.getElementById('test-data-result').innerHTML = '';
+            document.getElementById('quiz-detection-result').innerHTML = '';
+            alert('Test data cleared!');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1081 @@
+<!DOCT    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/visual-enhancements.css">PE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Database - T.O.M.E.</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/character-database.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>T.O.M.E.</h1>
+                <span>The Omniverse of Magical Education</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="quiz.html" class="nav-link">Take Quiz</a></li>
+                <li><a href="lore.html" class="nav-link">Lore</a></li>
+                <li><a href="disciplines.html" class="nav-link">Disciplines</a></li>
+                <li><a href="species.html" class="nav-link">Species</a></li>
+                <li><a href="characters.html" class="nav-link active">Characters</a></li>
+                <li><a href="database.html" class="nav-link">Player Database</a></li>
+                <li><a href="content-index.html" class="nav-link">Content Index</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="characters-hero">
+        <div class="hero-background">
+            <div class="character-particles"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Character <span class="highlight">Database</span></h1>
+            <p class="hero-subtitle">Explore detailed profiles, relationships, and storylines of every character in the Skulduggery Pleasant universe</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Characters</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">Main Books</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Relationships</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search & Filter Section -->
+    <section class="character-search">
+        <div class="container">
+            <div class="search-controls">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="character-search" placeholder="Search characters by name, ability, or affiliation...">
+                </div>
+                <div class="filter-controls">
+                    <select id="filter-affiliation">
+                        <option value="">All Affiliations</option>
+                        <option value="sanctuary">Sanctuary</option>
+                        <option value="detective">Detective Agency</option>
+                        <option value="criminal">Criminal</option>
+                        <option value="civilian">Civilian</option>
+                        <option value="dead-men">Dead Men</option>
+                        <option value="council">Council of Elders</option>
+                        <option value="resistance">Resistance</option>
+                    </select>
+                    <select id="filter-magic">
+                        <option value="">All Magic Types</option>
+                        <option value="elemental">Elemental</option>
+                        <option value="adept">Adept</option>
+                        <option value="necromancy">Necromancy</option>
+                        <option value="sigil">Sigil Magic</option>
+                        <option value="none">No Magic</option>
+                    </select>
+                    <select id="filter-status">
+                        <option value="">All Status</option>
+                        <option value="alive">Alive</option>
+                        <option value="dead">Dead</option>
+                        <option value="undead">Undead</option>
+                        <option value="unknown">Unknown</option>
+                    </select>
+                    <select id="filter-book">
+                        <option value="">All Books</option>
+                        <option value="book1">Skulduggery Pleasant</option>
+                        <option value="book2">Playing with Fire</option>
+                        <option value="book3">The Faceless Ones</option>
+                        <option value="book4">Dark Days</option>
+                        <option value="book5">Mortal Coil</option>
+                        <option value="book6">Death Bringer</option>
+                        <option value="book7">Kingdom of the Wicked</option>
+                        <option value="book8">Last Stand of Dead Men</option>
+                        <option value="book9">The Dying of the Light</option>
+                        <option value="book10">Resurrection</option>
+                        <option value="book11">Midnight</option>
+                        <option value="book12">Bedlam</option>
+                        <option value="book13">Seasons of War</option>
+                        <option value="book14">Dead or Alive</option>
+                        <option value="book15">Until the End</option>
+                    </select>
+                </div>
+                <div class="view-controls">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th"></i>
+                        Grid
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <i class="fas fa-list"></i>
+                        List
+                    </button>
+                    <button class="view-btn" data-view="relationships">
+                        <i class="fas fa-project-diagram"></i>
+                        Relationships
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Characters -->
+    <section class="featured-characters">
+        <div class="container">
+            <h2 class="section-title">Main Characters</h2>
+            
+            <!-- Character Portrait Gallery -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="assets/images/characters/skulduggery-pleasant.jpg" alt="Skulduggery Pleasant" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">💀</div>
+                    <div class="gallery-caption">
+                        Skulduggery Pleasant - The legendary skeleton detective and elemental master
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/characters/valkyrie-cain.jpg" alt="Valkyrie Cain" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">⚡</div>
+                    <div class="gallery-caption">
+                        Valkyrie Cain - Young sorcerer with mysterious dark powers
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/characters/ghastly-bespoke.jpg" alt="Ghastly Bespoke" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">🥊</div>
+                    <div class="gallery-caption">
+                        Ghastly Bespoke - Master tailor and powerful elemental boxer
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/characters/tanith-low.jpg" alt="Tanith Low" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">⚔️</div>
+                    <div class="gallery-caption">
+                        Tanith Low - Deadly sword-wielding warrior and tactician
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/characters/china-sorrows.jpg" alt="China Sorrows" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">📚</div>
+                    <div class="gallery-caption">
+                        China Sorrows - Mysterious antiquarian and sigil magic expert
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/characters/fletcher-renn.jpg" alt="Fletcher Renn" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">🌀</div>
+                    <div class="gallery-caption">
+                        Fletcher Renn - Teleporter with unmatched transportation abilities
+                    </div>
+                </div>
+            </div>
+
+            <!-- Character Action Shots -->
+            <div class="video-showcase">
+                <div class="video-placeholder">
+                    <div class="play-button"></div>
+                    <div class="video-title">Character Spotlight: Main Cast</div>
+                    <div class="video-description">Meet the core characters of the Skulduggery Pleasant series through action sequences and character moments.</div>
+                </div>
+            </div>
+
+            <!-- Character Relationship Network -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="assets/images/characters/relationships/partnership-skulduggery-valkyrie.jpg" alt="Skulduggery and Valkyrie Partnership" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">🤝</div>
+                    <div class="gallery-caption">
+                        The legendary partnership between detective and apprentice
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/characters/relationships/dead-men-team.jpg" alt="Dead Men Team" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">💀</div>
+                    <div class="gallery-caption">
+                        The Dead Men - Elite team of supernatural soldiers
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/characters/relationships/sanctuary-elders.jpg" alt="Sanctuary Elders" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">🏛️</div>
+                    <div class="gallery-caption">
+                        The Council of Elders governing the magical world
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/characters/relationships/villains-gallery.jpg" alt="Major Villains" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">😈</div>
+                    <div class="gallery-caption">
+                        Major antagonists and villains throughout the series
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Character Video Showcases -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Skulduggery Pleasant: Character Study</div>
+                        <div class="video-description">Deep dive into the skeleton detective</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Valkyrie Cain: Evolution</div>
+                        <div class="video-description">Character development across the series</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Supporting Cast Spotlight</div>
+                        <div class="video-description">Ghastly, Tanith, and the ensemble</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Villain Analysis</div>
+                        <div class="video-description">Major antagonists throughout the books</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Character Interaction Videos -->
+            <div class="video-showcase">
+                <div class="video-placeholder">
+                    <div class="play-button"></div>
+                    <div class="video-title">Character Relationships Deep Dive</div>
+                    <div class="video-description">Exploring the complex relationships between characters, their development over time, and the emotional bonds that drive the story forward.</div>
+                </div>
+            </div>
+
+            <!-- Character Development Timeline -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Book 1-5 Character Growth</div>
+                        <div class="video-description">Early character development</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Book 6-10 Transformations</div>
+                        <div class="video-description">Mid-series character changes</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Book 11-15 Conclusions</div>
+                        <div class="video-description">Final character arcs and resolutions</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Future Possibilities</div>
+                        <div class="video-description">Where characters might go next</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Voice Actor Interviews -->
+            <div class="magic-demo">
+                <div class="demo-header">
+                    <span class="demo-icon">🎤</span>
+                    <span class="demo-title">Voice Actor Interview Series</span>
+                </div>
+                <div class="demo-content">
+                    <div class="demo-description">
+                        Meet the voice actors bringing your favorite characters to life in audiobooks and upcoming game adaptations. Hear their insights into character portrayal and behind-the-scenes stories.
+                    </div>
+                    <div class="demo-visual">
+                        <div class="video-placeholder">
+                            <div class="play-button"></div>
+                            <div>Voice Interviews</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Character Creation Process -->
+            <div class="video-showcase">
+                <div class="video-placeholder">
+                    <div class="play-button"></div>
+                    <div class="video-title">Derek Landy: Character Creation Process</div>
+                    <div class="video-description">Author insights into how iconic characters were conceived, developed, and brought to life throughout the writing process.</div>
+                </div>
+            </div>
+            
+            <!-- Original Family Member Screenshot Galleries -->
+            <section class="original-family-member-screenshots">
+                <h2 class="gallery-section-title">👑 Original Family Member Archives</h2>
+                
+                <!-- Merlin - The Sibling of Memory -->
+                <div class="screenshot-section">
+                    <h3>🧠 Merlin - The Sibling of Memory</h3>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/merlin-divine-form.jpg" alt="Merlin's Divine Form" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🧠</div>
+                            <div class="gallery-caption">
+                                Merlin in his true divine form as the Sibling of Memory
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/merlin-camelot-advisor.jpg" alt="Merlin at Camelot" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🏰</div>
+                            <div class="gallery-caption">
+                                Merlin serving as court wizard and advisor to King Arthur
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/merlin-magic-system-creation.jpg" alt="Merlin Creating Magic System" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">📚</div>
+                            <div class="gallery-caption">
+                                Merlin designing the structured magical discipline system
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/merlin-teaching-sorcerers.jpg" alt="Merlin Teaching Sorcerers" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🎓</div>
+                            <div class="gallery-caption">
+                                Merlin instructing the first generation of structured magic users
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Morgana - The Sibling of Change -->
+                <div class="screenshot-section">
+                    <h3>🌙 Morgana - The Sibling of Change</h3>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/morgana-divine-form.jpg" alt="Morgana's Divine Form" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🌙</div>
+                            <div class="gallery-caption">
+                                Morgana's ever-changing divine form shifting through aspects
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/morgana-shapeshifter-creation.jpg" alt="Morgana Creating Shapeshifters" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🐺</div>
+                            <div class="gallery-caption">
+                                Morgana blessing the first werewolves with transformation abilities
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/morgana-le-fay.jpg" alt="Morgana Le Fay" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🔮</div>
+                            <div class="gallery-caption">
+                                Morgana in her legendary identity as Morgana Le Fay
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/morgana-lunar-ritual.jpg" alt="Morgana's Lunar Rituals" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🌕</div>
+                            <div class="gallery-caption">
+                                Morgana performing powerful lunar transformation rituals
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Sibling of Blood -->
+                <div class="screenshot-section">
+                    <h3>🩸 The Sibling of Blood</h3>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/blood-sibling-divine-form.jpg" alt="Blood Sibling's Divine Form" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🩸</div>
+                            <div class="gallery-caption">
+                                The Sibling of Blood in terrifying divine splendor
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/first-vampire-creation.jpg" alt="First Vampire Creation" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🧛</div>
+                            <div class="gallery-caption">
+                                The creation of the first vampire bloodline from divine essence
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/blood-magic-mastery.jpg" alt="Blood Magic Mastery" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">💉</div>
+                            <div class="gallery-caption">
+                                Demonstrating the most advanced blood magic techniques
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/vampire-court-establishment.jpg" alt="Vampire Court Establishment" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">👑</div>
+                            <div class="gallery-caption">
+                                Establishing the first vampire courts and hierarchies
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Sibling of Light -->
+                <div class="screenshot-section">
+                    <h3>✨ The Sibling of Light</h3>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/light-sibling-radiance.jpg" alt="Sibling of Light's Radiance" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">✨</div>
+                            <div class="gallery-caption">
+                                The Sibling of Light radiating pure divine illumination
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/faerie-realm-creation.jpg" alt="Faerie Realm Creation" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🧚</div>
+                            <div class="gallery-caption">
+                                Creating the ethereal faerie realm and its inhabitants
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/light-magic-mastery.jpg" alt="Light Magic Mastery" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🌟</div>
+                            <div class="gallery-caption">
+                                Wielding pure light magic to banish darkness and evil
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/beauty-glamour-creation.jpg" alt="Beauty and Glamour Creation" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">💫</div>
+                            <div class="gallery-caption">
+                                Teaching faeries the arts of beauty and illusion magic
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Sibling of Death -->
+                <div class="screenshot-section">
+                    <h3>💀 The Sibling of Death</h3>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/death-sibling-majesty.jpg" alt="Death Sibling's Dark Majesty" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">💀</div>
+                            <div class="gallery-caption">
+                                The Sibling of Death in full necromantic splendor
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/first-skeleton-animation.jpg" alt="First Skeleton Animation" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🦴</div>
+                            <div class="gallery-caption">
+                                Animating the first skeleton with consciousness and magic
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/necromancy-teaching.jpg" alt="Necromancy Teaching" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">📖</div>
+                            <div class="gallery-caption">
+                                Teaching mortals the sacred arts of necromancy
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/death-realm-gateway.jpg" alt="Death Realm Gateway" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🚪</div>
+                            <div class="gallery-caption">
+                                Opening gateways between life and death realms
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Sibling of Hunger -->
+                <div class="screenshot-section">
+                    <h3>🍽️ The Sibling of Hunger</h3>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/hunger-sibling-maw.jpg" alt="Hunger Sibling's Infinite Maw" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🍽️</div>
+                            <div class="gallery-caption">
+                                The Sibling of Hunger with an eternal appetite for souls
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/demon-spawning.jpg" alt="Demon Spawning" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">👹</div>
+                            <div class="gallery-caption">
+                                Spawning the first demonic entities from pure hunger
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/possession-creation.jpg" alt="Possession Magic Creation" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">👻</div>
+                            <div class="gallery-caption">
+                                Creating the first possession and parasitic magic
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/soul-consumption.jpg" alt="Soul Consumption Ritual" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🔥</div>
+                            <div class="gallery-caption">
+                                Demonstrating the terrible art of soul consumption
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Sibling of Decay -->
+                <div class="screenshot-section">
+                    <h3>🦴 The Sibling of Decay</h3>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/decay-sibling-corruption.jpg" alt="Decay Sibling's Corruption" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🦴</div>
+                            <div class="gallery-caption">
+                                The Sibling of Decay spreading divine corruption
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/plague-magic-creation.jpg" alt="Plague Magic Creation" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🦠</div>
+                            <div class="gallery-caption">
+                                Creating the first magical plagues and diseases
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/viral-entity-spawning.jpg" alt="Viral Entity Spawning" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">☣️</div>
+                            <div class="gallery-caption">
+                                Spawning self-replicating viral magical entities
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/biological-warfare.jpg" alt="Biological Warfare Magic" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">⚗️</div>
+                            <div class="gallery-caption">
+                                Mastering the dark arts of magical biological warfare
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Sibling of Chaos -->
+                <div class="screenshot-section">
+                    <h3>🌪️ The Sibling of Chaos</h3>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/chaos-sibling-storm.jpg" alt="Chaos Sibling's Reality Storm" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🌪️</div>
+                            <div class="gallery-caption">
+                                The Sibling of Chaos warping reality with wild magic
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/remnant-creation.jpg" alt="Remnant Creation" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">👻</div>
+                            <div class="gallery-caption">
+                                Creating the first chaotic remnant entities
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/wild-magic-unleashing.jpg" alt="Wild Magic Unleashing" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">⚡</div>
+                            <div class="gallery-caption">
+                                Unleashing pure, uncontrolled wild magic into the world
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/original-family/order-disruption.jpg" alt="Magical Order Disruption" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">💥</div>
+                            <div class="gallery-caption">
+                                Disrupting established magical order with chaotic force
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="featured-grid">
+                <div class="character-card main-character" data-character="skulduggery">
+                    <div class="character-image">
+                        <div class="character-avatar">
+                            <i class="fas fa-skull"></i>
+                        </div>
+                        <div class="character-status alive"></div>
+                    </div>
+                    <div class="character-info">
+                        <h3>Skulduggery Pleasant</h3>
+                        <p class="character-title">Detective • Living Skeleton</p>
+                        <div class="character-abilities">
+                            <span class="ability-tag elemental">Fire Elemental</span>
+                            <span class="ability-tag">Detective</span>
+                        </div>
+                        <div class="character-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">First Appearance:</span>
+                                <span class="stat-value">Book 1</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Affiliation:</span>
+                                <span class="stat-value">Sanctuary</span>
+                            </div>
+                        </div>
+                        <p class="character-description">
+                            An elegantly dressed living skeleton and Ireland's most famous detective. Known for his wit, magical prowess, and unwavering dedication to protecting the mortal world.
+                        </p>
+                        <a href="characters/skulduggery-pleasant.html" class="character-link">
+                            <i class="fas fa-arrow-right"></i>
+                            View Full Profile
+                        </a>
+                    </div>
+                </div>
+
+                <div class="character-card main-character" data-character="valkyrie">
+                    <div class="character-image">
+                        <div class="character-avatar">
+                            <i class="fas fa-female"></i>
+                        </div>
+                        <div class="character-status alive"></div>
+                    </div>
+                    <div class="character-info">
+                        <h3>Valkyrie Cain</h3>
+                        <p class="character-title">Stephanie Edgley • True Name Bearer</p>
+                        <div class="character-abilities">
+                            <span class="ability-tag elemental">Lightning Elemental</span>
+                            <span class="ability-tag">True Name</span>
+                        </div>
+                        <div class="character-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">First Appearance:</span>
+                                <span class="stat-value">Book 1</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Affiliation:</span>
+                                <span class="stat-value">Detective Agency</span>
+                            </div>
+                        </div>
+                        <p class="character-description">
+                            Originally Stephanie Edgley, she became Skulduggery's partner and one of the most powerful sorcerers of her generation, wielding lightning and possessing her True Name.
+                        </p>
+                        <a href="characters/valkyrie-cain.html" class="character-link">
+                            <i class="fas fa-arrow-right"></i>
+                            View Full Profile
+                        </a>
+                    </div>
+                </div>
+
+                <div class="character-card main-character" data-character="tanith">
+                    <div class="character-image">
+                        <div class="character-avatar">
+                            <i class="fas fa-sword"></i>
+                        </div>
+                        <div class="character-status alive"></div>
+                    </div>
+                    <div class="character-info">
+                        <h3>Tanith Low</h3>
+                        <p class="character-title">Sword Fighter • Remnant Host</p>
+                        <div class="character-abilities">
+                            <span class="ability-tag adept">Enhanced Speed</span>
+                            <span class="ability-tag">Swordsmanship</span>
+                        </div>
+                        <div class="character-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">First Appearance:</span>
+                                <span class="stat-value">Book 1</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Affiliation:</span>
+                                <span class="stat-value">Resistance</span>
+                            </div>
+                        </div>
+                        <p class="character-description">
+                            A master sword fighter from London with enhanced speed abilities. Once possessed by a Remnant, she struggles with her identity and loyalties.
+                        </p>
+                        <a href="characters/tanith-low.html" class="character-link">
+                            <i class="fas fa-arrow-right"></i>
+                            View Full Profile
+                        </a>
+                    </div>
+                </div>
+
+                <div class="character-card main-character" data-character="ghastly">
+                    <div class="character-image">
+                        <div class="character-avatar">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <div class="character-status dead"></div>
+                    </div>
+                    <div class="character-info">
+                        <h3>Ghastly Bespoke</h3>
+                        <p class="character-title">Tailor • Dead Men Member</p>
+                        <div class="character-abilities">
+                            <span class="ability-tag elemental">Earth Elemental</span>
+                            <span class="ability-tag">Tailoring</span>
+                        </div>
+                        <div class="character-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">First Appearance:</span>
+                                <span class="stat-value">Book 1</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Affiliation:</span>
+                                <span class="stat-value">Dead Men</span>
+                            </div>
+                        </div>
+                        <p class="character-description">
+                            A scarred tailor and former member of the Dead Men. Known for his earth elemental magic and unwavering loyalty to his friends.
+                        </p>
+                        <a href="characters/ghastly-bespoke.html" class="character-link">
+                            <i class="fas fa-arrow-right"></i>
+                            View Full Profile
+                        </a>
+                    </div>
+                </div>
+
+                <div class="character-card main-character" data-character="china">
+                    <div class="character-image">
+                        <div class="character-avatar">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="character-status alive"></div>
+                    </div>
+                    <div class="character-info">
+                        <h3>China Sorrows</h3>
+                        <p class="character-title">Information Broker • Supreme Mage</p>
+                        <div class="character-abilities">
+                            <span class="ability-tag sigil">Sigil Magic</span>
+                            <span class="ability-tag">Beauty Curse</span>
+                        </div>
+                        <div class="character-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">First Appearance:</span>
+                                <span class="stat-value">Book 1</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Affiliation:</span>
+                                <span class="stat-value">Council</span>
+                            </div>
+                        </div>
+                        <p class="character-description">
+                            A devastatingly beautiful woman who deals in information and favors. Known for her sigil magic and complex history with the main characters.
+                        </p>
+                        <a href="characters/china-sorrows.html" class="character-link">
+                            <i class="fas fa-arrow-right"></i>
+                            View Full Profile
+                        </a>
+                    </div>
+                </div>
+
+                <div class="character-card main-character" data-character="kenspeckle">
+                    <div class="character-image">
+                        <div class="character-avatar">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="character-status dead"></div>
+                    </div>
+                    <div class="character-info">
+                        <h3>Kenspeckle Grouse</h3>
+                        <p class="character-title">Professor • Medical Practitioner</p>
+                        <div class="character-abilities">
+                            <span class="ability-tag adept">Medical Magic</span>
+                            <span class="ability-tag">Alchemy</span>
+                        </div>
+                        <div class="character-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">First Appearance:</span>
+                                <span class="stat-value">Book 1</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Affiliation:</span>
+                                <span class="stat-value">Civilian</span>
+                            </div>
+                        </div>
+                        <p class="character-description">
+                            A brilliant and cantankerous medical practitioner who specialized in treating magical injuries. Known for his healing abilities and sharp tongue.
+                        </p>
+                        <a href="characters/kenspeckle-grouse.html" class="character-link">
+                            <i class="fas fa-arrow-right"></i>
+                            View Full Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Categories -->
+    <section class="character-categories">
+        <div class="container">
+            <h2 class="section-title">Browse by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="main">
+                    <div class="category-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Main Characters</h3>
+                    <p>Core protagonists and central figures in the series</p>
+                    <div class="category-count">15 Characters</div>
+                </div>
+
+                <div class="category-card" data-category="dead-men">
+                    <div class="category-icon">
+                        <i class="fas fa-skull-crossbones"></i>
+                    </div>
+                    <h3>The Dead Men</h3>
+                    <p>Elite squadron during the War of the Sanctuaries</p>
+                    <div class="category-count">8 Characters</div>
+                </div>
+
+                <div class="category-card" data-category="sanctuary">
+                    <div class="category-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Sanctuary Personnel</h3>
+                    <p>Members of the Irish Sanctuary and Council</p>
+                    <div class="category-count">25 Characters</div>
+                </div>
+
+                <div class="category-card" data-category="villains">
+                    <div class="category-icon">
+                        <i class="fas fa-mask"></i>
+                    </div>
+                    <h3>Antagonists</h3>
+                    <p>Primary villains and opposing forces</p>
+                    <div class="category-count">20 Characters</div>
+                </div>
+
+                <div class="category-card" data-category="family">
+                    <div class="category-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Edgley Family</h3>
+                    <p>Valkyrie's mortal family members</p>
+                    <div class="category-count">12 Characters</div>
+                </div>
+
+                <div class="category-card" data-category="international">
+                    <div class="category-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>International Mages</h3>
+                    <p>Characters from other Sanctuaries worldwide</p>
+                    <div class="category-count">18 Characters</div>
+                </div>
+
+                <div class="category-card" data-category="historical">
+                    <div class="category-icon">
+                        <i class="fas fa-scroll"></i>
+                    </div>
+                    <h3>Historical Figures</h3>
+                    <p>Characters from the magical world's past</p>
+                    <div class="category-count">22 Characters</div>
+                </div>
+
+                <div class="category-card" data-category="creatures">
+                    <div class="category-icon">
+                        <i class="fas fa-dragon"></i>
+                    </div>
+                    <h3>Magical Creatures</h3>
+                    <p>Non-human magical beings and entities</p>
+                    <div class="category-count">30 Characters</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Relationships Map -->
+    <section class="relationships-section" id="relationships-view" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Character Relationships</h2>
+            <div class="relationships-controls">
+                <select id="relationships-center">
+                    <option value="skulduggery">Center on Skulduggery Pleasant</option>
+                    <option value="valkyrie">Center on Valkyrie Cain</option>
+                    <option value="tanith">Center on Tanith Low</option>
+                    <option value="china">Center on China Sorrows</option>
+                </select>
+                <div class="relationship-filters">
+                    <label><input type="checkbox" checked> Allies</label>
+                    <label><input type="checkbox" checked> Enemies</label>
+                    <label><input type="checkbox" checked> Family</label>
+                    <label><input type="checkbox" checked> Romance</label>
+                    <label><input type="checkbox" checked> Mentorship</label>
+                </div>
+            </div>
+            <div class="relationships-map" id="relationships-map">
+                <!-- Interactive relationship visualization will be rendered here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Random Character Feature -->
+    <section class="random-character">
+        <div class="container">
+            <div class="random-card">
+                <h2>Discover a Random Character</h2>
+                <p>Explore the vast cast of the Skulduggery Pleasant universe</p>
+                <button class="btn btn-primary" id="random-character-btn">
+                    <i class="fas fa-random"></i>
+                    Show Random Character
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Statistics -->
+    <section class="character-stats">
+        <div class="container">
+            <h2 class="section-title">Character Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Total Characters</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">45</div>
+                        <div class="stat-label">Elemental Mages</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">38</div>
+                        <div class="stat-label">Adept Disciplines</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-skull"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">67</div>
+                        <div class="stat-label">Deceased Characters</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Countries Featured</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">15</div>
+                        <div class="stat-label">Books Spanning</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Timeline -->
+    <section class="character-timeline">
+        <div class="container">
+            <h2 class="section-title">Character Introduction Timeline</h2>
+            <div class="timeline-container">
+                <div class="timeline-book" data-book="1">
+                    <div class="book-marker">
+                        <span class="book-number">1</span>
+                        <span class="book-title">Skulduggery Pleasant</span>
+                    </div>
+                    <div class="book-characters">
+                        <div class="character-intro">Skulduggery Pleasant</div>
+                        <div class="character-intro">Valkyrie Cain</div>
+                        <div class="character-intro">China Sorrows</div>
+                        <div class="character-intro">Ghastly Bespoke</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-book" data-book="2">
+                    <div class="book-marker">
+                        <span class="book-number">2</span>
+                        <span class="book-title">Playing with Fire</span>
+                    </div>
+                    <div class="book-characters">
+                        <div class="character-intro">Tanith Low</div>
+                        <div class="character-intro">Guild</div>
+                        <div class="character-intro">Mr. Bliss</div>
+                    </div>
+                </div>
+
+                <!-- More books would be added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Character Database</h3>
+                    <ul>
+                        <li><a href="#main">Main Characters</a></li>
+                        <li><a href="#dead-men">The Dead Men</a></li>
+                        <li><a href="#sanctuary">Sanctuary Personnel</a></li>
+                        <li><a href="#villains">Antagonists</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Features</h3>
+                    <ul>
+                        <li><a href="#search">Character Search</a></li>
+                        <li><a href="#relationships">Relationship Map</a></li>
+                        <li><a href="#timeline">Character Timeline</a></li>
+                        <li><a href="#stats">Statistics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Universe</h3>
+                    <ul>
+                        <li><a href="disciplines.html">Magical Disciplines</a></li>
+                        <li><a href="species.html">Magical Species</a></li>
+                        <li><a href="locations.html">Locations</a></li>
+                        <li><a href="timeline.html">Universe Timeline</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/character-database.js"></script>
+</body>
+</html>

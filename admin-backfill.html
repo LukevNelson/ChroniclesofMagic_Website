@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Admin: Backfill taken-names from quiz-profiles</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial;margin:18px}
+    button{padding:8px 12px;margin:6px}
+    #log{white-space:pre-wrap;background:#111;color:#eee;padding:12px;border-radius:6px;max-height:400px;overflow:auto}
+    .status{margin:8px 0}
+  </style>
+</head>
+<body>
+  <h1>Admin — Backfill taken-names</h1>
+  <p>This tool will scan existing quiz profiles and create reservations under <code>taken-names/</code> for any profile that has <code>takenFirstName</code> and/or <code>takenLastName</code>. Run this page in a browser where your Firebase project is initialized (the site normally does this).</p>
+  <div class="status"><strong>Firebase ready:</strong> <span id="fb-ready">unknown</span></div>
+  <label><input type="checkbox" id="dryRun" checked> Dry-run (do not write)</label>
+  <div>
+    <button id="start">Start Backfill</button>
+    <button id="stop" disabled>Stop</button>
+  </div>
+  <div class="status">Profiles scanned: <span id="scanned">0</span> — Reserved: <span id="reserved">0</span> — Skipped: <span id="skipped">0</span></div>
+  <div id="log"></div>
+
+  <script src="js/admin-backfill.js"></script>
+</body>
+</html>

@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutter Mobile App - Skulduggery Pleasant Universe</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flutter-app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">SP Universe</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="characters.html" class="nav-link">Characters</a>
+                </li>
+                <li class="nav-item">
+                    <a href="books.html" class="nav-link">Books</a>
+                </li>
+                <li class="nav-item">
+                    <a href="magic-system.html" class="nav-link">Magic</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ue5-game.html" class="nav-link">UE5 Game</a>
+                </li>
+                <li class="nav-item">
+                    <a href="flutter-app.html" class="nav-link active">Mobile App</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="app-hero">
+        <div class="hero-background">
+            <div class="floating-devices">
+                <div class="device-mockup phone-1">
+                    <img src="assets/images/app-screenshots/home-screen.jpg" alt="App Home Screen">
+                </div>
+                <div class="device-mockup phone-2">
+                    <img src="assets/images/app-screenshots/magic-training.jpg" alt="Magic Training Screen">
+                </div>
+                <div class="device-mockup tablet-1">
+                    <img src="assets/images/app-screenshots/character-database.jpg" alt="Character Database">
+                </div>
+            </div>
+            <div class="hero-particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-badge">
+                    <i class="fab fa-flutter"></i>
+                    <span>Built with Flutter</span>
+                </div>
+                <h1 class="hero-title">SP Universe Mobile</h1>
+                <p class="hero-subtitle">Your magical companion app for iOS and Android</p>
+                
+                <div class="app-features">
+                    <div class="feature-highlight">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Offline Magic Training</span>
+                    </div>
+                    <div class="feature-highlight">
+                        <i class="fas fa-sync"></i>
+                        <span>Cross-Platform Sync</span>
+                    </div>
+                    <div class="feature-highlight">
+                        <i class="fas fa-bell"></i>
+                        <span>Smart Notifications</span>
+                    </div>
+                    <div class="feature-highlight">
+                        <i class="fas fa-users"></i>
+                        <span>Social Features</span>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <div class="download-buttons">
+                        <a href="#" class="download-btn ios">
+                            <img src="assets/images/badges/app-store-badge.png" alt="Download on App Store">
+                        </a>
+                        <a href="#" class="download-btn android">
+                            <img src="assets/images/badges/google-play-badge.png" alt="Get it on Google Play">
+                        </a>
+                    </div>
+                    <div class="beta-access">
+                        <button class="btn btn-outline" id="join-beta-btn">
+                            <i class="fas fa-flask"></i>
+                            Join Beta Testing
+                        </button>
+                        <button class="btn btn-secondary" id="view-screenshots-btn">
+                            <i class="fas fa-images"></i>
+                            View Screenshots
+                        </button>
+                    </div>
+                </div>
+
+                <div class="app-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" id="downloads">50K+</div>
+                        <div class="stat-label">Downloads</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="rating">4.8</div>
+                        <div class="stat-label">★ Rating</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="users">15K+</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cross-Platform Sync -->
+    <section class="cross-platform-sync">
+        <div class="container">
+            <h2 class="section-title">Seamless Cross-Platform Experience</h2>
+            <p class="section-subtitle">Your progress syncs across web, mobile, and game platforms</p>
+
+            <div class="sync-diagram">
+                <div class="platform-node web-platform">
+                    <div class="platform-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h4>Web Training</h4>
+                    <p>Complete magic courses and spell practice on our website</p>
+                    <div class="platform-features">
+                        <ul>
+                            <li>Interactive spell creator</li>
+                            <li>Detailed magic theory</li>
+                            <li>Combat simulator</li>
+                            <li>Progress tracking</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sync-connections">
+                    <div class="connection-line">
+                        <div class="sync-indicator">
+                            <i class="fas fa-sync fa-spin"></i>
+                            <span>Real-time sync</span>
+                        </div>
+                    </div>
+                    <div class="connection-line">
+                        <div class="sync-indicator">
+                            <i class="fas fa-sync fa-spin"></i>
+                            <span>Cloud backup</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="platform-node mobile-platform active">
+                    <div class="platform-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4>Mobile App</h4>
+                    <p>Practice on-the-go with offline capabilities and mobile-optimized features</p>
+                    <div class="platform-features">
+                        <ul>
+                            <li>Offline spell practice</li>
+                            <li>Quick daily lessons</li>
+                            <li>Social challenges</li>
+                            <li>Smart notifications</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sync-connections">
+                    <div class="connection-line">
+                        <div class="sync-indicator">
+                            <i class="fas fa-sync fa-spin"></i>
+                            <span>Progress sharing</span>
+                        </div>
+                    </div>
+                    <div class="connection-line">
+                        <div class="sync-indicator">
+                            <i class="fas fa-sync fa-spin"></i>
+                            <span>Achievement sync</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="platform-node game-platform">
+                    <div class="platform-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h4>UE5 Game</h4>
+                    <p>Apply your mobile training in immersive 3D gaming experience</p>
+                    <div class="platform-features">
+                        <ul>
+                            <li>Unlock trained spells</li>
+                            <li>Enhanced abilities</li>
+                            <li>Special achievements</li>
+                            <li>Academy access</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sync-benefits">
+                <h3>Benefits of Cross-Platform Integration</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>Continuous Learning</h4>
+                        <p>Learn magic theory on web, practice spells on mobile, apply skills in game</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-trophy"></i>
+                        <h4>Unified Progress</h4>
+                        <p>All achievements, levels, and unlocks are shared across platforms</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-cloud"></i>
+                        <h4>Cloud Backup</h4>
+                        <p>Your progress is safely stored in the cloud and accessible anywhere</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Mobile Flexibility</h4>
+                        <p>Continue your magical education during commutes and breaks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Features -->
+    <section class="app-features-detailed">
+        <div class="container">
+            <h2 class="section-title">Mobile App Features</h2>
+            <p class="section-subtitle">Everything you need for magical mastery in your pocket</p>
+
+            <div class="features-showcase">
+                <div class="feature-showcase">
+                    <div class="feature-content">
+                        <h3>Pocket Magic Academy</h3>
+                        <p>Access the complete magic training system optimized for mobile devices. Learn anywhere, anytime with offline support.</p>
+                        <div class="feature-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-wifi-slash"></i>
+                                <span>Offline Learning</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Quick 5-min Lessons</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Progress Tracking</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-graduation-cap"></i>
+                            Explore Academy
+                        </button>
+                    </div>
+                    <div class="feature-mockup">
+                        <div class="phone-frame">
+                            <img src="assets/images/app-screenshots/academy-home.jpg" alt="Mobile Academy">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-showcase reverse">
+                    <div class="feature-content">
+                        <h3>Interactive Spell Practice</h3>
+                        <p>Practice spell gestures with touch controls, voice commands, and haptic feedback for immersive mobile magic training.</p>
+                        <div class="feature-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-hand-pointer"></i>
+                                <span>Touch Gestures</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-microphone"></i>
+                                <span>Voice Commands</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Haptic Feedback</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-magic"></i>
+                            Try Spell Practice
+                        </button>
+                    </div>
+                    <div class="feature-mockup">
+                        <div class="phone-frame">
+                            <img src="assets/images/app-screenshots/spell-practice.jpg" alt="Spell Practice">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-showcase">
+                    <div class="feature-content">
+                        <h3>Social Magic Challenges</h3>
+                        <p>Challenge friends to spell duels, join community events, and share your magical achievements with other fans.</p>
+                        <div class="feature-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-users"></i>
+                                <span>Friend Challenges</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Weekly Events</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>Leaderboards</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-sword"></i>
+                            Start Challenges
+                        </button>
+                    </div>
+                    <div class="feature-mockup">
+                        <div class="phone-frame">
+                            <img src="assets/images/app-screenshots/social-challenges.jpg" alt="Social Challenges">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-showcase reverse">
+                    <div class="feature-content">
+                        <h3>Character Collection & AR</h3>
+                        <p>Collect 3D character cards, view them in augmented reality, and learn about their magical abilities and backstories.</p>
+                        <div class="feature-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-cubes"></i>
+                                <span>3D Character Cards</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-eye"></i>
+                                <span>AR Viewing</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-book"></i>
+                                <span>Character Lore</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-camera"></i>
+                            Try AR Features
+                        </button>
+                    </div>
+                    <div class="feature-mockup">
+                        <div class="phone-frame">
+                            <img src="assets/images/app-screenshots/ar-characters.jpg" alt="AR Characters">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-showcase">
+                    <div class="feature-content">
+                        <h3>Smart Study Assistant</h3>
+                        <p>AI-powered learning recommendations, personalized study schedules, and intelligent progress analytics.</p>
+                        <div class="feature-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-brain"></i>
+                                <span>AI Recommendations</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>Study Reminders</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-chart-pie"></i>
+                                <span>Learning Analytics</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-robot"></i>
+                            Meet Your Assistant
+                        </button>
+                    </div>
+                    <div class="feature-mockup">
+                        <div class="phone-frame">
+                            <img src="assets/images/app-screenshots/ai-assistant.jpg" alt="AI Study Assistant">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-showcase reverse">
+                    <div class="feature-content">
+                        <h3>Interactive Reading Companion</h3>
+                        <p>Enhanced reading experience with character lookups, location maps, and spoiler-free chapter guides synced with your reading progress.</p>
+                        <div class="feature-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-book-reader"></i>
+                                <span>Reading Tracker</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <span>Interactive Maps</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-eye-slash"></i>
+                                <span>Spoiler Protection</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-bookmark"></i>
+                            Start Reading
+                        </button>
+                    </div>
+                    <div class="feature-mockup">
+                        <div class="phone-frame">
+                            <img src="assets/images/app-screenshots/reading-companion.jpg" alt="Reading Companion">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile-Specific Features -->
+    <section class="mobile-specific-features">
+        <div class="container">
+            <h2 class="section-title">Mobile-First Design</h2>
+            <p class="section-subtitle">Features designed specifically for mobile devices</p>
+
+            <div class="mobile-features-grid">
+                <div class="mobile-feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h4>Offline Mode</h4>
+                    <p>Download lessons, characters, and content for offline access. Perfect for commutes and areas with poor connectivity.</p>
+                    <div class="feature-demo">
+                        <img src="assets/images/app-features/offline-mode.gif" alt="Offline Mode Demo">
+                    </div>
+                </div>
+
+                <div class="mobile-feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h4>Smart Notifications</h4>
+                    <p>Intelligent reminders for daily practice, new content updates, and social challenges from friends.</p>
+                    <div class="feature-demo">
+                        <img src="assets/images/app-features/notifications.png" alt="Smart Notifications">
+                    </div>
+                </div>
+
+                <div class="mobile-feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h4>Dark Mode & Themes</h4>
+                    <p>Multiple theme options including dark mode, high contrast, and magical house colors for personalization.</p>
+                    <div class="feature-demo">
+                        <img src="assets/images/app-features/themes.jpg" alt="App Themes">
+                    </div>
+                </div>
+
+                <div class="mobile-feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-universal-access"></i>
+                    </div>
+                    <h4>Accessibility Features</h4>
+                    <p>Full accessibility support including voice over, high contrast modes, and gesture alternatives.</p>
+                    <div class="feature-demo">
+                        <img src="assets/images/app-features/accessibility.png" alt="Accessibility Features">
+                    </div>
+                </div>
+
+                <div class="mobile-feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4>Haptic Feedback</h4>
+                    <p>Immersive haptic feedback for spell casting, duels, and interactions that makes magic feel real.</p>
+                    <div class="feature-demo">
+                        <img src="assets/images/app-features/haptic-feedback.gif" alt="Haptic Feedback Demo">
+                    </div>
+                </div>
+
+                <div class="mobile-feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h4>AR Integration</h4>
+                    <p>Augmented reality features for viewing 3D characters, practicing spells, and exploring magical environments.</p>
+                    <div class="feature-demo">
+                        <img src="assets/images/app-features/ar-integration.jpg" alt="AR Integration">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Screenshots Gallery -->
+    <section class="app-screenshots">
+        <div class="container">
+            <h2 class="section-title">App Screenshots</h2>
+            <p class="section-subtitle">See the mobile experience in action</p>
+
+            <div class="device-tabs">
+                <button class="device-tab active" data-device="iphone">
+                    <i class="fab fa-apple"></i>
+                    iPhone
+                </button>
+                <button class="device-tab" data-device="android">
+                    <i class="fab fa-android"></i>
+                    Android
+                </button>
+                <button class="device-tab" data-device="tablet">
+                    <i class="fas fa-tablet-alt"></i>
+                    Tablet
+                </button>
+            </div>
+
+            <div class="screenshots-container">
+                <div class="screenshots-grid" data-device="iphone">
+                    <div class="screenshot-item">
+                        <div class="phone-frame iphone">
+                            <img src="assets/images/app-screenshots/ios/home-screen.jpg" alt="iOS Home Screen">
+                        </div>
+                        <h4>Home Dashboard</h4>
+                        <p>Quick access to all features</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="phone-frame iphone">
+                            <img src="assets/images/app-screenshots/ios/spell-practice.jpg" alt="iOS Spell Practice">
+                        </div>
+                        <h4>Spell Practice</h4>
+                        <p>Interactive spell training</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="phone-frame iphone">
+                            <img src="assets/images/app-screenshots/ios/character-cards.jpg" alt="iOS Character Cards">
+                        </div>
+                        <h4>Character Collection</h4>
+                        <p>3D character database</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="phone-frame iphone">
+                            <img src="assets/images/app-screenshots/ios/ar-mode.jpg" alt="iOS AR Mode">
+                        </div>
+                        <h4>AR Magic Practice</h4>
+                        <p>Augmented reality spells</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="phone-frame iphone">
+                            <img src="assets/images/app-screenshots/ios/social-hub.jpg" alt="iOS Social Hub">
+                        </div>
+                        <h4>Social Features</h4>
+                        <p>Connect with other fans</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="phone-frame iphone">
+                            <img src="assets/images/app-screenshots/ios/progress-tracker.jpg" alt="iOS Progress Tracker">
+                        </div>
+                        <h4>Progress Tracking</h4>
+                        <p>Detailed analytics</p>
+                    </div>
+                </div>
+
+                <div class="screenshots-grid" data-device="android" style="display: none;">
+                    <div class="screenshot-item">
+                        <div class="phone-frame android">
+                            <img src="assets/images/app-screenshots/android/home-screen.jpg" alt="Android Home Screen">
+                        </div>
+                        <h4>Material Design</h4>
+                        <p>Native Android experience</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="phone-frame android">
+                            <img src="assets/images/app-screenshots/android/magic-lessons.jpg" alt="Android Magic Lessons">
+                        </div>
+                        <h4>Interactive Lessons</h4>
+                        <p>Step-by-step magic training</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="phone-frame android">
+                            <img src="assets/images/app-screenshots/android/widget-collection.jpg" alt="Android Widgets">
+                        </div>
+                        <h4>Home Widgets</h4>
+                        <p>Quick access widgets</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="phone-frame android">
+                            <img src="assets/images/app-screenshots/android/dark-mode.jpg" alt="Android Dark Mode">
+                        </div>
+                        <h4>Dark Mode</h4>
+                        <p>Beautiful dark theme</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="phone-frame android">
+                            <img src="assets/images/app-screenshots/android/notifications.jpg" alt="Android Notifications">
+                        </div>
+                        <h4>Smart Notifications</h4>
+                        <p>Customizable reminders</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="phone-frame android">
+                            <img src="assets/images/app-screenshots/android/settings.jpg" alt="Android Settings">
+                        </div>
+                        <h4>Settings & Preferences</h4>
+                        <p>Personalize your experience</p>
+                    </div>
+                </div>
+
+                <div class="screenshots-grid tablet-grid" data-device="tablet" style="display: none;">
+                    <div class="screenshot-item">
+                        <div class="tablet-frame">
+                            <img src="assets/images/app-screenshots/tablet/dashboard.jpg" alt="Tablet Dashboard">
+                        </div>
+                        <h4>Split Screen Interface</h4>
+                        <p>Optimized for larger screens</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="tablet-frame">
+                            <img src="assets/images/app-screenshots/tablet/spell-laboratory.jpg" alt="Tablet Spell Lab">
+                        </div>
+                        <h4>Advanced Spell Laboratory</h4>
+                        <p>Enhanced tablet experience</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="tablet-frame">
+                            <img src="assets/images/app-screenshots/tablet/reading-mode.jpg" alt="Tablet Reading Mode">
+                        </div>
+                        <h4>Immersive Reading</h4>
+                        <p>Perfect for book exploration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section class="technical-specs">
+        <div class="container">
+            <h2 class="section-title">Technical Specifications</h2>
+            
+            <div class="specs-grid">
+                <div class="spec-category">
+                    <h3>iOS Requirements</h3>
+                    <div class="spec-list">
+                        <div class="spec-item">
+                            <i class="fab fa-apple"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">iOS Version:</span>
+                                <span class="spec-value">iOS 14.0 or later</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">Devices:</span>
+                                <span class="spec-value">iPhone 8 or newer, iPad (6th gen) or newer</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-memory"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">RAM:</span>
+                                <span class="spec-value">3GB or more recommended</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-hdd"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">Storage:</span>
+                                <span class="spec-value">2GB free space minimum</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-camera"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">AR Features:</span>
+                                <span class="spec-value">ARKit compatible device</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-category">
+                    <h3>Android Requirements</h3>
+                    <div class="spec-list">
+                        <div class="spec-item">
+                            <i class="fab fa-android"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">Android Version:</span>
+                                <span class="spec-value">Android 7.0 (API level 24) or later</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">Architecture:</span>
+                                <span class="spec-value">arm64-v8a, armeabi-v7a</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-memory"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">RAM:</span>
+                                <span class="spec-value">3GB or more recommended</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-hdd"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">Storage:</span>
+                                <span class="spec-value">2GB free space minimum</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-camera"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">AR Features:</span>
+                                <span class="spec-value">ARCore supported device</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spec-category flutter-features">
+                    <h3>Flutter Framework Benefits</h3>
+                    <div class="spec-list">
+                        <div class="spec-item">
+                            <i class="fab fa-flutter"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">Performance:</span>
+                                <span class="spec-value">Native-level performance on both platforms</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-sync"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">Updates:</span>
+                                <span class="spec-value">Simultaneous iOS and Android releases</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-palette"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">UI Consistency:</span>
+                                <span class="spec-value">Identical experience across platforms</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-rocket"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">Hot Reload:</span>
+                                <span class="spec-value">Rapid development and bug fixes</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-code"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">Codebase:</span>
+                                <span class="spec-value">Single codebase for all platforms</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Reviews -->
+    <section class="user-reviews">
+        <div class="container">
+            <h2 class="section-title">User Reviews</h2>
+            <p class="section-subtitle">What our magical community is saying</p>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <img src="assets/images/avatars/user1.jpg" alt="Sarah M.">
+                            </div>
+                            <div class="reviewer-details">
+                                <h4>Sarah M.</h4>
+                                <div class="reviewer-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="platform">iOS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-date">2 days ago</div>
+                    </div>
+                    <div class="review-content">
+                        <p>"The AR features are absolutely incredible! Seeing Skulduggery Pleasant in my living room through my phone was magical. The spell practice mode with haptic feedback makes it feel so real."</p>
+                        <div class="review-helpful">
+                            <button class="helpful-btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                Helpful (23)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <img src="assets/images/avatars/user2.jpg" alt="Alex Chen">
+                            </div>
+                            <div class="reviewer-details">
+                                <h4>Alex Chen</h4>
+                                <div class="reviewer-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="platform">Android</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-date">1 week ago</div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Love how my progress syncs between the website and mobile app. I can study magic theory during lunch breaks and then practice spells on my commute. The offline mode is a lifesaver!"</p>
+                        <div class="review-helpful">
+                            <button class="helpful-btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                Helpful (18)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <img src="assets/images/avatars/user3.jpg" alt="Emma Wilson">
+                            </div>
+                            <div class="reviewer-details">
+                                <h4>Emma Wilson</h4>
+                                <div class="reviewer-rating">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="platform">iPad</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-date">2 weeks ago</div>
+                    </div>
+                    <div class="review-content">
+                        <p>"The tablet version is fantastic for reading the books with the interactive companion features. The character lookup and spoiler-free chapter guides are brilliant. Would love to see more books added!"</p>
+                        <div class="review-helpful">
+                            <button class="helpful-btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                Helpful (15)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <img src="assets/images/avatars/user4.jpg" alt="Mike Thompson">
+                            </div>
+                            <div class="reviewer-details">
+                                <h4>Mike Thompson</h4>
+                                <div class="reviewer-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="platform">Android</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-date">3 weeks ago</div>
+                    </div>
+                    <div class="review-content">
+                        <p>"The social challenges are addictive! Competing with friends in spell duels and seeing who can master disciplines faster adds a great competitive element. The daily notifications keep me engaged."</p>
+                        <div class="review-helpful">
+                            <button class="helpful-btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                Helpful (31)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <img src="assets/images/avatars/user5.jpg" alt="Lisa Rodriguez">
+                            </div>
+                            <div class="reviewer-details">
+                                <h4>Lisa Rodriguez</h4>
+                                <div class="reviewer-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="platform">iOS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-date">1 month ago</div>
+                    </div>
+                    <div class="review-content">
+                        <p>"As someone with accessibility needs, I'm impressed by the app's attention to detail. Voice over support is excellent, and the high contrast mode makes everything readable. Truly inclusive design!"</p>
+                        <div class="review-helpful">
+                            <button class="helpful-btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                Helpful (42)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <img src="assets/images/avatars/user6.jpg" alt="David Kim">
+                            </div>
+                            <div class="reviewer-details">
+                                <h4>David Kim</h4>
+                                <div class="reviewer-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="platform">Android</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-date">1 month ago</div>
+                    </div>
+                    <div class="review-content">
+                        <p>"The integration with the upcoming UE5 game is genius! Training on mobile and seeing those skills unlock in the PC game creates an amazing ecosystem. Can't wait for the full game release!"</p>
+                        <div class="review-helpful">
+                            <button class="helpful-btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                Helpful (27)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-summary">
+                <div class="rating-breakdown">
+                    <h3>Rating Breakdown</h3>
+                    <div class="rating-bars">
+                        <div class="rating-bar">
+                            <span class="rating-label">5 stars</span>
+                            <div class="rating-progress">
+                                <div class="rating-fill" style="width: 78%"></div>
+                            </div>
+                            <span class="rating-count">78%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="rating-label">4 stars</span>
+                            <div class="rating-progress">
+                                <div class="rating-fill" style="width: 18%"></div>
+                            </div>
+                            <span class="rating-count">18%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="rating-label">3 stars</span>
+                            <div class="rating-progress">
+                                <div class="rating-fill" style="width: 3%"></div>
+                            </div>
+                            <span class="rating-count">3%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="rating-label">2 stars</span>
+                            <div class="rating-progress">
+                                <div class="rating-fill" style="width: 1%"></div>
+                            </div>
+                            <span class="rating-count">1%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="rating-label">1 star</span>
+                            <div class="rating-progress">
+                                <div class="rating-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="rating-count">0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="overall-rating">
+                    <div class="rating-score">4.8</div>
+                    <div class="rating-stars">★★★★★</div>
+                    <div class="rating-text">out of 5 stars</div>
+                    <div class="rating-count">Based on 2,847 reviews</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="download-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Begin Your Magical Journey?</h2>
+                <p>Download the SP Universe mobile app and start your adventure today</p>
+                
+                <div class="download-options">
+                    <div class="download-buttons">
+                        <a href="#" class="download-btn ios">
+                            <img src="assets/images/badges/app-store-badge.png" alt="Download on App Store">
+                        </a>
+                        <a href="#" class="download-btn android">
+                            <img src="assets/images/badges/google-play-badge.png" alt="Get it on Google Play">
+                        </a>
+                    </div>
+                    
+                    <div class="qr-codes">
+                        <div class="qr-code">
+                            <img src="assets/images/qr-codes/ios-qr.png" alt="iOS QR Code">
+                            <span>iOS App</span>
+                        </div>
+                        <div class="qr-code">
+                            <img src="assets/images/qr-codes/android-qr.png" alt="Android QR Code">
+                            <span>Android App</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <i class="fas fa-download"></i>
+                        <span>Free Download</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>No Ads</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-sync"></i>
+                        <span>Cross-Platform Sync</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-heart"></i>
+                        <span>Fan Made</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SP Universe</h3>
+                    <p>Your ultimate destination for exploring the magical world of Skulduggery Pleasant.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Mobile App</h4>
+                    <ul>
+                        <li><a href="#">Download iOS</a></li>
+                        <li><a href="#">Download Android</a></li>
+                        <li><a href="#">App Features</a></li>
+                        <li><a href="#">Beta Testing</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Platforms</h4>
+                    <ul>
+                        <li><a href="magic-system.html">Web Training</a></li>
+                        <li><a href="flutter-app.html">Mobile App</a></li>
+                        <li><a href="ue5-game.html">UE5 Game</a></li>
+                        <li><a href="#">VR Experience</a></li>
+                        <li><a href="#">AR Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="#">Forums</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Fan Art</a></li>
+                        <li><a href="#">Fan Fiction</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SP Universe. This is a fan-made mobile app dedicated to Derek Landy's Skulduggery Pleasant series. Built with Flutter.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/flutter-app.js"></script>
+</body>
+</html>

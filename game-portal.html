@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T.O.M.E. Game Integration Portal | Transmedia Experience</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/game-portal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">T.O.M.E.</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="books.html" class="nav-link">Books</a></li>
+                <li class="nav-item"><a href="characters.html" class="nav-link">Characters</a></li>
+                <li class="nav-item"><a href="magic-system.html" class="nav-link">Magic</a></li>
+                <li class="nav-item"><a href="species.html" class="nav-link">Species</a></li>
+                <li class="nav-item"><a href="codex.html" class="nav-link">Codex</a></li>
+                <li class="nav-item"><a href="game-portal.html" class="nav-link active">Game Portal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="portal-hero">
+        <div class="hero-background">
+            <div class="platform-orbits">
+                <div class="orbit web-orbit">
+                    <div class="platform-node web-node">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                </div>
+                <div class="orbit mobile-orbit">
+                    <div class="platform-node mobile-node">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                </div>
+                <div class="orbit game-orbit">
+                    <div class="platform-node game-node">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                </div>
+                <div class="orbit vr-orbit">
+                    <div class="platform-node vr-node">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="connection-lines">
+                <div class="sync-beam web-to-mobile"></div>
+                <div class="sync-beam mobile-to-game"></div>
+                <div class="sync-beam game-to-vr"></div>
+                <div class="sync-beam web-to-game"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-badge">
+                    <i class="fas fa-network-wired"></i>
+                    <span>Transmedia Experience</span>
+                </div>
+                <h1 class="hero-title">T.O.M.E. Ecosystem</h1>
+                <p class="hero-subtitle">One Universe, Multiple Platforms - Your journey through the Skulduggery Pleasant world spans web, mobile, and gaming experiences</p>
+                
+                <div class="platform-showcase">
+                    <div class="platform-card web-platform">
+                        <i class="fas fa-laptop"></i>
+                        <h3>Web Portal</h3>
+                        <p>Learn & Research</p>
+                    </div>
+                    <div class="platform-card mobile-platform">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile App</h3>
+                        <p>Train & Practice</p>
+                    </div>
+                    <div class="platform-card game-platform">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>UE5 Game</h3>
+                        <p>Experience & Apply</p>
+                    </div>
+                    <div class="platform-card vr-platform">
+                        <i class="fas fa-vr-cardboard"></i>
+                        <h3>VR Extension</h3>
+                        <p>Immerse & Master</p>
+                    </div>
+                </div>
+
+                <div class="integration-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Cross-Platform Sync</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Shared Features</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Real-Time</span>
+                        <span class="stat-label">Progress Sharing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Overview -->
+    <section class="integration-overview">
+        <div class="container">
+            <h2 class="section-title">How It All Connects</h2>
+            <p class="section-subtitle">Your magical education journey seamlessly flows between platforms</p>
+
+            <div class="journey-flow">
+                <div class="journey-step">
+                    <div class="step-number">1</div>
+                    <div class="step-platform">
+                        <i class="fas fa-laptop"></i>
+                        <h3>Web Portal - T.O.M.E.</h3>
+                    </div>
+                    <div class="step-content">
+                        <h4>Learn & Research</h4>
+                        <ul>
+                            <li>Study magical theory and lore</li>
+                            <li>Read character profiles and histories</li>
+                            <li>Take personality quizzes</li>
+                            <li>Plan your magical discipline path</li>
+                            <li>Access the complete codex</li>
+                        </ul>
+                        <div class="unlocks-next">
+                            <span>Unlocks →</span>
+                            <p>Mobile training modules based on your interests</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="journey-step">
+                    <div class="step-number">2</div>
+                    <div class="step-platform">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile App - Practice Portal</h3>
+                    </div>
+                    <div class="step-content">
+                        <h4>Train & Practice</h4>
+                        <ul>
+                            <li>Daily magical discipline training</li>
+                            <li>Interactive spell practice sessions</li>
+                            <li>Character development challenges</li>
+                            <li>Social features and competitions</li>
+                            <li>Offline study materials</li>
+                        </ul>
+                        <div class="unlocks-next">
+                            <span>Unlocks →</span>
+                            <p>Enhanced abilities and spells in the UE5 game</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="journey-step">
+                    <div class="step-number">3</div>
+                    <div class="step-platform">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>UE5 Game - Immersive World</h3>
+                    </div>
+                    <div class="step-content">
+                        <h4>Experience & Apply</h4>
+                        <ul>
+                            <li>Use trained abilities in 3D combat</li>
+                            <li>Explore iconic locations</li>
+                            <li>Interact with beloved characters</li>
+                            <li>Complete original storylines</li>
+                            <li>Participate in multiplayer adventures</li>
+                        </ul>
+                        <div class="unlocks-next">
+                            <span>Unlocks →</span>
+                            <p>VR experiences and advanced features</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="journey-step">
+                    <div class="step-number">4</div>
+                    <div class="step-platform">
+                        <i class="fas fa-vr-cardboard"></i>
+                        <h3>VR Extension - Total Immersion</h3>
+                    </div>
+                    <div class="step-content">
+                        <h4>Immerse & Master</h4>
+                        <ul>
+                            <li>Full-body magical gesture casting</li>
+                            <li>1:1 scale magical environments</li>
+                            <li>Direct character interaction</li>
+                            <li>Advanced training simulations</li>
+                            <li>Master-level skill development</li>
+                        </ul>
+                        <div class="unlocks-next">
+                            <span>Achievement →</span>
+                            <p>Complete mastery across all platforms</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cross-Platform Features -->
+    <section class="cross-platform-features">
+        <div class="container">
+            <h2 class="section-title">Shared Features & Synchronization</h2>
+            
+            <div class="sync-categories">
+                <div class="sync-category character-sync">
+                    <div class="category-header">
+                        <i class="fas fa-user-circle"></i>
+                        <h3>Character Development</h3>
+                    </div>
+                    <div class="sync-features">
+                        <div class="feature-item">
+                            <h4>🎭 Unified Character Profile</h4>
+                            <p>Your character, abilities, and progress sync across all platforms. Personality quiz results influence game character creation and mobile app customization.</p>
+                            <div class="sync-flow">
+                                <span class="platform">Web Quiz</span>
+                                <i class="fas fa-arrow-right"></i>
+                                <span class="platform">Mobile Profile</span>
+                                <i class="fas fa-arrow-right"></i>
+                                <span class="platform">Game Character</span>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <h4>⚡ Magic Discipline Progression</h4>
+                            <p>Choose your magical path on the web, train skills on mobile, and use enhanced abilities in the game. Your discipline mastery level affects power and available techniques.</p>
+                            <div class="progression-example">
+                                <div class="prog-step">
+                                    <span class="prog-platform">Web</span>
+                                    <span class="prog-action">Study Elemental Theory</span>
+                                </div>
+                                <div class="prog-step">
+                                    <span class="prog-platform">Mobile</span>
+                                    <span class="prog-action">Practice Fire Manipulation</span>
+                                </div>
+                                <div class="prog-step">
+                                    <span class="prog-platform">Game</span>
+                                    <span class="prog-action">Cast Advanced Fireballs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sync-category knowledge-sync">
+                    <div class="category-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>Knowledge & Lore</h3>
+                    </div>
+                    <div class="sync-features">
+                        <div class="feature-item">
+                            <h4>📚 Research Integration</h4>
+                            <p>Information learned on the web unlocks new content in mobile and game. Character relationships, location knowledge, and magical theory all carry forward.</p>
+                            <div class="knowledge-unlock">
+                                <div class="unlock-trigger">Read about Necromancy on Web</div>
+                                <div class="unlock-results">
+                                    <span>Mobile: Unlock Necromancy Training Modules</span>
+                                    <span>Game: Access to Necromancy-based Questlines</span>
+                                    <span>VR: Advanced Necromancy Simulation</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <h4>🗺️ Location Familiarity</h4>
+                            <p>Study locations in the codex, practice navigation on mobile, then explore with enhanced knowledge in the game. Familiar locations provide gameplay bonuses.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sync-category social-sync">
+                    <div class="category-header">
+                        <i class="fas fa-users"></i>
+                        <h3>Social & Community</h3>
+                    </div>
+                    <div class="sync-features">
+                        <div class="feature-item">
+                            <h4>👥 Friend Networks</h4>
+                            <p>Connect with friends across all platforms. Form study groups on web, train together on mobile, and adventure as a team in the game.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <h4>🏆 Achievement System</h4>
+                            <p>Unified achievement system tracks accomplishments across all platforms. Complete challenges anywhere to unlock rewards everywhere.</p>
+                            <div class="achievement-examples">
+                                <div class="achievement">
+                                    <i class="fas fa-medal"></i>
+                                    <span>Lore Master</span>
+                                    <small>Read 100 character profiles</small>
+                                </div>
+                                <div class="achievement">
+                                    <i class="fas fa-fire"></i>
+                                    <span>Elemental Adept</span>
+                                    <small>Master all 6 elements on mobile</small>
+                                </div>
+                                <div class="achievement">
+                                    <i class="fas fa-sword"></i>
+                                    <span>Combat Veteran</span>
+                                    <small>Win 50 duels in UE5 game</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Integration -->
+    <section class="technical-integration">
+        <div class="container">
+            <h2 class="section-title">Technical Architecture</h2>
+            <p class="section-subtitle">How we make the magic happen behind the scenes</p>
+
+            <div class="tech-architecture">
+                <div class="architecture-layer cloud-layer">
+                    <h3>☁️ Cloud Infrastructure</h3>
+                    <div class="tech-components">
+                        <div class="component">
+                            <h4>User Profiles & Progress</h4>
+                            <p>Secure cloud storage for all character data, progress, achievements, and preferences using Firebase/AWS</p>
+                        </div>
+                        <div class="component">
+                            <h4>Real-Time Synchronization</h4>
+                            <p>Instant sync across all platforms using WebSocket connections and real-time databases</p>
+                        </div>
+                        <div class="component">
+                            <h4>Cross-Platform API</h4>
+                            <p>RESTful API endpoints that serve data to web, mobile, and game clients consistently</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="architecture-layer platform-layer">
+                    <h3>📱 Platform Technologies</h3>
+                    <div class="platform-techs">
+                        <div class="tech-platform">
+                            <h4>Web Portal (T.O.M.E.)</h4>
+                            <div class="tech-stack">
+                                <span class="tech-item">HTML5/CSS3/JavaScript</span>
+                                <span class="tech-item">Progressive Web App</span>
+                                <span class="tech-item">Responsive Design</span>
+                                <span class="tech-item">WebSocket Integration</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-platform">
+                            <h4>Mobile Application</h4>
+                            <div class="tech-stack">
+                                <span class="tech-item">Flutter Framework</span>
+                                <span class="tech-item">Cross-Platform (iOS/Android)</span>
+                                <span class="tech-item">Offline Capability</span>
+                                <span class="tech-item">Push Notifications</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-platform">
+                            <h4>UE5 Game</h4>
+                            <div class="tech-stack">
+                                <span class="tech-item">Unreal Engine 5</span>
+                                <span class="tech-item">Cross-Platform Gaming</span>
+                                <span class="tech-item">Multiplayer Networking</span>
+                                <span class="tech-item">VR/AR Ready</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="architecture-layer data-layer">
+                    <h3>💾 Data Synchronization</h3>
+                    <div class="sync-mechanisms">
+                        <div class="sync-type">
+                            <h4>Character Data Sync</h4>
+                            <p>Personality traits, magical discipline choices, skill levels, and character customization options</p>
+                            <div class="sync-frequency">Updates: Real-time</div>
+                        </div>
+                        
+                        <div class="sync-type">
+                            <h4>Progress Tracking</h4>
+                            <p>Learning progress, training completion, quest status, and achievement unlocks</p>
+                            <div class="sync-frequency">Updates: Every 30 seconds</div>
+                        </div>
+                        
+                        <div class="sync-type">
+                            <h4>Social Features</h4>
+                            <p>Friend lists, group memberships, leaderboards, and shared activities</p>
+                            <div class="sync-frequency">Updates: Real-time</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Deep Dive -->
+    <section class="platform-deep-dive">
+        <div class="container">
+            <h2 class="section-title">Platform-Specific Features</h2>
+            
+            <div class="platform-tabs">
+                <button class="tab-btn active" data-platform="web">Web Portal</button>
+                <button class="tab-btn" data-platform="mobile">Mobile App</button>
+                <button class="tab-btn" data-platform="game">UE5 Game</button>
+                <button class="tab-btn" data-platform="vr">VR Extension</button>
+            </div>
+
+            <div class="platform-content">
+                <div class="platform-panel active" id="web-panel">
+                    <div class="panel-header">
+                        <i class="fas fa-laptop"></i>
+                        <h3>Web Portal - T.O.M.E.</h3>
+                        <p>The comprehensive knowledge base and starting point for your magical education</p>
+                    </div>
+                    
+                    <div class="features-grid">
+                        <div class="feature-category">
+                            <h4>📚 Educational Content</h4>
+                            <ul>
+                                <li>Complete magical discipline guides</li>
+                                <li>Character profiles and relationships</li>
+                                <li>Historical timelines and events</li>
+                                <li>Interactive personality assessments</li>
+                                <li>Magical theory and scientific principles</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="feature-category">
+                            <h4>🎯 Planning Tools</h4>
+                            <ul>
+                                <li>Discipline selection wizard</li>
+                                <li>Character build planner</li>
+                                <li>Learning path recommendations</li>
+                                <li>Goal setting and tracking</li>
+                                <li>Progress visualization</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="feature-category">
+                            <h4>🌐 Integration Hub</h4>
+                            <ul>
+                                <li>Account management and sync settings</li>
+                                <li>Mobile app download and setup</li>
+                                <li>Game account linking</li>
+                                <li>Cross-platform achievement viewing</li>
+                                <li>Community forum access</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="unique-advantages">
+                        <h4>Web-Specific Advantages:</h4>
+                        <div class="advantage-list">
+                            <div class="advantage">
+                                <i class="fas fa-desktop"></i>
+                                <span>Large screen real estate for detailed information display</span>
+                            </div>
+                            <div class="advantage">
+                                <i class="fas fa-keyboard"></i>
+                                <span>Full keyboard input for detailed character creation</span>
+                            </div>
+                            <div class="advantage">
+                                <i class="fas fa-link"></i>
+                                <span>Rich hyperlink navigation between related concepts</span>
+                            </div>
+                            <div class="advantage">
+                                <i class="fas fa-search"></i>
+                                <span>Powerful search and filter capabilities</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="platform-panel" id="mobile-panel">
+                    <div class="panel-header">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile App - Practice Portal</h3>
+                        <p>Daily training and skill development in your pocket</p>
+                    </div>
+                    
+                    <div class="features-grid">
+                        <div class="feature-category">
+                            <h4>🏃‍♂️ Training Modules</h4>
+                            <ul>
+                                <li>Daily discipline-specific exercises</li>
+                                <li>Progressive skill challenges</li>
+                                <li>Timed reaction training</li>
+                                <li>Memory and focus games</li>
+                                <li>Gesture-based spell practice</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="feature-category">
+                            <h4>📱 Mobile-Optimized Features</h4>
+                            <ul>
+                                <li>Touch and swipe spell casting</li>
+                                <li>Camera-based AR spell effects</li>
+                                <li>Haptic feedback for magical energy</li>
+                                <li>Voice recognition for incantations</li>
+                                <li>Offline training mode</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="feature-category">
+                            <h4>👥 Social Training</h4>
+                            <ul>
+                                <li>Friend challenges and competitions</li>
+                                <li>Guild-based group training</li>
+                                <li>Real-time multiplayer mini-games</li>
+                                <li>Leaderboards and rankings</li>
+                                <li>Achievement sharing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="app-screenshots">
+                        <div class="screenshot-mockup">
+                            <div class="phone-frame">
+                                <div class="screen-content">
+                                    <div class="app-interface">
+                                        <div class="training-session">
+                                            <h5>Fire Manipulation Training</h5>
+                                            <div class="progress-ring">
+                                                <span>Level 12</span>
+                                            </div>
+                                            <p>Master the flame orb creation technique</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="platform-panel" id="game-panel">
+                    <div class="panel-header">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>UE5 Game - Immersive World</h3>
+                        <p>Experience the Skulduggery Pleasant universe in stunning 3D</p>
+                    </div>
+                    
+                    <div class="features-grid">
+                        <div class="feature-category">
+                            <h4>🎮 Core Gameplay</h4>
+                            <ul>
+                                <li>Third-person magical combat</li>
+                                <li>Open-world exploration</li>
+                                <li>Story-driven campaigns</li>
+                                <li>Character interaction dialogues</li>
+                                <li>Puzzle-solving using magic</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="feature-category">
+                            <h4>⚔️ Combat System</h4>
+                            <ul>
+                                <li>Discipline-based spell combinations</li>
+                                <li>Environmental interaction magic</li>
+                                <li>PvP and PvE magical duels</li>
+                                <li>Team-based magical tactics</li>
+                                <li>Dynamic spell effects and physics</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="feature-category">
+                            <h4>🌍 World Features</h4>
+                            <ul>
+                                <li>Iconic locations from the books</li>
+                                <li>Original areas and expansions</li>
+                                <li>Day/night cycle affecting magic</li>
+                                <li>Weather systems and seasons</li>
+                                <li>Hidden secrets and Easter eggs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="game-integration-benefits">
+                        <h4>How Your Training Enhances Gameplay:</h4>
+                        <div class="benefit-showcase">
+                            <div class="integration-example">
+                                <div class="training-input">
+                                    <h5>Mobile Training Completed:</h5>
+                                    <span>Fire Manipulation - Level 15</span>
+                                </div>
+                                <div class="game-output">
+                                    <h5>Game Enhancement:</h5>
+                                    <ul>
+                                        <li>15% increased fire spell damage</li>
+                                        <li>Unlock advanced fire spell combos</li>
+                                        <li>Reduced casting time for fire magic</li>
+                                        <li>Special fire-based questlines available</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="platform-panel" id="vr-panel">
+                    <div class="panel-header">
+                        <i class="fas fa-vr-cardboard"></i>
+                        <h3>VR Extension - Total Immersion</h3>
+                        <p>Step into the magical world with full-body immersion</p>
+                    </div>
+                    
+                    <div class="features-grid">
+                        <div class="feature-category">
+                            <h4>🤲 Natural Magic Casting</h4>
+                            <ul>
+                                <li>Hand tracking for precise gestures</li>
+                                <li>Voice commands for incantations</li>
+                                <li>Full-body movement magic</li>
+                                <li>Eye tracking for focus targeting</li>
+                                <li>Haptic feedback magical sensations</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="feature-category">
+                            <h4>🌟 Immersive Training</h4>
+                            <ul>
+                                <li>1:1 scale magical environments</li>
+                                <li>Direct character mentorship</li>
+                                <li>Realistic spell component handling</li>
+                                <li>Environmental magic interactions</li>
+                                <li>Advanced combat simulations</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="feature-category">
+                            <h4>🎭 Character Interaction</h4>
+                            <ul>
+                                <li>Face-to-face conversations with SP characters</li>
+                                <li>Emotional recognition and responses</li>
+                                <li>Collaborative spell casting with NPCs</li>
+                                <li>Mentorship programs with masters</li>
+                                <li>Social VR magical gatherings</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="vr-requirements">
+                        <h4>VR Setup Requirements:</h4>
+                        <div class="requirements-grid">
+                            <div class="req-category">
+                                <h5>Minimum Specs</h5>
+                                <ul>
+                                    <li>Oculus Quest 2 or equivalent</li>
+                                    <li>6DOF tracking capability</li>
+                                    <li>Hand tracking support</li>
+                                    <li>4x4m play space recommended</li>
+                                </ul>
+                            </div>
+                            <div class="req-category">
+                                <h5>Optimal Experience</h5>
+                                <ul>
+                                    <li>High-end VR headset (Index, Quest Pro)</li>
+                                    <li>Full-body tracking system</li>
+                                    <li>Haptic feedback suit</li>
+                                    <li>Large dedicated VR room</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Roadmap -->
+    <section class="implementation-roadmap">
+        <div class="container">
+            <h2 class="section-title">Development Roadmap</h2>
+            <p class="section-subtitle">Our phased approach to building the complete transmedia experience</p>
+
+            <div class="roadmap-timeline">
+                <div class="phase completed">
+                    <div class="phase-marker">
+                        <i class="fas fa-check"></i>
+                        <span class="phase-number">Phase 1</span>
+                    </div>
+                    <div class="phase-content">
+                        <h3>Foundation Platform (Completed)</h3>
+                        <p class="phase-date">January - September 2025</p>
+                        <div class="phase-deliverables">
+                            <div class="deliverable completed">✅ T.O.M.E. Web Portal</div>
+                            <div class="deliverable completed">✅ Character Database & Profiles</div>
+                            <div class="deliverable completed">✅ Magic System Documentation</div>
+                            <div class="deliverable completed">✅ Interactive Personality Quiz</div>
+                            <div class="deliverable completed">✅ Cross-Platform Account System</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase active">
+                    <div class="phase-marker">
+                        <i class="fas fa-cog fa-spin"></i>
+                        <span class="phase-number">Phase 2</span>
+                    </div>
+                    <div class="phase-content">
+                        <h3>Mobile Integration (In Progress)</h3>
+                        <p class="phase-date">October 2025 - February 2026</p>
+                        <div class="phase-deliverables">
+                            <div class="deliverable completed">✅ Flutter App Framework</div>
+                            <div class="deliverable in-progress">🔄 Training Module System</div>
+                            <div class="deliverable pending">📋 Social Features Implementation</div>
+                            <div class="deliverable pending">📋 AR Spell Visualization</div>
+                            <div class="deliverable pending">📋 Offline Mode & Sync</div>
+                        </div>
+                        <div class="phase-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                            <span class="progress-text">60% Complete</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase upcoming">
+                    <div class="phase-marker">
+                        <i class="fas fa-gamepad"></i>
+                        <span class="phase-number">Phase 3</span>
+                    </div>
+                    <div class="phase-content">
+                        <h3>UE5 Game Launch</h3>
+                        <p class="phase-date">March - August 2026</p>
+                        <div class="phase-deliverables">
+                            <div class="deliverable pending">📋 Core Game Mechanics</div>
+                            <div class="deliverable pending">📋 Single-Player Campaign</div>
+                            <div class="deliverable pending">📋 Multiplayer Framework</div>
+                            <div class="deliverable pending">📋 Cross-Platform Data Integration</div>
+                            <div class="deliverable pending">📋 Beta Testing Program</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase future">
+                    <div class="phase-marker">
+                        <i class="fas fa-vr-cardboard"></i>
+                        <span class="phase-number">Phase 4</span>
+                    </div>
+                    <div class="phase-content">
+                        <h3>VR Enhancement</h3>
+                        <p class="phase-date">September 2026 - March 2027</p>
+                        <div class="phase-deliverables">
+                            <div class="deliverable future">🔮 VR Training Modules</div>
+                            <div class="deliverable future">🔮 Immersive Character Interactions</div>
+                            <div class="deliverable future">🔮 Full-Body Magic Casting</div>
+                            <div class="deliverable future">🔮 Social VR Experiences</div>
+                            <div class="deliverable future">🔮 Advanced Haptic Feedback</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Started Section -->
+    <section class="get-started">
+        <div class="container">
+            <h2 class="section-title">Start Your Magical Journey</h2>
+            <p class="section-subtitle">Choose your entry point into the T.O.M.E. ecosystem</p>
+
+            <div class="entry-options">
+                <div class="entry-option recommended">
+                    <div class="option-badge">Recommended</div>
+                    <div class="option-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Complete Experience</h3>
+                    <p>Start with the web portal, get the mobile app, then join the game when ready</p>
+                    <div class="option-steps">
+                        <div class="step">1. Take the personality quiz</div>
+                        <div class="step">2. Download the mobile app</div>
+                        <div class="step">3. Begin daily training</div>
+                        <div class="step">4. Join the game beta</div>
+                    </div>
+                    <button class="btn btn-primary">Begin Journey</button>
+                </div>
+
+                <div class="entry-option">
+                    <div class="option-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile First</h3>
+                    <p>Jump straight into training with our mobile app</p>
+                    <div class="option-benefits">
+                        <span>✨ Instant training access</span>
+                        <span>📱 On-the-go learning</span>
+                        <span>🏆 Quick achievement unlocks</span>
+                    </div>
+                    <button class="btn btn-secondary">Download App</button>
+                </div>
+
+                <div class="entry-option">
+                    <div class="option-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Game Beta</h3>
+                    <p>Jump into the UE5 game beta testing program</p>
+                    <div class="option-benefits">
+                        <span>🎮 Early access gaming</span>
+                        <span>🔥 Immediate action</span>
+                        <span>👥 Beta community</span>
+                    </div>
+                    <button class="btn btn-outline">Join Beta</button>
+                </div>
+            </div>
+
+            <div class="platform-links">
+                <a href="ue5-game.html" class="platform-link">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Learn about the UE5 Game</span>
+                </a>
+                <a href="flutter-app.html" class="platform-link">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Explore the Mobile App</span>
+                </a>
+                <a href="quiz.html" class="platform-link">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Take the Personality Quiz</span>
+                </a>
+                <a href="magic-system.html" class="platform-link">
+                    <i class="fas fa-magic"></i>
+                    <span>Study the Magic System</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>T.O.M.E. Ecosystem</h3>
+                <p>The complete transmedia experience for Skulduggery Pleasant fans across web, mobile, and gaming platforms.</p>
+                <div class="platform-badges">
+                    <span class="badge web">Web Portal</span>
+                    <span class="badge mobile">Mobile App</span>
+                    <span class="badge game">UE5 Game</span>
+                    <span class="badge vr">VR Ready</span>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Platforms</h3>
+                <ul>
+                    <li><a href="index.html">Web Portal</a></li>
+                    <li><a href="flutter-app.html">Mobile App</a></li>
+                    <li><a href="ue5-game.html">UE5 Game</a></li>
+                    <li><a href="#vr">VR Extension</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Features</h3>
+                <ul>
+                    <li><a href="quiz.html">Personality Quiz</a></li>
+                    <li><a href="characters.html">Character Profiles</a></li>
+                    <li><a href="magic-system.html">Magic Training</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Community</h3>
+                <ul>
+                    <li><a href="#forums">Discussion Forums</a></li>
+                    <li><a href="#discord">Discord Server</a></li>
+                    <li><a href="#events">Community Events</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 T.O.M.E. - The Omniverse of Magical Education. Transmedia fan experience.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/game-portal.js"></script>
+</body>
+</html>

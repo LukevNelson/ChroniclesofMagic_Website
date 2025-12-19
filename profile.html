@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Magical Profile - T.O.M.E.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>T.O.M.E.</h1>
+                <span>The Omniverse of Magical Education</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="quiz.html" class="nav-link">Take Quiz</a></li>
+                <li><a href="lore.html" class="nav-link">Lore</a></li>
+                <li><a href="disciplines.html" class="nav-link">Disciplines</a></li>
+                <li><a href="species.html" class="nav-link">Species</a></li>
+                <li><a href="database.html" class="nav-link">Player Database</a></li>
+                <li><a href="index.html#universe" class="nav-link">Universe</a></li>
+                <li><a href="index.html#app" class="nav-link">Mobile App</a></li>
+                <li><a href="index.html#game" class="nav-link">Fan Project</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Container -->
+    <div class="profile-container">
+        <!-- Profile sync banner (encourages linking web profile to Project TOME game) -->
+        <div id="profile-sync-banner" style="display:none;position:relative;margin-bottom:18px;">
+            <div id="profile-sync-inner" style="background:linear-gradient(90deg,#0f1724,#1f2937);color:#fff;padding:16px;border-radius:10px;border:1px solid rgba(212,175,55,0.15);display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+                <div style="flex:1;min-width:220px;">
+                    <strong>Link your web profile with Project TOME</strong>
+                    <div style="opacity:0.9;margin-top:6px;font-size:13px;">Connect this profile to the game to import stats and unlock game features.</div>
+                </div>
+                <div style="display:flex;gap:8px;align-items:center;">
+                    <button id="profile-sync-yes" class="btn btn-primary">Yes — I've synced</button>
+                    <button id="profile-sync-no" class="btn btn-outline">No — I need help</button>
+                    <button id="profile-sync-later" class="btn btn-secondary">Maybe later</button>
+                </div>
+            </div>
+            <div id="profile-sync-followup" style="display:none;margin-top:10px;background:#0b1220;border-radius:8px;padding:12px;border:1px solid rgba(255,255,255,0.03);">
+                <div style="margin-bottom:8px;color:#ddd">Want to start syncing now? You can export your profile JSON to import into the game, or copy it to the clipboard.</div>
+                <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                    <button id="profile-export-copy" class="btn btn-outline">Copy JSON to clipboard</button>
+                    <button id="profile-export-download" class="btn btn-primary">Download JSON</button>
+                    <button id="profile-export-start-sync" class="btn btn-secondary">Start Sync Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <!-- Profile Header -->
+            <section class="profile-header">
+                <div class="profile-avatar">
+                    <div class="avatar-circle">
+                        <div class="avatar-content" id="avatar-content">
+                            <!-- Avatar will be generated based on species -->
+                        </div>
+                    </div>
+                    <div class="magical-aura" id="magical-aura"></div>
+                </div>
+                
+                <div class="profile-identity">
+                    <h1 class="true-name" id="profile-true-name">Loading...</h1>
+                    <h2 class="taken-name" id="profile-taken-name">Loading...</h2>
+                    <div class="given-name" id="profile-given-name">Loading...</div>
+                    <div class="profile-badges">
+                        <span class="badge species-badge" id="species-badge">Human</span>
+                        <span class="badge discipline-badge" id="discipline-badge">Elemental</span>
+                        <span class="badge alignment-badge" id="alignment-badge">Light</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Stats -->
+            <section class="profile-stats">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🔥</div>
+                        <div class="stat-info">
+                            <h3>Elemental Affinity</h3>
+                            <div class="stat-bar">
+                                <div class="stat-fill" id="elemental-stat"></div>
+                            </div>
+                            <span class="stat-value" id="elemental-value">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">✨</div>
+                        <div class="stat-info">
+                            <h3>Adept Mastery</h3>
+                            <div class="stat-bar">
+                                <div class="stat-fill" id="adept-stat"></div>
+                            </div>
+                            <span class="stat-value" id="adept-value">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">⚔️</div>
+                        <div class="stat-info">
+                            <h3>Aggressiveness</h3>
+                            <div class="stat-bar">
+                                <div class="stat-fill" id="aggressive-stat"></div>
+                            </div>
+                            <span class="stat-value" id="aggressive-value">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">🛡️</div>
+                        <div class="stat-info">
+                            <h3>Defensiveness</h3>
+                            <div class="stat-bar">
+                                <div class="stat-fill" id="defensive-stat"></div>
+                            </div>
+                            <span class="stat-value" id="defensive-value">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">📚</div>
+                        <div class="stat-info">
+                            <h3>Scholarly Nature</h3>
+                            <div class="stat-bar">
+                                <div class="stat-fill" id="scholarly-stat"></div>
+                            </div>
+                            <span class="stat-value" id="scholarly-value">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">🔮</div>
+                        <div class="stat-info">
+                            <h3>Intuitive Power</h3>
+                            <div class="stat-bar">
+                                <div class="stat-fill" id="intuitive-stat"></div>
+                            </div>
+                            <span class="stat-value" id="intuitive-value">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">👑</div>
+                        <div class="stat-info">
+                            <h3>Leadership</h3>
+                            <div class="stat-bar">
+                                <div class="stat-fill" id="leader-stat"></div>
+                            </div>
+                            <span class="stat-value" id="leader-value">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">🌟</div>
+                        <div class="stat-info">
+                            <h3>Light Alignment</h3>
+                            <div class="stat-bar">
+                                <div class="stat-fill" id="light-stat"></div>
+                            </div>
+                            <span class="stat-value" id="light-value">0</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Abilities Section -->
+            <section class="profile-abilities">
+                <h2 class="section-title">Magical Abilities</h2>
+                <div class="abilities-grid" id="abilities-grid">
+                    <!-- Abilities will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Character Details -->
+            <section class="profile-details">
+                <div class="details-grid">
+                    <div class="detail-card">
+                        <h3>Personal Information</h3>
+                        <div class="detail-content">
+                            <div class="detail-row">
+                                <span class="detail-label">Age:</span>
+                                <span class="detail-value" id="profile-age">Unknown</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Species:</span>
+                                <span class="detail-value" id="profile-species">Unknown</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Primary Discipline:</span>
+                                <span class="detail-value" id="profile-discipline">Unknown</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Alignment:</span>
+                                <span class="detail-value" id="profile-alignment">Unknown</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Leadership Style:</span>
+                                <span class="detail-value" id="profile-leadership">Unknown</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <h3>Magical Profile</h3>
+                        <div class="detail-content">
+                            <div class="detail-row">
+                                <span class="detail-label">Combat Style:</span>
+                                <span class="detail-value" id="combat-style">Unknown</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Preferred Magic:</span>
+                                <span class="detail-value" id="preferred-magic">Unknown</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Weakness:</span>
+                                <span class="detail-value" id="weakness">Unknown</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Greatest Strength:</span>
+                                <span class="detail-value" id="greatest-strength">Unknown</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Sanctuary Relationship:</span>
+                                <span class="detail-value" id="sanctuary-relationship">Unknown</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Character Description -->
+            <section class="profile-description">
+                <h2 class="section-title">Character Analysis</h2>
+                <div class="description-card">
+                    <div class="description-content" id="character-description">
+                        <!-- Description will be generated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Actions Section -->
+            <section class="profile-actions">
+                <div class="actions-grid">
+                    <button class="btn btn-primary" onclick="shareProfile()">
+                        <span class="btn-icon">📤</span>
+                        Share Profile
+                    </button>
+                    <button class="btn btn-outline" onclick="downloadProfile()">
+                        <span class="btn-icon">💾</span>
+                        Download Profile
+                    </button>
+                    <button class="btn btn-outline" onclick="downloadProfileForUnreal()">
+                        <span class="btn-icon">🎮</span>
+                        Export for Unreal
+                    </button>
+                    <button class="btn btn-secondary" onclick="editProfile()">
+                        <span class="btn-icon">✏️</span>
+                        Retake Quiz
+                    </button>
+                    <button class="btn btn-outline" onclick="viewDatabase()">
+                        <span class="btn-icon">👥</span>
+                        View All Players
+                    </button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/truename-generator.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/profile-pairing.js"></script>
+    <script>
+        // Profile sync banner logic
+        (function(){
+            const STORAGE_KEY = 'tome_profile_sync';
+            function readState(){
+                try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null'); } catch(e){ return null; }
+            }
+            function writeState(s){ try { localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); } catch(e){} }
+
+            function shouldShowBanner(state){
+                if (!state) return true;
+                if (state.status === 'synced') return false;
+                if (state.status === 'snoozed' && state.snoozeUntil && Date.now() < state.snoozeUntil) return false;
+                return true;
+            }
+
+            function hideBanner(){ const b = document.getElementById('profile-sync-banner'); if(b) b.style.display='none'; }
+            function showBanner(){ const b = document.getElementById('profile-sync-banner'); if(b) b.style.display='block'; }
+
+            function getProfileForExport(){
+                // Uses global currentProfile from profile.js
+                if (typeof currentProfile === 'object' && currentProfile) return currentProfile;
+                return null;
+            }
+
+            function copyProfileJson(){
+                const p = getProfileForExport();
+                if (!p) { alert('No profile available to export'); return; }
+                const data = JSON.stringify({ profile: p, exportedAt: new Date().toISOString() }, null, 2);
+                navigator.clipboard.writeText(data).then(()=>{
+                    showNotification('Profile JSON copied to clipboard', 'success');
+                }).catch(()=>{
+                    prompt('Copy the profile JSON manually', data);
+                });
+            }
+
+            function downloadProfileJson(){
+                const p = getProfileForExport();
+                if (!p) { alert('No profile available to download'); return; }
+                const payload = JSON.stringify({ profile: p, exportedAt: new Date().toISOString() }, null, 2);
+                const blob = new Blob([payload], { type: 'application/json' });
+                const a = document.createElement('a');
+                a.href = URL.createObjectURL(blob);
+                a.download = `${(p.takenFirstName||'profile')}_${(p.takenLastName||'')}_tome.json`;
+                a.click();
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const banner = document.getElementById('profile-sync-banner');
+                if (!banner) return;
+
+                // Wire up buttons
+                document.getElementById('profile-sync-yes').addEventListener('click', () => {
+                    writeState({ status: 'synced', at: Date.now() });
+                    hideBanner();
+                    showNotification('Thanks — your profile is marked as linked to Project TOME.', 'success');
+                });
+
+                document.getElementById('profile-sync-no').addEventListener('click', () => {
+                    // Show followup actions
+                    const f = document.getElementById('profile-sync-followup');
+                    if (f) f.style.display = 'block';
+                });
+
+                document.getElementById('profile-sync-later').addEventListener('click', () => {
+                    // Snooze for 24 hours
+                    const snoozeMs = 24 * 60 * 60 * 1000;
+                    writeState({ status: 'snoozed', snoozeUntil: Date.now() + snoozeMs });
+                    hideBanner();
+                    showNotification('Remind you later — we will prompt again soon.', 'info');
+                });
+
+                document.getElementById('profile-export-copy').addEventListener('click', () => {
+                    copyProfileJson();
+                });
+                document.getElementById('profile-export-download').addEventListener('click', () => {
+                    downloadProfileJson();
+                });
+                document.getElementById('profile-export-start-sync').addEventListener('click', () => {
+                    // For now, treat this as the user starting sync: show export options and mark as syncing requested
+                    const p = getProfileForExport();
+                    if (!p) { alert('No profile to sync'); return; }
+                    // Save a flag that user requested sync; actual game-side linking is external
+                    writeState({ status: 'requested-sync', at: Date.now(), profileId: p.id || null });
+                    hideBanner();
+                    showNotification('Sync requested. Follow the game instructions to complete the import.', 'success');
+                });
+
+                // Decide whether to show banner
+                const state = readState();
+                if (shouldShowBanner(state)) showBanner(); else hideBanner();
+            });
+        })();
+    </script>
+</body>
+</html>

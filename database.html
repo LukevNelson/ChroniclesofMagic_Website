@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Database - T.O.M.E.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/database.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>T.O.M.E.</h1>
+                <span>The Omniverse of Magical Education</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="quiz.html" class="nav-link">Take Quiz</a></li>
+                <li><a href="lore.html" class="nav-link">Lore</a></li>
+                <li><a href="disciplines.html" class="nav-link">Disciplines</a></li>
+                <li><a href="species.html" class="nav-link">Species</a></li>
+                <li><a href="database.html" class="nav-link active">Player Database</a></li>
+                <li><a href="index.html#universe" class="nav-link">Universe</a></li>
+                <li><a href="index.html#app" class="nav-link">Mobile App</a></li>
+                <li><a href="index.html#game" class="nav-link">Fan Project</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Database Container -->
+    <div class="database-container">
+        <div class="container">
+            <!-- Header Section -->
+            <section class="database-header">
+                <h1>Magical Beings Database</h1>
+                <p>Discover the magical identities of fellow sorcerers, mages, and mystical beings</p>
+                
+                <!-- Statistics -->
+                <div class="database-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" id="total-profiles">0</div>
+                        <div class="stat-label">Total Profiles</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="total-species">0</div>
+                        <div class="stat-label">Species Types</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="total-disciplines">0</div>
+                        <div class="stat-label">Disciplines</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="newest-profile">0</div>
+                        <div class="stat-label">Hours Since Last Join</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Character Creation Section -->
+            <section class="character-creation-section">
+                <h2>Create Your Magical Identity</h2>
+                <p>Join the magical community by creating your own character profile</p>
+                
+                <div class="creation-options">
+                    <a href="quiz.html" class="creation-card primary-card">
+                        <div class="creation-icon">🎭</div>
+                        <div class="creation-title">Create Your Character</div>
+                        <div class="creation-description">
+                            Complete the Skulduggery Pleasant personality quiz and build your game-ready character with magical discipline selection and gameplay preview.
+                        </div>
+                        <div class="creation-features">
+                            ✨ Personality-based character creation<br>
+                            ✨ Choose your magical discipline<br>
+                            ✨ See gameplay impact preview<br>
+                            ✨ Full game integration ready<br>
+                            ✨ Cross-device cloud sync
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Search and Filter Section -->
+            <section class="database-controls">
+                <div class="search-section">
+                    <div class="search-bar">
+                        <input type="text" id="search-input" placeholder="Search by name, species, or discipline...">
+                        <button class="search-btn" onclick="performSearch()">🔍</button>
+                    </div>
+                </div>
+                
+                <div class="filter-section">
+                    <div class="filter-group">
+                        <label for="species-filter">Species:</label>
+                        <select id="species-filter" onchange="applyFilters()">
+                            <option value="">All Species</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="discipline-filter">Discipline:</label>
+                        <select id="discipline-filter" onchange="applyFilters()">
+                            <option value="">All Disciplines</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="alignment-filter">Alignment:</label>
+                        <select id="alignment-filter" onchange="applyFilters()">
+                            <option value="">All Alignments</option>
+                            <option value="Light">Light</option>
+                            <option value="Dark">Dark</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="sort-filter">Sort By:</label>
+                        <select id="sort-filter" onchange="applySorting()">
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="name">Name (A-Z)</option>
+                            <option value="species">Species</option>
+                            <option value="power">Most Powerful</option>
+                        </select>
+                    </div>
+                    
+                    <button class="clear-filters-btn" onclick="clearFilters()">Clear Filters</button>
+                </div>
+                
+            </section>
+
+            <!-- View Toggle -->
+            <section class="view-controls">
+                <div class="view-toggle">
+                    <button class="view-btn active" id="grid-view-btn" onclick="setView('grid')">
+                        <span>📊</span> Grid View
+                    </button>
+                    <button class="view-btn" id="list-view-btn" onclick="setView('list')">
+                        <span>📋</span> List View
+                    </button>
+                    <button class="view-btn" id="card-view-btn" onclick="setView('card')">
+                        <span>🃏</span> Card View
+                    </button>
+                </div>
+                
+                <div class="results-info">
+                    <span id="results-count">0 profiles found</span>
+                    <button id="download-all-profiles" class="btn btn-outline" style="margin-left:12px;">Download All Profiles</button>
+                </div>
+            </section>
+
+            <!-- Profiles Section -->
+            <section class="database-profiles">
+                <div id="profiles-container" class="profiles-grid">
+                    <!-- Profiles will be populated by JavaScript -->
+                </div>
+                
+                <!-- Empty State -->
+                <div id="empty-state" class="empty-state" style="display: none;">
+                    <div class="empty-icon">🎭</div>
+                    <h3>No Magical Beings Found</h3>
+                    <p>Be the first to create your magical identity!</p>
+                    <button class="btn btn-primary" onclick="window.location.href='quiz.html'">
+                        Take the Quiz
+                    </button>
+                </div>
+                
+                <!-- No Results State -->
+                <div id="no-results" class="empty-state" style="display: none;">
+                    <div class="empty-icon">🔍</div>
+                    <h3>No Results Found</h3>
+                    <p>Try adjusting your search or filter criteria.</p>
+                    <button class="btn btn-outline" onclick="clearFilters()">
+                        Clear Filters
+                    </button>
+                </div>
+            </section>
+
+            <!-- Pagination -->
+            <section class="pagination-section" id="pagination-section" style="display: none;">
+                <div class="pagination">
+                    <button class="page-btn" id="prev-page" onclick="changePage(-1)">← Previous</button>
+                    <div class="page-numbers" id="page-numbers"></div>
+                    <button class="page-btn" id="next-page" onclick="changePage(1)">Next →</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Profile Detail Modal -->
+    <div id="profile-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Profile Details</h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Profile details will be populated here -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeModal()">Close</button>
+                <button class="btn btn-primary" id="view-full-profile-btn">View Full Profile</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase Modular Init — load only on http/https to avoid file:// CORS -->
+    <!-- Default: enable Firebase initialization for this page (database.html) -->
+    <script>
+        try { if (typeof window !== 'undefined') window.ALLOW_FIREBASE_INIT = true; } catch(e) {}
+    </script>
+    <script>
+        (function(){
+            try {
+                if (location.protocol === 'http:' || location.protocol === 'https:') {
+                    var s = document.createElement('script');
+                    s.type = 'module';
+                    s.src = 'js/firebase-init.js';
+                    document.head.appendChild(s);
+                } else {
+                    console.warn('[firebase-init] Skipping modular init on file:// protocol');
+                }
+            } catch (e) {
+                console.warn('[firebase-init] dynamic load failed', e);
+            }
+        })();
+    </script>
+    <!-- Compat (temporary) -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    
+    <!-- Firebase Configuration -->
+    <script src="js/firebase-config.js"></script>
+    
+    <!-- Application Scripts -->
+    <script src="js/firebase-adapters.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/truename-generator.js"></script>
+    <script src="js/firebase-database.js"></script>
+    <script src="js/database.js"></script>
+    <script>
+        // Download all profiles as a JSON array for import into Unreal
+        (function(){
+            function gatherProfiles(){
+                return new Promise(async (resolve) => {
+                    try {
+                        if (window.firebaseDB && typeof window.firebaseDB.getAllProfiles === 'function') {
+                            try {
+                                const profiles = await window.firebaseDB.getAllProfiles();
+                                if (Array.isArray(profiles) && profiles.length) return resolve(profiles);
+                            } catch(e) { /* fall through to localStorage */ }
+                        }
+                    } catch(e) {}
+                    // Fallback to localStorage keys used by the site
+                    try {
+                        const quiz = JSON.parse(localStorage.getItem('quizProfiles') || '[]');
+                        if (Array.isArray(quiz) && quiz.length) return resolve(quiz);
+                    } catch(e) {}
+                    try {
+                        const sp = JSON.parse(localStorage.getItem('spProfiles') || '[]');
+                        if (Array.isArray(sp) && sp.length) return resolve(sp);
+                    } catch(e) {}
+                    resolve([]);
+                });
+            }
+
+            function download(filename, text){
+                const blob = new Blob([text], {type: 'application/json'});
+                const a = document.createElement('a');
+                a.href = URL.createObjectURL(blob);
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const btn = document.getElementById('download-all-profiles');
+                if (!btn) return;
+                btn.addEventListener('click', async () => {
+                    btn.disabled = true;
+                    btn.textContent = 'Preparing...';
+                    const profiles = await gatherProfiles();
+                    if (!profiles || !profiles.length) {
+                        alert('No profiles available to export.');
+                        btn.disabled = false;
+                        btn.textContent = 'Download All Profiles';
+                        return;
+                    }
+                    const payload = { exportedAt: new Date().toISOString(), profiles: profiles };
+                    const filename = `tome_profiles_${new Date().toISOString().replace(/[:.]/g,'-')}.json`;
+                    download(filename, JSON.stringify(payload, null, 2));
+                    btn.disabled = false;
+                    btn.textContent = 'Download All Profiles';
+                });
+            });
+        })();
+    </script>
+    
+        <!-- Dev helper removed -->
+    
+    <!-- Character Creation Section Styles -->
+    <style>
+        .character-creation-section {
+            background: var(--card-bg, rgba(26, 26, 26, 0.9));
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid var(--accent-gold, #d4af37);
+        }
+        
+        .character-creation-section h2 {
+            color: var(--accent-gold, #d4af37);
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+        
+        .character-creation-section p {
+            color: var(--text-secondary, #ccc);
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .creation-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+        
+        .creation-card {
+            background: var(--bg-secondary, #1a1a1a);
+            border: 2px solid var(--border-color, #333);
+            border-radius: 12px;
+            padding: 25px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            display: block;
+        }
+        
+        .creation-card.primary-card {
+            border-color: var(--accent-gold, #d4af37);
+            background: linear-gradient(135deg, var(--bg-secondary, #1a1a1a) 0%, rgba(212, 175, 55, 0.1) 100%);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+        
+        .creation-card:hover {
+            border-color: var(--accent-gold, #d4af37);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .creation-icon {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .creation-title {
+            color: var(--accent-gold, #d4af37);
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .creation-description {
+            color: var(--text-secondary, #ccc);
+            line-height: 1.5;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .creation-features {
+            color: var(--text-primary, #fff);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .creation-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .character-creation-section {
+                padding: 20px;
+                margin: 20px 0;
+            }
+        }
+    </style>
+</body>
+</html>

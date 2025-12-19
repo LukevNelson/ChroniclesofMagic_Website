@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UE5 Magical Experience - T.O.M.E.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ue5-game.css">
+    <link rel="stylesheet" href="css/visual-enhancements.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">T.O.M.E.</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="characters.html" class="nav-link">Characters</a>
+                </li>
+                <li class="nav-item">
+                    <a href="books.html" class="nav-link">Books</a>
+                </li>
+                <li class="nav-item">
+                    <a href="magic-system.html" class="nav-link">Magic</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ue5-game.html" class="nav-link active">UE5 Game</a>
+                </li>
+                <li class="nav-item">
+                    <a href="flutter-app.html" class="nav-link">Mobile App</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="game-hero">
+        <div class="hero-background">
+            <div class="floating-screenshots">
+                <div class="screenshot-mockup screen-1">
+                    <img src="assets/images/game-screenshots/combat-scene.jpg" alt="Magical Combat">
+                </div>
+                <div class="screenshot-mockup screen-2">
+                    <img src="assets/images/game-screenshots/academy-hall.jpg" alt="Sorcerer's Academy">
+                </div>
+                <div class="screenshot-mockup screen-3">
+                    <img src="assets/images/game-screenshots/spell-casting.jpg" alt="Spell Casting">
+                </div>
+            </div>
+            <div class="hero-particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-badge">
+                    <i class="fab fa-unreal-engine"></i>
+                    <span>Powered by Unreal Engine 5</span>
+                </div>
+                <h1 class="hero-title">SP Universe Game</h1>
+                <p class="hero-subtitle">Experience the magical world in stunning 3D with UE5 technology</p>
+                
+                <div class="game-features">
+                    <div class="feature-highlight">
+                        <i class="fas fa-magic"></i>
+                        <span>Master 6 Magic Disciplines</span>
+                    </div>
+                    <div class="feature-highlight">
+                        <i class="fas fa-sword"></i>
+                        <span>Epic Magical Combat</span>
+                    </div>
+                    <div class="feature-highlight">
+                        <i class="fas fa-users"></i>
+                        <span>Multiplayer Adventures</span>
+                    </div>
+                    <div class="feature-highlight">
+                        <i class="fas fa-map"></i>
+                        <span>Explore Iconic Locations</span>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <div class="primary-actions">
+                        <button class="btn btn-primary btn-large" id="play-trailer-btn">
+                            <i class="fas fa-play"></i>
+                            Watch Gameplay Trailer
+                        </button>
+                        <button class="btn btn-secondary btn-large" id="download-demo-btn">
+                            <i class="fas fa-download"></i>
+                            Download Demo
+                        </button>
+                    </div>
+                    <div class="secondary-actions">
+                        <button class="btn btn-outline" id="join-beta-btn">
+                            <i class="fas fa-flask"></i>
+                            Join Beta Testing
+                        </button>
+                        <button class="btn btn-secondary" id="view-screenshots-btn">
+                            <i class="fas fa-images"></i>
+                            View Screenshots
+                        </button>
+                    </div>
+                </div>
+
+                <div class="game-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" id="players">25K+</div>
+                        <div class="stat-label">Beta Players</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="rating">4.7</div>
+                        <div class="stat-label">★ Rating</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="spells">247+</div>
+                        <div class="stat-label">Spells Available</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cross-Platform Gaming Experience -->
+    <section class="cross-platform-gaming">
+        <div class="container">
+            <h2 class="section-title">Seamless Cross-Platform Gaming Experience</h2>
+            <p class="section-subtitle">Your progress syncs across web, mobile, and game platforms</p>
+
+            <div class="sync-diagram">
+                <div class="platform-node web-platform">
+                    <div class="platform-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h4>Web Training</h4>
+                    <p>Learn magic theory and practice spell combinations on our website</p>
+                    <div class="platform-features">
+                        <ul>
+                            <li>Interactive spell creator</li>
+                            <li>Detailed magic theory</li>
+                            <li>Combat simulator</li>
+                            <li>Progress tracking</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sync-connections">
+                    <div class="connection-line">
+                        <div class="sync-indicator">
+                            <i class="fas fa-sync fa-spin"></i>
+                            <span>Real-time sync</span>
+                        </div>
+                    </div>
+                    <div class="connection-line">
+                        <div class="sync-indicator">
+                            <i class="fas fa-sync fa-spin"></i>
+                            <span>Progress sharing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="platform-node mobile-platform">
+                    <div class="platform-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4>Mobile Practice</h4>
+                    <p>Continue training on-the-go with mobile app integration</p>
+                    <div class="platform-features">
+                        <ul>
+                            <li>Offline spell practice</li>
+                            <li>Quick daily lessons</li>
+                            <li>Social challenges</li>
+                            <li>AR spell viewing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sync-connections">
+                    <div class="connection-line">
+                        <div class="sync-indicator">
+                            <i class="fas fa-sync fa-spin"></i>
+                            <span>Skill unlocks</span>
+                        </div>
+                    </div>
+                    <div class="connection-line">
+                        <div class="sync-indicator">
+                            <i class="fas fa-sync fa-spin"></i>
+                            <span>Achievement sync</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="platform-node game-platform active">
+                    <div class="platform-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h4>UE5 Game</h4>
+                    <p>Apply your training in immersive 3D magical combat and exploration</p>
+                    <div class="platform-features">
+                        <ul>
+                            <li>Unlock trained spells</li>
+                            <li>Enhanced abilities</li>
+                            <li>Special achievements</li>
+                            <li>Academy access</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sync-benefits">
+                <h3>Benefits of Cross-Platform Integration</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>Progressive Learning</h4>
+                        <p>Master spells step-by-step from web theory to mobile practice to game mastery</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-trophy"></i>
+                        <h4>Unified Progress</h4>
+                        <p>All achievements, levels, and unlocks are shared across all platforms</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-unlock"></i>
+                        <h4>Skill Unlocks</h4>
+                        <p>Training unlocks powerful spells and abilities in the 3D game world</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-gamepad"></i>
+                        <h4>Enhanced Gaming</h4>
+                        <p>Pre-trained skills give you advantages in combat and exploration</p>
+                    </div>
+        </div>
+    </section>
+
+    <!-- Discipline Mastery System -->
+    <section class="discipline-mastery-system">
+        <div class="container">
+            <h2 class="section-title">Discipline Mastery System</h2>
+            <p class="section-subtitle">Track your progress across web training and game experience</p>
+
+            <div class="mastery-overview">
+                <div class="overview-card">
+                    <div class="overview-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h4>Web Training</h4>
+                    <p>Learn spell theory, practice combinations, and complete courses on our website</p>
+                </div>
+                <div class="sync-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>Unlocks</span>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h4>Game Abilities</h4>
+                    <p>Use trained spells in combat, exploration, and magical challenges</p>
+                </div>
+            </div>
+
+            <div class="disciplines-grid">
+                <div class="discipline-card elemental">
+                    <div class="discipline-header">
+                        <div class="discipline-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="discipline-info">
+                            <h3>Elemental Magic</h3>
+                            <p>Master fire, water, earth, and air elements</p>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-section">
+                        <div class="progress-track web-progress">
+                            <div class="track-header">
+                                <span class="track-label">
+                                    <i class="fas fa-laptop"></i>
+                                    Web Training
+                                </span>
+                                <span class="progress-percentage">65%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%"></div>
+                            </div>
+                            <div class="progress-details">
+                                <span>13 of 20 lessons completed</span>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-track game-progress">
+                            <div class="track-header">
+                                <span class="track-label">
+                                    <i class="fas fa-gamepad"></i>
+                                    Game Mastery
+                                </span>
+                                <span class="progress-percentage">45%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 45%"></div>
+                            </div>
+                            <div class="progress-details">
+                                <span>9 of 20 abilities unlocked</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="abilities-section">
+                        <h4>Unlocked Abilities:</h4>
+                        <div class="ability-grid">
+                            <div class="ability-item unlocked" title="Fireball">
+                                <i class="fas fa-fire"></i>
+                                <span>Fireball</span>
+                            </div>
+                            <div class="ability-item unlocked" title="Lightning Strike">
+                                <i class="fas fa-bolt"></i>
+                                <span>Lightning</span>
+                            </div>
+                            <div class="ability-item unlocked" title="Water Shield">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Water Shield</span>
+                            </div>
+                            <div class="ability-item locked" title="Tornado (Locked)">
+                                <i class="fas fa-tornado"></i>
+                                <span>Tornado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="discipline-card death">
+                    <div class="discipline-header">
+                        <div class="discipline-icon">
+                            <i class="fas fa-skull"></i>
+                        </div>
+                        <div class="discipline-info">
+                            <h3>Death Magic</h3>
+                            <p>Harness the power of shadows and necromancy</p>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-section">
+                        <div class="progress-track web-progress">
+                            <div class="track-header">
+                                <span class="track-label">
+                                    <i class="fas fa-laptop"></i>
+                                    Web Training
+                                </span>
+                                <span class="progress-percentage">25%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 25%"></div>
+                            </div>
+                            <div class="progress-details">
+                                <span>5 of 20 lessons completed</span>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-track game-progress">
+                            <div class="track-header">
+                                <span class="track-label">
+                                    <i class="fas fa-gamepad"></i>
+                                    Game Mastery
+                                </span>
+                                <span class="progress-percentage">10%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 10%"></div>
+                            </div>
+                            <div class="progress-details">
+                                <span>2 of 20 abilities unlocked</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="abilities-section">
+                        <h4>Unlocked Abilities:</h4>
+                        <div class="ability-grid">
+                            <div class="ability-item unlocked" title="Shadow Step">
+                                <i class="fas fa-mask"></i>
+                                <span>Shadow Step</span>
+                            </div>
+                            <div class="ability-item locked" title="Life Drain (Locked)">
+                                <i class="fas fa-heart"></i>
+                                <span>Life Drain</span>
+                            </div>
+                            <div class="ability-item locked" title="Necromancy (Locked)">
+                                <i class="fas fa-ghost"></i>
+                                <span>Necromancy</span>
+                            </div>
+                            <div class="ability-item locked" title="Soul Strike (Locked)">
+                                <i class="fas fa-skull-crossbones"></i>
+                                <span>Soul Strike</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="discipline-card energy">
+                    <div class="discipline-header">
+                        <div class="discipline-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="discipline-info">
+                            <h3>Energy Throwing</h3>
+                            <p>Project pure magical energy as weapons</p>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-section">
+                        <div class="progress-track web-progress">
+                            <div class="track-header">
+                                <span class="track-label">
+                                    <i class="fas fa-laptop"></i>
+                                    Web Training
+                                </span>
+                                <span class="progress-percentage">40%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 40%"></div>
+                            </div>
+                            <div class="progress-details">
+                                <span>8 of 20 lessons completed</span>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-track game-progress">
+                            <div class="track-header">
+                                <span class="track-label">
+                                    <i class="fas fa-gamepad"></i>
+                                    Game Mastery
+                                </span>
+                                <span class="progress-percentage">30%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 30%"></div>
+                            </div>
+                            <div class="progress-details">
+                                <span>6 of 20 abilities unlocked</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="abilities-section">
+                        <h4>Unlocked Abilities:</h4>
+                        <div class="ability-grid">
+                            <div class="ability-item unlocked" title="Energy Blast">
+                                <i class="fas fa-bullseye"></i>
+                                <span>Energy Blast</span>
+                            </div>
+                            <div class="ability-item unlocked" title="Force Push">
+                                <i class="fas fa-hand-paper"></i>
+                                <span>Force Push</span>
+                            </div>
+                            <div class="ability-item locked" title="Energy Shield (Locked)">
+                                <i class="fas fa-shield"></i>
+                                <span>Energy Shield</span>
+                            </div>
+                            <div class="ability-item locked" title="Plasma Beam (Locked)">
+                                <i class="fas fa-laser-pointer"></i>
+                                <span>Plasma Beam</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mastery-benefits">
+                <h3>Training Benefits</h3>
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <i class="fas fa-unlock"></i>
+                        <div class="benefit-content">
+                            <h4>Spell Unlocks</h4>
+                            <p>Each web lesson completed unlocks corresponding spells in the game</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-star"></i>
+                        <div class="benefit-content">
+                            <h4>Enhanced Power</h4>
+                            <p>Higher web training levels increase spell damage and effectiveness in-game</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-trophy"></i>
+                        <div class="benefit-content">
+                            <h4>Special Achievements</h4>
+                            <p>Master both web and game versions to unlock exclusive achievements</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Features Detailed -->
+    <section class="game-features-detailed">
+        <div class="container">
+            <h2 class="section-title">UE5 Game Features</h2>
+            <p class="section-subtitle">Immersive magical world powered by cutting-edge technology</p>
+
+            <!-- Game Screenshots Gallery -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="assets/images/game-screenshots/character-creation.jpg" alt="Character Creation" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">👤</div>
+                    <div class="gallery-caption">
+                        Detailed character creation with magical disciplines
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/game-screenshots/dublin-open-world.jpg" alt="Dublin Open World" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">🌍</div>
+                    <div class="gallery-caption">
+                        Fully realized Dublin with hidden magical districts
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/game-screenshots/spell-casting-system.jpg" alt="Spell Casting" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">🔮</div>
+                    <div class="gallery-caption">
+                        Intuitive gesture-based spell casting system
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/game-screenshots/sanctuary-headquarters.jpg" alt="Sanctuary HQ" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">🏛️</div>
+                    <div class="gallery-caption">
+                        Detailed Sanctuary interior with NPCs
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/game-screenshots/magical-combat.jpg" alt="Magical Combat" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">⚔️</div>
+                    <div class="gallery-caption">
+                        Dynamic magical combat with elemental effects
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/game-screenshots/investigation-mode.jpg" alt="Investigation Mode" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">🔍</div>
+                    <div class="gallery-caption">
+                        Detective work with magical investigation tools
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gameplay Demonstration Videos -->
+            <div class="video-showcase">
+                <div class="video-placeholder">
+                    <div class="play-button"></div>
+                    <div class="video-title">Gameplay Reveal Trailer</div>
+                    <div class="video-description">First look at the Skulduggery Pleasant UE5 game featuring magic combat, character interactions, and world exploration.</div>
+                </div>
+            </div>
+
+            <!-- Development Behind the Scenes -->
+            <div class="magic-demo">
+                <div class="demo-header">
+                    <span class="demo-icon">🎥</span>
+                    <span class="demo-title">Development Diary Series</span>
+                </div>
+                <div class="demo-content">
+                    <div class="demo-description">
+                        Follow the development process from concept to completion. See how we're bringing the magical world to life using Unreal Engine 5's cutting-edge technology.
+                    </div>
+                    <div class="demo-visual">
+                        <div class="video-placeholder">
+                            <div class="play-button"></div>
+                            <div>Dev Diary</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Concept Art Gallery -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="assets/images/game-screenshots/concept-art/skulduggery-design.jpg" alt="Skulduggery Concept" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">💀</div>
+                    <div class="gallery-caption">
+                        Skulduggery Pleasant character design evolution
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/game-screenshots/concept-art/environment-designs.jpg" alt="Environment Concepts" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">🏘️</div>
+                    <div class="gallery-caption">
+                        Environment and location concept artwork
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/game-screenshots/concept-art/magic-effects.jpg" alt="Magic Effects" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">✨</div>
+                    <div class="gallery-caption">
+                        Magical spell effects and visual design
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/game-screenshots/concept-art/ui-design.jpg" alt="UI Design" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">📱</div>
+                    <div class="gallery-caption">
+                        User interface and HUD design concepts
+                    </div>
+                </div>
+            </div>
+
+            <!-- Extensive Gameplay Video Collection -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Combat System Deep Dive</div>
+                        <div class="video-description">Advanced magic combat mechanics</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Character Creation Walkthrough</div>
+                        <div class="video-description">Complete customization options</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Open World Exploration</div>
+                        <div class="video-description">Dublin's magical districts revealed</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Detective Mode Gameplay</div>
+                        <div class="video-description">Investigation mechanics showcase</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Development Videos -->
+            <div class="video-showcase">
+                <div class="video-placeholder">
+                    <div class="play-button"></div>
+                    <div class="video-title">Unreal Engine 5 Tech Demo</div>
+                    <div class="video-description">Showcasing cutting-edge graphics technology, ray tracing, and magical effect rendering in our Skulduggery Pleasant game.</div>
+                </div>
+            </div>
+
+            <!-- More Development Screenshots -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="assets/images/game-screenshots/development/early-prototypes.jpg" alt="Early Prototypes" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">🛠️</div>
+                    <div class="gallery-caption">
+                        Early development prototypes and iterations
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/game-screenshots/development/character-rigging.jpg" alt="Character Rigging" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">🦴</div>
+                    <div class="gallery-caption">
+                        Character rigging and animation development
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/game-screenshots/development/environment-building.jpg" alt="Environment Building" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">🏗️</div>
+                    <div class="gallery-caption">
+                        Environment construction and world building
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/game-screenshots/development/magic-effects-work.jpg" alt="Magic Effects Development" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">✨</div>
+                    <div class="gallery-caption">
+                        Magic effects and particle system development
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weekly Development Updates -->
+            <div class="magic-demo">
+                <div class="demo-header">
+                    <span class="demo-icon">📺</span>
+                    <span class="demo-title">Weekly Development Updates</span>
+                </div>
+                <div class="demo-content">
+                    <div class="demo-description">
+                        Follow our weekly development progress with behind-the-scenes videos showing coding sessions, art creation, and feature implementation.
+                    </div>
+                    <div class="demo-visual">
+                        <div class="video-placeholder">
+                            <div class="play-button"></div>
+                            <div>Dev Updates</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alpha/Beta Testing Videos -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Alpha Testing Highlights</div>
+                        <div class="video-description">Early alpha gameplay footage</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Beta Test Feedback Session</div>
+                        <div class="video-description">Community feedback and improvements</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Bug Hunt Stream</div>
+                        <div class="video-description">Live bug testing and fixes</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Performance Optimization</div>
+                        <div class="video-description">Technical optimization process</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Launch Preparation Videos -->
+            <div class="video-showcase">
+                <div class="video-placeholder">
+                    <div class="play-button"></div>
+                    <div class="video-title">Game Launch Countdown</div>
+                    <div class="video-description">Final preparations for the official game launch, featuring developer interviews, final features, and community excitement.</div>
+                </div>
+            </div>
+
+            <div class="features-showcase">
+                <div class="feature-showcase">
+                    <div class="feature-content">
+                        <h3>Advanced Magic Combat</h3>
+                        <p>Experience spell-based combat with realistic physics, elemental interactions, and tactical depth. Combine spells learned from web training for devastating combos.</p>
+                        <div class="feature-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-wand-magic-sparkles"></i>
+                                <span>50+ Unique Spells</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-atom"></i>
+                                <span>Realistic Physics</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-chess"></i>
+                                <span>Strategic Combat</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-sword"></i>
+                            Explore Combat
+                        </button>
+                    </div>
+                    <div class="feature-mockup">
+                        <div class="game-frame">
+                            <img src="assets/images/ue5-screenshots/magic-combat.jpg" alt="Magical Combat System">
+                            <div class="play-overlay" data-video="combat-showcase">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-showcase reverse">
+                    <div class="feature-content">
+                        <h3>Interactive Sorcerer's Academy</h3>
+                        <p>Explore the magical academy with classrooms, practice ranges, and secret areas. Your web training unlocks special academy content and advanced lessons.</p>
+                        <div class="feature-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-school"></i>
+                                <span>Multiple Classrooms</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-target"></i>
+                                <span>Practice Ranges</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-eye"></i>
+                                <span>Hidden Secrets</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-graduation-cap"></i>
+                            Visit Academy
+                        </button>
+                    </div>
+                    <div class="feature-mockup">
+                        <div class="game-frame">
+                            <img src="assets/images/ue5-screenshots/academy-grounds.jpg" alt="Sorcerer's Academy">
+                            <div class="play-overlay" data-video="academy-tour">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-showcase">
+                    <div class="feature-content">
+                        <h3>Iconic Locations Exploration</h3>
+                        <p>Visit famous locations from the books in stunning detail. Explore Dublin streets, magical sanctuaries, and hidden magical communities.</p>
+                        <div class="feature-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-city"></i>
+                                <span>Dublin Streets</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-building"></i>
+                                <span>Sanctuary HQ</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <span>Hidden Locations</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-map"></i>
+                            Explore World
+                        </button>
+                    </div>
+                    <div class="feature-mockup">
+                        <div class="game-frame">
+                            <img src="assets/images/ue5-screenshots/dublin-streets.jpg" alt="Dublin Streets">
+                            <div class="play-overlay" data-video="world-exploration">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-showcase reverse">
+                    <div class="feature-content">
+                        <h3>Character Customization</h3>
+                        <p>Create your unique sorcerer with deep customization options. Choose your magical discipline, appearance, and backstory to shape your journey.</p>
+                        <div class="feature-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-user-edit"></i>
+                                <span>Deep Customization</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-magic"></i>
+                                <span>Discipline Choice</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-book"></i>
+                                <span>Personal Story</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-user-circle"></i>
+                            Create Character
+                        </button>
+                    </div>
+                    <div class="feature-mockup">
+                        <div class="game-frame">
+                            <img src="assets/images/ue5-screenshots/character-creation.jpg" alt="Character Creation">
+                            <div class="play-overlay" data-video="character-creation">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-showcase">
+                    <div class="feature-content">
+                        <h3>Multiplayer Adventures</h3>
+                        <p>Team up with friends for cooperative missions, compete in magical duels, or join large-scale battles between sorcerers and evil forces.</p>
+                        <div class="feature-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-users"></i>
+                                <span>Co-op Missions</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-swords"></i>
+                                <span>Magical Duels</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-flag"></i>
+                                <span>Epic Battles</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-gamepad"></i>
+                            Join Multiplayer
+                        </button>
+                    </div>
+                    <div class="feature-mockup">
+                        <div class="game-frame">
+                            <img src="assets/images/ue5-screenshots/multiplayer-battle.jpg" alt="Multiplayer Battle">
+                            <div class="play-overlay" data-video="multiplayer-showcase">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-showcase reverse">
+                    <div class="feature-content">
+                        <h3>Story Campaign</h3>
+                        <p>Experience an original story set in the Skulduggery Pleasant universe. Make choices that affect the narrative and discover multiple endings.</p>
+                        <div class="feature-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-book-open"></i>
+                                <span>Original Story</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-route"></i>
+                                <span>Branching Paths</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-star"></i>
+                                <span>Multiple Endings</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-play"></i>
+                            Start Campaign
+                        </button>
+                    </div>
+                    <div class="feature-mockup">
+                        <div class="game-frame">
+                            <img src="assets/images/ue5-screenshots/story-cutscene.jpg" alt="Story Campaign">
+                            <div class="play-overlay" data-video="story-trailer">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                        </div>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Iconic Locations</h3>
+                        <p>Explore detailed recreations of Dublin, the Sanctuary, and other locations from the books in stunning UE5 quality.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-media">
+                        <img src="assets/images/ue5-screenshots/character-creator.jpg" alt="Character Creation" class="feature-image">
+                        <div class="play-overlay" data-video="character-creation">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Character Creation</h3>
+                        <p>Create your unique sorcerer with extensive customization options and choose your magical discipline path.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-media">
+                        <img src="assets/images/ue5-screenshots/multiplayer-arena.jpg" alt="Multiplayer Combat" class="feature-image">
+                        <div class="play-overlay" data-video="multiplayer-combat">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Multiplayer Battles</h3>
+                        <p>Test your skills against other players in magical duels and team-based combat scenarios.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-media">
+                        <img src="assets/images/ue5-screenshots/story-mode.jpg" alt="Story Campaign" class="feature-image">
+                        <div class="play-overlay" data-video="story-campaign">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Original Story Campaign</h3>
+                        <p>Experience an original storyline set in the Skulduggery Pleasant universe with familiar characters and new adventures.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Screenshots Gallery -->
+    <section class="screenshots-gallery">
+        <div class="container">
+            <h2 class="section-title">Game Screenshots</h2>
+            <p class="section-subtitle">Experience the visual excellence of Unreal Engine 5</p>
+
+            <div class="screenshots-intro">
+                <div class="intro-text">
+                    <h3>Visual Excellence</h3>
+                    <p>Every screenshot showcases the stunning detail and magical atmosphere of our Skulduggery Pleasant game. From dynamic spell effects to meticulously crafted environments, see what makes UE5 the perfect engine for bringing the magical world to life.</p>
+                </div>
+                <div class="intro-stats">
+                    <div class="stat">
+                        <span class="stat-number">4K</span>
+                        <span class="stat-label">Resolution</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">60+</span>
+                        <span class="stat-label">FPS</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">RTX</span>
+                        <span class="stat-label">Ray Tracing</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-filters">
+                <h4>Browse by Category:</h4>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-th"></i>
+                        All Screenshots
+                    </button>
+                    <button class="filter-btn" data-filter="combat">
+                        <i class="fas fa-fire"></i>
+                        Combat & Magic
+                    </button>
+                    <button class="filter-btn" data-filter="world">
+                        <i class="fas fa-map"></i>
+                        World & Locations
+                    </button>
+                    <button class="filter-btn" data-filter="characters">
+                        <i class="fas fa-users"></i>
+                        Characters
+                    </button>
+                    <button class="filter-btn" data-filter="ui">
+                        <i class="fas fa-desktop"></i>
+                        User Interface
+                    </button>
+                </div>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="screenshot-card" data-category="combat">
+                    <div class="screenshot-image">
+                        <img src="assets/images/ue5-screenshots/elemental-duel.jpg" alt="Elemental Magic Duel">
+                        <div class="screenshot-overlay">
+                            <button class="zoom-btn" onclick="openScreenshot(this)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="play-btn" data-video="combat-elemental">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="screenshot-info">
+                        <h4>Elemental Magic Duel</h4>
+                        <p>Witness the spectacular visual effects when fire meets water in magical combat. UE5's particle systems create realistic elemental interactions.</p>
+                        <div class="screenshot-tags">
+                            <span class="tag combat">Combat</span>
+                            <span class="tag magic">Magic Effects</span>
+                            <span class="tag particles">Particles</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screenshot-card" data-category="world">
+                    <div class="screenshot-image">
+                        <img src="assets/images/ue5-screenshots/sanctuary-interior.jpg" alt="Sanctuary Interior">
+                        <div class="screenshot-overlay">
+                            <button class="zoom-btn" onclick="openScreenshot(this)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="play-btn" data-video="sanctuary-tour">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="screenshot-info">
+                        <h4>The Sanctuary Interior</h4>
+                        <p>Explore the iconic Sanctuary headquarters with incredible detail. Ray tracing brings realistic lighting and reflections to every surface.</p>
+                        <div class="screenshot-tags">
+                            <span class="tag world">World</span>
+                            <span class="tag lighting">Ray Tracing</span>
+                            <span class="tag architecture">Architecture</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screenshot-card" data-category="combat">
+                    <div class="screenshot-image">
+                        <img src="assets/images/ue5-screenshots/spell-crafting.jpg" alt="Spell Crafting Lab">
+                        <div class="screenshot-overlay">
+                            <button class="zoom-btn" onclick="openScreenshot(this)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="play-btn" data-video="spell-crafting">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="screenshot-info">
+                        <h4>Spell Crafting Laboratory</h4>
+                        <p>The 3D version of our web spell creator brings magic to life. Watch as spells are constructed with visual components and effects.</p>
+                        <div class="screenshot-tags">
+                            <span class="tag magic">Magic System</span>
+                            <span class="tag ui">Interface</span>
+                            <span class="tag crafting">Crafting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screenshot-card" data-category="characters">
+                    <div class="screenshot-image">
+                        <img src="assets/images/ue5-screenshots/skulduggery-model.jpg" alt="Skulduggery Pleasant 3D Model">
+                        <div class="screenshot-overlay">
+                            <button class="zoom-btn" onclick="openScreenshot(this)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="play-btn" data-video="character-showcase">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="screenshot-info">
+                        <h4>Skulduggery Pleasant Model</h4>
+                        <p>Meet the legendary detective skeleton in stunning detail. Every bone, fabric texture, and magical aura is meticulously crafted.</p>
+                        <div class="screenshot-tags">
+                            <span class="tag characters">Characters</span>
+                            <span class="tag modeling">3D Model</span>
+                            <span class="tag detail">High Detail</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screenshot-card" data-category="world">
+                    <div class="screenshot-image">
+                        <img src="assets/images/ue5-screenshots/dublin-overview.jpg" alt="Dublin City Overview">
+                        <div class="screenshot-overlay">
+                            <button class="zoom-btn" onclick="openScreenshot(this)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="play-btn" data-video="dublin-flyover">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="screenshot-info">
+                        <h4>Dublin City Streets</h4>
+                        <p>Explore the atmospheric recreation of Dublin where magic hides in plain sight. Dynamic weather and lighting create an immersive experience.</p>
+                        <div class="screenshot-tags">
+                            <span class="tag world">Open World</span>
+                            <span class="tag atmosphere">Atmosphere</span>
+                            <span class="tag weather">Weather</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screenshot-card" data-category="combat">
+                    <div class="screenshot-image">
+                        <img src="assets/images/ue5-screenshots/arena-battle.jpg" alt="Arena Battle">
+                        <div class="screenshot-overlay">
+                            <button class="zoom-btn" onclick="openScreenshot(this)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="play-btn" data-video="multiplayer-arena">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="screenshot-info">
+                        <h4>Multiplayer Arena Combat</h4>
+                        <p>Experience intense 4v4 magical battles in purpose-built arenas. Every spell collision creates spectacular visual effects.</p>
+                        <div class="screenshot-tags">
+                            <span class="tag combat">Combat</span>
+                            <span class="tag multiplayer">Multiplayer</span>
+                            <span class="tag arena">Arena</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screenshot-card" data-category="world">
+                    <div class="screenshot-image">
+                        <img src="assets/images/ue5-screenshots/academy-halls.jpg" alt="Academy Halls">
+                        <div class="screenshot-overlay">
+                            <button class="zoom-btn" onclick="openScreenshot(this)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="play-btn" data-video="academy-walkthrough">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="screenshot-info">
+                        <h4>Sorcerer's Academy Halls</h4>
+                        <p>Walk through the grand halls where young sorcerers learn their craft. Ancient architecture meets modern magical technology.</p>
+                        <div class="screenshot-tags">
+                            <span class="tag world">Academy</span>
+                            <span class="tag education">Learning</span>
+                            <span class="tag architecture">Gothic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screenshot-card" data-category="ui">
+                    <div class="screenshot-image">
+                        <img src="assets/images/ue5-screenshots/magic-hud.jpg" alt="Magic HUD Interface">
+                        <div class="screenshot-overlay">
+                            <button class="zoom-btn" onclick="openScreenshot(this)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="play-btn" data-video="ui-showcase">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="screenshot-info">
+                        <h4>Magic HUD Interface</h4>
+                        <p>The intuitive spell-casting interface shows your magical arsenal and energy levels. Clean design meets functional gameplay.</p>
+                        <div class="screenshot-tags">
+                            <span class="tag ui">User Interface</span>
+                            <span class="tag hud">HUD</span>
+                            <span class="tag design">Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screenshot-card" data-category="characters">
+                    <div class="screenshot-image">
+                        <img src="assets/images/ue5-screenshots/character-creator.jpg" alt="Character Creation">
+                        <div class="screenshot-overlay">
+                            <button class="zoom-btn" onclick="openScreenshot(this)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="play-btn" data-video="character-creation">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="screenshot-info">
+                        <h4>Character Creation Suite</h4>
+                        <p>Design your unique sorcerer with extensive customization options. Choose from hundreds of appearance options and magical disciplines.</p>
+                        <div class="screenshot-tags">
+                            <span class="tag characters">Character</span>
+                            <span class="tag customization">Customization</span>
+                            <span class="tag creation">Creation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-actions">
+                <button class="btn btn-primary" id="download-all-screenshots">
+                    <i class="fas fa-download"></i>
+                    Download All Screenshots
+                </button>
+                <button class="btn btn-secondary" id="view-gameplay-videos">
+                    <i class="fas fa-play-circle"></i>
+                    Watch Gameplay Videos
+                </button>
+                <button class="btn btn-outline" id="share-gallery">
+                    <i class="fas fa-share"></i>
+                    Share Gallery
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Requirements -->
+    <section class="system-requirements">
+        <div class="container">
+            <h2 class="section-title">System Requirements</h2>
+            
+            <div class="requirements-grid">
+                <div class="requirement-card minimum">
+                    <h3>Minimum Requirements</h3>
+                    <div class="requirement-list">
+                        <div class="requirement-item">
+                            <i class="fas fa-microchip"></i>
+                            <div class="requirement-details">
+                                <span class="requirement-label">Processor:</span>
+                                <span class="requirement-value">Intel i5-8400 / AMD Ryzen 5 2600</span>
+                            </div>
+                        </div>
+                        <div class="requirement-item">
+                            <i class="fas fa-memory"></i>
+                            <div class="requirement-details">
+                                <span class="requirement-label">Memory:</span>
+                                <span class="requirement-value">8 GB RAM</span>
+                            </div>
+                        </div>
+                        <div class="requirement-item">
+                            <i class="fas fa-tv"></i>
+                            <div class="requirement-details">
+                                <span class="requirement-label">Graphics:</span>
+                                <span class="requirement-value">GTX 1060 6GB / RX 580 8GB</span>
+                            </div>
+                        </div>
+                        <div class="requirement-item">
+                            <i class="fab fa-windows"></i>
+                            <div class="requirement-details">
+                                <span class="requirement-label">OS:</span>
+                                <span class="requirement-value">Windows 10 64-bit</span>
+                            </div>
+                        </div>
+                        <div class="requirement-item">
+                            <i class="fas fa-hdd"></i>
+                            <div class="requirement-details">
+                                <span class="requirement-label">Storage:</span>
+                                <span class="requirement-value">50 GB available space</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="requirement-card recommended">
+                    <h3>Recommended Requirements</h3>
+                    <div class="requirement-list">
+                        <div class="requirement-item">
+                            <i class="fas fa-microchip"></i>
+                            <div class="requirement-details">
+                                <span class="requirement-label">Processor:</span>
+                                <span class="requirement-value">Intel i7-10700K / AMD Ryzen 7 3700X</span>
+                            </div>
+                        </div>
+                        <div class="requirement-item">
+                            <i class="fas fa-memory"></i>
+                            <div class="requirement-details">
+                                <span class="requirement-label">Memory:</span>
+                                <span class="requirement-value">16 GB RAM</span>
+                            </div>
+                        </div>
+                        <div class="requirement-item">
+                            <i class="fas fa-tv"></i>
+                            <div class="requirement-details">
+                                <span class="requirement-label">Graphics:</span>
+                                <span class="requirement-value">RTX 3070 / RX 6700 XT</span>
+                            </div>
+                        </div>
+                        <div class="requirement-item">
+                            <i class="fab fa-windows"></i>
+                            <div class="requirement-details">
+                                <span class="requirement-label">OS:</span>
+                                <span class="requirement-value">Windows 11 64-bit</span>
+                            </div>
+                        </div>
+                        <div class="requirement-item">
+                            <i class="fas fa-hdd"></i>
+                            <div class="requirement-details">
+                                <span class="requirement-label">Storage:</span>
+                                <span class="requirement-value">50 GB SSD space</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="requirement-card ultimate">
+                    <h3>Ultimate Experience</h3>
+                    <div class="requirement-list">
+                        <div class="requirement-item">
+                            <i class="fas fa-microchip"></i>
+                            <div class="requirement-details">
+                                <span class="requirement-label">Processor:</span>
+                                <span class="requirement-value">Intel i9-12900K / AMD Ryzen 9 5900X</span>
+                            </div>
+                        </div>
+                        <div class="requirement-item">
+                            <i class="fas fa-memory"></i>
+                            <div class="requirement-details">
+                                <span class="requirement-label">Memory:</span>
+                                <span class="requirement-value">32 GB RAM</span>
+                            </div>
+                        </div>
+                        <div class="requirement-item">
+                            <i class="fas fa-tv"></i>
+                            <div class="requirement-details">
+                                <span class="requirement-label">Graphics:</span>
+                                <span class="requirement-value">RTX 4080 / RX 7800 XT</span>
+                            </div>
+                        </div>
+                        <div class="requirement-item">
+                            <i class="fab fa-windows"></i>
+                            <div class="requirement-details">
+                                <span class="requirement-label">OS:</span>
+                                <span class="requirement-value">Windows 11 64-bit</span>
+                            </div>
+                        </div>
+                        <div class="requirement-item">
+                            <i class="fas fa-hdd"></i>
+                            <div class="requirement-details">
+                                <span class="requirement-label">Storage:</span>
+                                <span class="requirement-value">100 GB NVMe SSD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ultimate-features">
+                        <h4>Ultimate Features:</h4>
+                        <ul>
+                            <li><i class="fas fa-eye"></i> Ray Tracing Ultra</li>
+                            <li><i class="fas fa-tachometer-alt"></i> 4K 60+ FPS</li>
+                            <li><i class="fas fa-volume-up"></i> Spatial Audio</li>
+                            <li><i class="fas fa-magic"></i> Enhanced VFX</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Updates -->
+    <section class="development-updates">
+        <div class="container">
+            <h2 class="section-title">Development Progress</h2>
+            <p class="section-subtitle">Stay updated on the latest development milestones</p>
+
+            <div class="update-timeline">
+                <div class="timeline-item completed">
+                    <div class="timeline-marker">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">September 2025</div>
+                        <h4>Core Magic System</h4>
+                        <p>Implemented all 6 magic disciplines with web integration. Spell effects and combat mechanics finalized.</p>
+                        <div class="timeline-media">
+                            <img src="assets/images/dev-updates/magic-system-preview.jpg" alt="Magic System Development">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item completed">
+                    <div class="timeline-marker">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">August 2025</div>
+                        <h4>Character Models & Animation</h4>
+                        <p>High-fidelity character models for Skulduggery, Valkyrie, and other main characters completed with motion capture.</p>
+                        <div class="timeline-media">
+                            <video controls>
+                                <source src="assets/videos/character-animation-reel.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item current">
+                    <div class="timeline-marker">
+                        <i class="fas fa-cog fa-spin"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">October 2025</div>
+                        <h4>World Building & Environments</h4>
+                        <p>Creating detailed environments for Dublin, the Sanctuary, and Academy locations with Nanite virtualized geometry.</p>
+                        <div class="progress-indicator">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                            <span class="progress-text">75% Complete</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item upcoming">
+                    <div class="timeline-marker">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">November 2025</div>
+                        <h4>Multiplayer & Networking</h4>
+                        <p>Implementing multiplayer systems for cooperative story mode and competitive magical duels.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item upcoming">
+                    <div class="timeline-marker">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">December 2025</div>
+                        <h4>Beta Testing Launch</h4>
+                        <p>Closed beta testing begins for registered community members. First public gameplay demonstrations.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item upcoming">
+                    <div class="timeline-marker">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Q2 2026</div>
+                        <h4>Full Release</h4>
+                        <p>Complete game launch across all platforms with story campaign, multiplayer, and web integration features.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community & Beta Access -->
+    <section class="community-beta">
+        <div class="container">
+            <h2 class="section-title">Join the Development Community</h2>
+            <p class="section-subtitle">Be part of creating the ultimate Skulduggery Pleasant gaming experience</p>
+
+            <div class="community-options">
+                <div class="community-card beta-testing">
+                    <div class="card-header">
+                        <i class="fas fa-flask"></i>
+                        <h3>Beta Testing Program</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Get early access to the game and help shape its development with your feedback.</p>
+                        <div class="beta-benefits">
+                            <ul>
+                                <li><i class="fas fa-early-bird"></i> Early game access</li>
+                                <li><i class="fas fa-bug"></i> Bug reporting tools</li>
+                                <li><i class="fas fa-users"></i> Exclusive beta forums</li>
+                                <li><i class="fas fa-gift"></i> Special in-game rewards</li>
+                                <li><i class="fas fa-certificate"></i> Beta tester badge</li>
+                            </ul>
+                        </div>
+                        <div class="beta-requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Active community member for 30+ days</li>
+                                <li>Completed web magic training (Level 3+)</li>
+                                <li>Meets minimum system requirements</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary" id="apply-beta-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Apply for Beta
+                        </button>
+                    </div>
+                </div>
+
+                <div class="community-card feedback">
+                    <div class="card-header">
+                        <i class="fas fa-comments"></i>
+                        <h3>Development Feedback</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Share your ideas and suggestions for game features, mechanics, and content.</p>
+                        <div class="feedback-areas">
+                            <div class="feedback-area">
+                                <i class="fas fa-magic"></i>
+                                <span>Magic System Feedback</span>
+                            </div>
+                            <div class="feedback-area">
+                                <i class="fas fa-map"></i>
+                                <span>World Design Input</span>
+                            </div>
+                            <div class="feedback-area">
+                                <i class="fas fa-user"></i>
+                                <span>Character Suggestions</span>
+                            </div>
+                            <div class="feedback-area">
+                                <i class="fas fa-gamepad"></i>
+                                <span>Gameplay Mechanics</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-lightbulb"></i>
+                            Submit Feedback
+                        </button>
+                    </div>
+                </div>
+
+                <div class="community-card developer-updates">
+                    <div class="card-header">
+                        <i class="fas fa-rss"></i>
+                        <h3>Developer Updates</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Stay connected with regular development blogs, livestreams, and behind-the-scenes content.</p>
+                        <div class="update-channels">
+                            <div class="update-channel">
+                                <i class="fab fa-youtube"></i>
+                                <div class="channel-info">
+                                    <span class="channel-name">Dev Diaries</span>
+                                    <span class="channel-desc">Weekly video updates</span>
+                                </div>
+                            </div>
+                            <div class="update-channel">
+                                <i class="fab fa-twitch"></i>
+                                <div class="channel-info">
+                                    <span class="channel-name">Live Streams</span>
+                                    <span class="channel-desc">Monthly development streams</span>
+                                </div>
+                            </div>
+                            <div class="update-channel">
+                                <i class="fab fa-discord"></i>
+                                <div class="channel-info">
+                                    <span class="channel-name">Discord Community</span>
+                                    <span class="channel-desc">Daily developer interaction</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-bell"></i>
+                            Subscribe to Updates
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Access CTA -->
+    <section class="game-access-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Enter the Magical World?</h2>
+                <p>Download the demo or join the beta testing program today</p>
+                
+                <div class="access-options">
+                    <div class="platform-downloads">
+                        <div class="platform-download">
+                            <div class="platform-info">
+                                <i class="fab fa-windows"></i>
+                                <h4>PC / Steam</h4>
+                                <p>Windows 10/11 - Full UE5 experience</p>
+                            </div>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-download"></i>
+                                Download Demo
+                            </button>
+                        </div>
+                        <div class="platform-download">
+                            <div class="platform-info">
+                                <i class="fab fa-playstation"></i>
+                                <h4>PlayStation 5</h4>
+                                <p>Haptic feedback & 3D audio</p>
+                            </div>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-download"></i>
+                                Download Demo
+                            </button>
+                        </div>
+                        <div class="platform-download">
+                            <div class="platform-info">
+                                <i class="fab fa-xbox"></i>
+                                <h4>Xbox Series X|S</h4>
+                                <p>Smart Delivery & Quick Resume</p>
+                            </div>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-download"></i>
+                                Download Demo
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="beta-signup">
+                        <div class="beta-info">
+                            <h4>Join Beta Testing</h4>
+                            <p>Get early access and help shape the game</p>
+                        </div>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-flask"></i>
+                            Join Beta Program
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <i class="fas fa-magic"></i>
+                        <span>6 Magic Disciplines</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-sync"></i>
+                        <span>Web Training Sync</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-users"></i>
+                        <span>Multiplayer Ready</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-heart"></i>
+                        <span>Fan Made</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SP Universe</h3>
+                    <p>Your ultimate destination for exploring the magical world of Skulduggery Pleasant.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Game Platforms</h4>
+                    <ul>
+                        <li><a href="ue5-game.html">UE5 Game</a></li>
+                        <li><a href="flutter-app.html">Mobile App</a></li>
+                        <li><a href="magic-system.html">Web Training</a></li>
+                        <li><a href="#">VR Experience</a></li>
+                        <li><a href="#">AR Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Development</h4>
+                    <ul>
+                        <li><a href="#">Beta Program</a></li>
+                        <li><a href="#">Dev Blog</a></li>
+                        <li><a href="#">Progress Updates</a></li>
+                        <li><a href="#">Community Feedback</a></li>
+                        <li><a href="#">Bug Reports</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="#">Forums</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Fan Art</a></li>
+                        <li><a href="#">Fan Fiction</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SP Universe. This is a fan-made project dedicated to Derek Landy's Skulduggery Pleasant series. Game developed with Unreal Engine 5.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/ue5-game.js"></script>
+</body>
+</html>

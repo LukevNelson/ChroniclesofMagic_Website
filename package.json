@@ -1,0 +1,23 @@
+{
+  "name": "com-website-tests",
+  "version": "0.0.0",
+  "description": "Auxiliary test scripts for the COM Website",
+  "scripts": {
+    "start": "npx http-server -p 8080",
+    "smoke-http": "node ./tests/smoke-http-test.js",
+    "backfill-taken-names": "node ./scripts/backfill-taken-names.js"
+  },
+  "devDependencies": {
+    "@types/chai": "^5.2.3",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
+    "chai": "^6.2.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0",
+    "minimist": "^1.2.8"
+  }
+}

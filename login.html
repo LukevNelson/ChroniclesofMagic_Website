@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { font-family: Arial, sans-serif; background: #181a1b; color: #f3f3f3; }
+        .auth-container { max-width: 400px; margin: 60px auto; background: #23272a; border-radius: 8px; box-shadow: 0 2px 12px #0008; padding: 32px; }
+        .auth-container h2 { margin-bottom: 18px; }
+        .auth-container form { display: flex; flex-direction: column; gap: 14px; }
+        .auth-container input, .auth-container select { padding: 10px; border-radius: 4px; border: 1px solid #444; background: #181a1b; color: #f3f3f3; }
+        .auth-container button { padding: 10px; border: none; border-radius: 4px; background: #7289da; color: #fff; font-weight: bold; cursor: pointer; }
+        .auth-container button:hover { background: #5b6eae; }
+        .auth-toggle { text-align: center; margin-top: 18px; }
+        .auth-toggle a { color: #7289da; cursor: pointer; text-decoration: underline; }
+        .auth-error { color: #ff6b6b; font-size: 0.95em; }
+        .auth-success { color: #51fa7b; font-size: 0.95em; }
+    </style>
+</head>
+<body>
+    <div class="auth-container" id="auth-container">
+        <!-- Forms will be injected here by JS -->
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html>

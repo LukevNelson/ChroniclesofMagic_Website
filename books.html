@@ -1,0 +1,1173 @@
+<!DOCT    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/visual-enhancements.css">PE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literary Archive - T.O.M.E.</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/book-analysis.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>T.O.M.E.</h1>
+                <span>The Omniverse of Magical Education</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="quiz.html" class="nav-link">Take Quiz</a></li>
+                <li><a href="lore.html" class="nav-link">Lore</a></li>
+                <li><a href="disciplines.html" class="nav-link">Disciplines</a></li>
+                <li><a href="species.html" class="nav-link">Species</a></li>
+                <li><a href="characters.html" class="nav-link">Characters</a></li>
+                <li><a href="books.html" class="nav-link active">Books</a></li>
+                <li><a href="database.html" class="nav-link">Player Database</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="books-hero">
+        <div class="hero-background">
+            <div class="book-particles"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Book Analysis & <span class="highlight">Reading Guide</span></h1>
+            <p class="hero-subtitle">Comprehensive guides, timelines, and analysis tools for the complete Skulduggery Pleasant series</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">Main Books</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Spin-offs</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Chapters</div>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <button class="btn btn-primary" id="reading-progress-btn">
+                    <i class="fas fa-book-reader"></i>
+                    Track Reading Progress
+                </button>
+                <button class="btn btn-secondary" id="spoiler-free-btn">
+                    <i class="fas fa-eye-slash"></i>
+                    Spoiler-Free Mode
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reading Tools -->
+    <section class="reading-tools">
+        <div class="container">
+            <h2 class="section-title">Reading Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card" data-tool="timeline">
+                    <div class="tool-icon">
+                        <i class="fas fa-timeline"></i>
+                    </div>
+                    <h3>Interactive Timeline</h3>
+                    <p>Explore events chronologically across all books with detailed breakdowns</p>
+                    <button class="tool-btn">Open Timeline</button>
+                </div>
+
+                <div class="tool-card" data-tool="reading-order">
+                    <div class="tool-icon">
+                        <i class="fas fa-sort-numeric-down"></i>
+                    </div>
+                    <h3>Reading Order Guide</h3>
+                    <p>Perfect sequence for new readers with spoiler-free recommendations</p>
+                    <button class="tool-btn">View Guide</button>
+                </div>
+
+                <div class="tool-card" data-tool="chapter-summaries">
+                    <div class="tool-icon">
+                        <i class="fas fa-list-alt"></i>
+                    </div>
+                    <h3>Chapter Summaries</h3>
+                    <p>Detailed chapter-by-chapter breakdowns with key plot points</p>
+                    <button class="tool-btn">Browse Summaries</button>
+                </div>
+
+                <div class="tool-card" data-tool="character-tracker">
+                    <div class="tool-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Character Tracker</h3>
+                    <p>Follow character development and appearances across the series</p>
+                    <button class="tool-btn">Track Characters</button>
+                </div>
+
+                <div class="tool-card" data-tool="themes-analysis">
+                    <div class="tool-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Themes & Analysis</h3>
+                    <p>Deep dive into literary themes, symbolism, and narrative techniques</p>
+                    <button class="tool-btn">Explore Themes</button>
+                </div>
+
+                <div class="tool-card" data-tool="quotes-database">
+                    <div class="tool-icon">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <h3>Memorable Quotes</h3>
+                    <p>Searchable database of iconic quotes from across the series</p>
+                    <button class="tool-btn">Browse Quotes</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Book Series -->
+    <section class="main-series">
+        <div class="container">
+            <h2 class="section-title">Main Series (Books 1-15)</h2>
+            
+            <!-- Complete Book Collection -->
+            <div class="book-covers">
+                <div class="book-cover">
+                    <img src="assets/images/books/skulduggery-pleasant-1.jpg" alt="Skulduggery Pleasant" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Book 1<br>Skulduggery Pleasant</div>';">
+                </div>
+                <div class="book-cover">
+                    <img src="assets/images/books/playing-with-fire.jpg" alt="Playing with Fire" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Book 2<br>Playing with Fire</div>';">
+                </div>
+                <div class="book-cover">
+                    <img src="assets/images/books/the-faceless-ones.jpg" alt="The Faceless Ones" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Book 3<br>The Faceless Ones</div>';">
+                </div>
+                <div class="book-cover">
+                    <img src="assets/images/books/dark-days.jpg" alt="Dark Days" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Book 4<br>Dark Days</div>';">
+                </div>
+                <div class="book-cover">
+                    <img src="assets/images/books/mortal-coil.jpg" alt="Mortal Coil" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Book 5<br>Mortal Coil</div>';">
+                </div>
+                <div class="book-cover">
+                    <img src="assets/images/books/death-bringer.jpg" alt="Death Bringer" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Book 6<br>Death Bringer</div>';">
+                </div>
+                <div class="book-cover">
+                    <img src="assets/images/books/kingdom-of-the-wicked.jpg" alt="Kingdom of the Wicked" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Book 7<br>Kingdom of the Wicked</div>';">
+                </div>
+                <div class="book-cover">
+                    <img src="assets/images/books/last-stand-of-dead-men.jpg" alt="Last Stand of Dead Men" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Book 8<br>Last Stand of Dead Men</div>';">
+                </div>
+                <div class="book-cover">
+                    <img src="assets/images/books/the-dying-of-the-light.jpg" alt="The Dying of the Light" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Book 9<br>The Dying of the Light</div>';">
+                </div>
+                <div class="book-cover">
+                    <img src="assets/images/books/resurrection.jpg" alt="Resurrection" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Book 10<br>Resurrection</div>';">
+                </div>
+                <div class="book-cover">
+                    <img src="assets/images/books/midnight.jpg" alt="Midnight" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Book 11<br>Midnight</div>';">
+                </div>
+                <div class="book-cover">
+                    <img src="assets/images/books/bedlam.jpg" alt="Bedlam" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Book 12<br>Bedlam</div>';">
+                </div>
+                <div class="book-cover">
+                    <img src="assets/images/books/seasons-of-war.jpg" alt="Seasons of War" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Book 13<br>Seasons of War</div>';">
+                </div>
+                <div class="book-cover">
+                    <img src="assets/images/books/dead-or-alive.jpg" alt="Dead or Alive" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Book 14<br>Dead or Alive</div>';">
+                </div>
+                <div class="book-cover">
+                    <img src="assets/images/books/until-the-end.jpg" alt="Until the End" onerror="this.style.display='none'; this.parentElement.innerHTML='<div>Book 15<br>Until the End</div>';">
+                </div>
+            </div>
+
+            <!-- Author Interview and Behind the Scenes -->
+            <div class="video-showcase">
+                <div class="video-placeholder">
+                    <div class="play-button"></div>
+                    <div class="video-title">Derek Landy: Behind the Series</div>
+                    <div class="video-description">Exclusive interviews with Derek Landy discussing the creation of the Skulduggery Pleasant universe, character development, and writing process.</div>
+                </div>
+            </div>
+
+            <!-- Enhanced Visual Content Section -->
+            <div class="books-visual-content">
+                <h3>📚 Book Series Visual Gallery</h3>
+                
+                <!-- Alternative Book Covers -->
+                <div class="gallery-subsection">
+                    <h4>Alternative Cover Art & International Editions</h4>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/books/covers/skulduggery-alt-uk.jpg" alt="UK Alternative Cover" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">
+                                <i class="fas fa-book"></i>
+                                <span>UK Edition Cover</span>
+                            </div>
+                            <div class="gallery-caption">Alternative UK cover design for Book 1</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/books/covers/skulduggery-us.jpg" alt="US Cover Edition" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">
+                                <i class="fas fa-flag-usa"></i>
+                                <span>US Edition Cover</span>
+                            </div>
+                            <div class="gallery-caption">American market cover design</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/books/covers/skulduggery-german.jpg" alt="German Edition" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">
+                                <i class="fas fa-language"></i>
+                                <span>German Translation</span>
+                            </div>
+                            <div class="gallery-caption">German language edition cover art</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/books/covers/skulduggery-anniversary.jpg" alt="Anniversary Edition" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">
+                                <i class="fas fa-anniversary"></i>
+                                <span>Special Anniversary</span>
+                            </div>
+                            <div class="gallery-caption">Limited anniversary edition with special artwork</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Character Concept Art -->
+                <div class="gallery-subsection">
+                    <h4>Character Design & Concept Art</h4>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/books/concept-art/skulduggery-early-design.jpg" alt="Skulduggery Early Design" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">
+                                <i class="fas fa-skull"></i>
+                                <span>Character Evolution</span>
+                            </div>
+                            <div class="gallery-caption">Early concept sketches of Skulduggery Pleasant</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/books/concept-art/valkyrie-concept.jpg" alt="Valkyrie Concept Art" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">
+                                <i class="fas fa-female"></i>
+                                <span>Valkyrie Design</span>
+                            </div>
+                            <div class="gallery-caption">Valkyrie's character design evolution</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/books/concept-art/villains-gallery.jpg" alt="Villain Designs" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">
+                                <i class="fas fa-mask"></i>
+                                <span>Antagonist Gallery</span>
+                            </div>
+                            <div class="gallery-caption">Concept art for major series villains</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/books/concept-art/magical-creatures.jpg" alt="Magical Creatures" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">
+                                <i class="fas fa-dragon"></i>
+                                <span>Creature Designs</span>
+                            </div>
+                            <div class="gallery-caption">Various magical creatures from the series</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scene Illustrations -->
+                <div class="gallery-subsection">
+                    <h4>Key Scene Illustrations</h4>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/books/scenes/gordon-house-scene.jpg" alt="Gordon's House" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">
+                                <i class="fas fa-home"></i>
+                                <span>Iconic Location</span>
+                            </div>
+                            <div class="gallery-caption">Stephanie's first visit to Uncle Gordon's house</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/books/scenes/sanctuary-dublin.jpg" alt="Dublin Sanctuary" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">
+                                <i class="fas fa-building"></i>
+                                <span>Magical Headquarters</span>
+                            </div>
+                            <div class="gallery-caption">The impressive Dublin Sanctuary headquarters</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/books/scenes/final-battle.jpg" alt="Epic Battle Scene" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">
+                                <i class="fas fa-fire"></i>
+                                <span>Epic Confrontation</span>
+                            </div>
+                            <div class="gallery-caption">Climactic magical battle from the series finale</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/books/scenes/character-moments.jpg" alt="Character Moments" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">
+                                <i class="fas fa-heart"></i>
+                                <span>Emotional Scenes</span>
+                            </div>
+                            <div class="gallery-caption">Key emotional moments between characters</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map & World Building -->
+                <div class="gallery-subsection">
+                    <h4>Maps & World Building Visuals</h4>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/books/maps/dublin-magical-districts.jpg" alt="Dublin Map" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">
+                                <i class="fas fa-map"></i>
+                                <span>Magical Dublin Map</span>
+                            </div>
+                            <div class="gallery-caption">Detailed map of Dublin's magical districts and hidden locations</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/books/maps/sanctuary-network.jpg" alt="Global Sanctuaries" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">
+                                <i class="fas fa-globe"></i>
+                                <span>Worldwide Network</span>
+                            </div>
+                            <div class="gallery-caption">Global network of Sanctuary locations</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/books/maps/faceless-dimensions.jpg" alt="Dimensional Map" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">
+                                <i class="fas fa-portal"></i>
+                                <span>Other Dimensions</span>
+                            </div>
+                            <div class="gallery-caption">Map of alternate dimensions and portal locations</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/books/maps/timeline-visual.jpg" alt="Series Timeline" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">
+                                <i class="fas fa-timeline"></i>
+                                <span>Visual Timeline</span>
+                            </div>
+                            <div class="gallery-caption">Complete visual timeline of major series events</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Video Content -->
+            <div class="books-video-content">
+                <h3>🎬 Behind the Books Video Series</h3>
+                
+                <!-- Book Analysis Videos -->
+                <div class="video-showcase">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Complete Series Analysis: All 15 Books Reviewed</div>
+                        <div class="video-description">Comprehensive analysis of the entire Skulduggery Pleasant series, covering themes, character development, plot evolution, and Derek Landy's writing techniques across all books.</div>
+                    </div>
+                </div>
+
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <div class="video-placeholder">
+                            <div class="play-button"></div>
+                            <div class="video-title">Phase 1 vs Phase 2 Analysis</div>
+                            <div class="video-description">Comparing the original 9 books to the new phase</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="video-placeholder">
+                            <div class="play-button"></div>
+                            <div class="video-title">Character Development Across Books</div>
+                            <div class="video-description">How main characters evolve throughout the series</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="video-placeholder">
+                            <div class="play-button"></div>
+                            <div class="video-title">Hidden Clues & Foreshadowing</div>
+                            <div class="video-description">Easter eggs and hints Derek planted early on</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="video-placeholder">
+                            <div class="play-button"></div>
+                            <div class="video-title">Best Reading Order for New Fans</div>
+                            <div class="video-description">Optimal sequence and what to expect</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter Illustrations Gallery -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="assets/images/books/illustrations/first-meeting.jpg" alt="First Meeting" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">📖</div>
+                    <div class="gallery-caption">
+                        Stephanie's first encounter with Skulduggery Pleasant
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/books/illustrations/bentley-chase.jpg" alt="Bentley Chase" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">🚗</div>
+                    <div class="gallery-caption">
+                        High-speed chase scene from the first book
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/books/illustrations/sanctuary-raid.jpg" alt="Sanctuary Raid" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">🏛️</div>
+                    <div class="gallery-caption">
+                        Assault on the Dublin Sanctuary
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/books/illustrations/final-battle.jpg" alt="Final Battle" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">⚔️</div>
+                    <div class="gallery-caption">
+                        Epic final confrontation scenes
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reading Progress Visualizer -->
+            <div class="magic-demo">
+                <div class="demo-header">
+                    <span class="demo-icon">📚</span>
+                    <span class="demo-title">Interactive Reading Tracker</span>
+                </div>
+                <div class="demo-content">
+                    <div class="demo-description">
+                        Track your reading progress through the entire series with our interactive visualization tool. See character developments, plot arcs, and thematic connections across all 15 books.
+                    </div>
+                    <div class="demo-visual">
+                        <div class="video-placeholder">
+                            <div class="play-button"></div>
+                            <div>Reading Tracker</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Extensive Book Analysis Videos -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Book 1: Skulduggery Pleasant Analysis</div>
+                        <div class="video-description">Chapter-by-chapter breakdown</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Series Timeline Explained</div>
+                        <div class="video-description">Chronological order and connections</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Hidden Themes & Symbolism</div>
+                        <div class="video-description">Literary analysis deep dive</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Plot Twist Breakdown</div>
+                        <div class="video-description">Major reveals and their impact</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Author Commentary Series -->
+            <div class="video-showcase">
+                <div class="video-placeholder">
+                    <div class="play-button"></div>
+                    <div class="video-title">Derek Landy: Complete Author Commentary</div>
+                    <div class="video-description">The author provides detailed commentary on each book, sharing writing process insights, character decisions, and hidden easter eggs throughout the series.</div>
+                </div>
+            </div>
+
+            <!-- Book-by-Book Video Reviews -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Books 1-3: Foundation Trilogy</div>
+                        <div class="video-description">Series establishment analysis</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Books 4-6: Expansion Arc</div>
+                        <div class="video-description">World building and complexity</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Books 7-9: Climax Series</div>
+                        <div class="video-description">Peak action and drama</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Books 10-15: New Generation</div>
+                        <div class="video-description">Fresh perspectives and conclusions</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reading Experience Enhancement -->
+            <div class="magic-demo">
+                <div class="demo-header">
+                    <span class="demo-icon">🎧</span>
+                    <span class="demo-title">Enhanced Reading Experience</span>
+                </div>
+                <div class="demo-content">
+                    <div class="demo-description">
+                        Enhance your reading experience with ambient soundscapes, character voice previews, and immersive audio effects that bring the magical world to life.
+                    </div>
+                    <div class="demo-visual">
+                        <div class="video-placeholder">
+                            <div class="play-button"></div>
+                            <div>Audio Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fan Theories and Discussions -->
+            <div class="video-showcase">
+                <div class="video-placeholder">
+                    <div class="play-button"></div>
+                    <div class="video-title">Fan Theory Roundtable</div>
+                    <div class="video-description">Community discussions exploring popular fan theories, predictions, and interpretations of key plot points and character motivations.</div>
+                </div>
+            </div>
+
+            <!-- Book Club and Community -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Virtual Book Club Sessions</div>
+                        <div class="video-description">Interactive reading discussions</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Fan Art Showcases</div>
+                        <div class="video-description">Community artwork features</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Reading Challenge Videos</div>
+                        <div class="video-description">Speed reading and comprehension</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Book Recommendation Engine</div>
+                        <div class="video-description">AI-powered reading suggestions</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Audiobook Experience -->
+            <div class="magic-demo">
+                <div class="demo-header">
+                    <span class="demo-icon">🎤</span>
+                    <span class="demo-title">Professional Audiobook Production</span>
+                </div>
+                <div class="demo-content">
+                    <div class="demo-description">
+                        Experience the series through professional narration with full voice acting, sound effects, and musical scores that bring every character to life.
+                    </div>
+                    <div class="demo-visual">
+                        <div class="video-placeholder">
+                            <div class="play-button"></div>
+                            <div>Audiobook Preview</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Adaptation Content -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">TV Series Development</div>
+                        <div class="video-description">Behind-the-scenes adaptation process</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Casting Director Insights</div>
+                        <div class="video-description">Character casting decisions</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Script Adaptation Process</div>
+                        <div class="video-description">Book to screen translation</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Set Design and Effects</div>
+                        <div class="video-description">Bringing magic to visual life</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Reading Tools -->
+            <div class="video-showcase">
+                <div class="video-placeholder">
+                    <div class="play-button"></div>
+                    <div class="video-title">Interactive Reading Companion</div>
+                    <div class="video-description">Digital tools to enhance your reading experience including character maps, timeline trackers, and magic system explanations that update as you progress through the series.</div>
+                </div>
+            </div>
+
+            <!-- Global Publishing and Translation -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">International Editions</div>
+                        <div class="video-description">Worldwide publishing journey</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Translation Challenges</div>
+                        <div class="video-description">Adapting humor and magic across cultures</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Cover Art Evolution</div>
+                        <div class="video-description">International cover design showcase</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Global Fan Communities</div>
+                        <div class="video-description">Worldwide reader interactions</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="series-controls">
+                <div class="view-options">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th"></i>
+                        Grid View
+                    </button>
+                    <button class="view-btn" data-view="timeline">
+                        <i class="fas fa-stream"></i>
+                        Timeline View
+                    </button>
+                    <button class="view-btn" data-view="detailed">
+                        <i class="fas fa-list"></i>
+                        Detailed View
+                    </button>
+                </div>
+                <div class="spoiler-toggle">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="spoiler-toggle">
+                        <span class="toggle-slider"></span>
+                    </label>
+                    <span>Hide Spoilers</span>
+                </div>
+            </div>
+
+            <div class="books-grid" id="books-grid-view">
+                <!-- Book 1 -->
+                <div class="book-card" data-book="1" data-spoiler-level="0">
+                    <div class="book-cover">
+                        <div class="cover-placeholder">
+                            <i class="fas fa-book"></i>
+                            <span class="book-number">1</span>
+                        </div>
+                        <div class="reading-status">
+                            <button class="status-btn" data-status="not-started">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="book-info">
+                        <h3>Skulduggery Pleasant</h3>
+                        <p class="book-subtitle">The Beginning</p>
+                        <div class="book-stats">
+                            <span class="stat-item">
+                                <i class="fas fa-calendar"></i>
+                                Published: 2007
+                            </span>
+                            <span class="stat-item">
+                                <i class="fas fa-file-alt"></i>
+                                28 Chapters
+                            </span>
+                            <span class="stat-item">
+                                <i class="fas fa-clock"></i>
+                                ~8 hours
+                            </span>
+                        </div>
+                        <p class="book-description">
+                            When twelve-year-old Stephanie inherits her weird uncle's estate, she discovers a world of magic, monsters, and a living skeleton detective.
+                        </p>
+                        <div class="spoiler-content" data-spoiler-level="1" style="display: none;">
+                            <p class="spoiler-warning">Contains spoilers for Book 1</p>
+                            <p>Stephanie Edgley becomes Valkyrie Cain and partners with Skulduggery Pleasant to stop Serpine from obtaining the Sceptre of the Ancients.</p>
+                        </div>
+                        <div class="book-actions">
+                            <a href="books/book-1.html" class="btn btn-primary">
+                                <i class="fas fa-book-open"></i>
+                                View Analysis
+                            </a>
+                            <button class="btn btn-secondary reading-progress-btn">
+                                <i class="fas fa-bookmark"></i>
+                                Track Progress
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book 2 -->
+                <div class="book-card" data-book="2" data-spoiler-level="0">
+                    <div class="book-cover">
+                        <div class="cover-placeholder">
+                            <i class="fas fa-book"></i>
+                            <span class="book-number">2</span>
+                        </div>
+                        <div class="reading-status">
+                            <button class="status-btn" data-status="not-started">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="book-info">
+                        <h3>Playing with Fire</h3>
+                        <p class="book-subtitle">The Adventure Continues</p>
+                        <div class="book-stats">
+                            <span class="stat-item">
+                                <i class="fas fa-calendar"></i>
+                                Published: 2008
+                            </span>
+                            <span class="stat-item">
+                                <i class="fas fa-file-alt"></i>
+                                30 Chapters
+                            </span>
+                            <span class="stat-item">
+                                <i class="fas fa-clock"></i>
+                                ~9 hours
+                            </span>
+                        </div>
+                        <p class="book-description">
+                            Valkyrie and Skulduggery face a new threat as the Grotesquery is assembled and Baron Vengeous returns from prison.
+                        </p>
+                        <div class="spoiler-content" data-spoiler-level="1" style="display: none;">
+                            <p class="spoiler-warning">Contains spoilers for Book 2</p>
+                            <p>Baron Vengeous attempts to bring back the Faceless Ones using the Grotesquery. Tanith Low joins the team and Mr. Bliss makes the ultimate sacrifice.</p>
+                        </div>
+                        <div class="book-actions">
+                            <a href="books/book-2.html" class="btn btn-primary">
+                                <i class="fas fa-book-open"></i>
+                                View Analysis
+                            </a>
+                            <button class="btn btn-secondary reading-progress-btn">
+                                <i class="fas fa-bookmark"></i>
+                                Track Progress
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book 3 -->
+                <div class="book-card" data-book="3" data-spoiler-level="0">
+                    <div class="book-cover">
+                        <div class="cover-placeholder">
+                            <i class="fas fa-book"></i>
+                            <span class="book-number">3</span>
+                        </div>
+                        <div class="reading-status">
+                            <button class="status-btn" data-status="not-started">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="book-info">
+                        <h3>The Faceless Ones</h3>
+                        <p class="book-subtitle">The First Trilogy Concludes</p>
+                        <div class="book-stats">
+                            <span class="stat-item">
+                                <i class="fas fa-calendar"></i>
+                                Published: 2009
+                            </span>
+                            <span class="stat-item">
+                                <i class="fas fa-file-alt"></i>
+                                32 Chapters
+                            </span>
+                            <span class="stat-item">
+                                <i class="fas fa-clock"></i>
+                                ~10 hours
+                            </span>
+                        </div>
+                        <p class="book-description">
+                            The Faceless Ones return to reclaim their world, and Valkyrie must make an impossible choice to save everyone she loves.
+                        </p>
+                        <div class="spoiler-content" data-spoiler-level="1" style="display: none;">
+                            <p class="spoiler-warning">Contains spoilers for Book 3</p>
+                            <p>Valkyrie sacrifices herself to close the portal, spending time in the Faceless Ones' dimension before returning with Skulduggery's help.</p>
+                        </div>
+                        <div class="book-actions">
+                            <a href="books/book-3.html" class="btn btn-primary">
+                                <i class="fas fa-book-open"></i>
+                                View Analysis
+                            </a>
+                            <button class="btn btn-secondary reading-progress-btn">
+                                <i class="fas fa-bookmark"></i>
+                                Track Progress
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional books would continue here with similar structure -->
+                <div class="book-card coming-soon">
+                    <div class="book-cover">
+                        <div class="cover-placeholder">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="book-info">
+                        <h3>More Books Coming Soon</h3>
+                        <p class="book-description">Complete analysis for all 15 books in the main series</p>
+                        <div class="book-actions">
+                            <button class="btn btn-secondary" disabled>
+                                <i class="fas fa-clock"></i>
+                                In Development
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline View -->
+            <div class="books-timeline" id="books-timeline-view" style="display: none;">
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-period" data-period="phase1">
+                        <div class="period-header">
+                            <h3>Phase One: The Faceless Ones Trilogy</h3>
+                            <span class="period-years">2007-2009</span>
+                        </div>
+                        <div class="period-books">
+                            <div class="timeline-book" data-book="1">
+                                <div class="book-marker">
+                                    <span class="book-number">1</span>
+                                </div>
+                                <div class="book-details">
+                                    <h4>Skulduggery Pleasant</h4>
+                                    <p>The beginning of Valkyrie's journey into the magical world</p>
+                                </div>
+                            </div>
+                            <div class="timeline-book" data-book="2">
+                                <div class="book-marker">
+                                    <span class="book-number">2</span>
+                                </div>
+                                <div class="book-details">
+                                    <h4>Playing with Fire</h4>
+                                    <p>Baron Vengeous and the Grotesquery threat</p>
+                                </div>
+                            </div>
+                            <div class="timeline-book" data-book="3">
+                                <div class="book-marker">
+                                    <span class="book-number">3</span>
+                                </div>
+                                <div class="book-details">
+                                    <h4>The Faceless Ones</h4>
+                                    <p>The return of the ancient gods</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-period" data-period="phase2">
+                        <div class="period-header">
+                            <h3>Phase Two: The Death Bringer Saga</h3>
+                            <span class="period-years">2010-2012</span>
+                        </div>
+                        <div class="period-books">
+                            <div class="timeline-book" data-book="4">
+                                <div class="book-marker">
+                                    <span class="book-number">4</span>
+                                </div>
+                                <div class="book-details">
+                                    <h4>Dark Days</h4>
+                                    <p>Skulduggery's imprisonment and return</p>
+                                </div>
+                            </div>
+                            <div class="timeline-book" data-book="5">
+                                <div class="book-marker">
+                                    <span class="book-number">5</span>
+                                </div>
+                                <div class="book-details">
+                                    <h4>Mortal Coil</h4>
+                                    <p>The prophecy of the Death Bringer unfolds</p>
+                                </div>
+                            </div>
+                            <div class="timeline-book" data-book="6">
+                                <div class="book-marker">
+                                    <span class="book-number">6</span>
+                                </div>
+                                <div class="book-details">
+                                    <h4>Death Bringer</h4>
+                                    <p>Valkyrie embraces her dark destiny</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional phases would continue here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reading Progress Tracker -->
+    <section class="reading-progress" id="reading-progress-section" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Your Reading Journey</h2>
+            <div class="progress-overview">
+                <div class="progress-stats">
+                    <div class="progress-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-books"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="books-completed">0</div>
+                            <div class="stat-label">Books Completed</div>
+                        </div>
+                    </div>
+                    <div class="progress-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="reading-time">0h</div>
+                            <div class="stat-label">Reading Time</div>
+                        </div>
+                    </div>
+                    <div class="progress-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="series-progress">0%</div>
+                            <div class="stat-label">Series Progress</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="current-book">
+                    <h3>Currently Reading</h3>
+                    <div class="current-book-info" id="current-book-info">
+                        <p>No book currently being tracked</p>
+                        <button class="btn btn-primary" id="start-reading-btn">Start Reading</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reading-goals">
+                <h3>Reading Goals</h3>
+                <div class="goals-grid">
+                    <div class="goal-card">
+                        <h4>Complete Phase One</h4>
+                        <div class="goal-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0/3 books</span>
+                        </div>
+                    </div>
+                    <div class="goal-card">
+                        <h4>Read 100 Hours</h4>
+                        <div class="goal-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0/100 hours</span>
+                        </div>
+                    </div>
+                    <div class="goal-card">
+                        <h4>Complete Main Series</h4>
+                        <div class="goal-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0/15 books</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spin-offs & Related Works -->
+    <section class="related-works">
+        <div class="container">
+            <h2 class="section-title">Spin-offs & Related Works</h2>
+            <div class="works-grid">
+                <div class="work-card">
+                    <div class="work-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>The Maleficent Seven</h3>
+                    <p class="work-type">Standalone Novel</p>
+                    <p class="work-description">
+                        A story set in the Skulduggery Pleasant universe featuring Tanith Low and a team of criminals.
+                    </p>
+                    <div class="work-stats">
+                        <span>Published: 2013</span>
+                        <span>Timeline: Between books 8-9</span>
+                    </div>
+                    <a href="books/maleficent-seven.html" class="btn btn-secondary">Read Analysis</a>
+                </div>
+
+                <div class="work-card">
+                    <div class="work-icon">
+                        <i class="fas fa-scroll"></i>
+                    </div>
+                    <h3>Short Stories</h3>
+                    <p class="work-type">Collection</p>
+                    <p class="work-description">
+                        Various short stories and novellas set in the Skulduggery Pleasant universe.
+                    </p>
+                    <div class="work-stats">
+                        <span>Multiple releases</span>
+                        <span>Various timelines</span>
+                    </div>
+                    <a href="books/short-stories.html" class="btn btn-secondary">Browse Collection</a>
+                </div>
+
+                <div class="work-card">
+                    <div class="work-icon">
+                        <i class="fas fa-theater-masks"></i>
+                    </div>
+                    <h3>Plays & Scripts</h3>
+                    <p class="work-type">Theatre</p>
+                    <p class="work-description">
+                        Theatrical adaptations and original plays set in the magical world.
+                    </p>
+                    <div class="work-stats">
+                        <span>Various productions</span>
+                        <span>Live performances</span>
+                    </div>
+                    <a href="books/plays.html" class="btn btn-secondary">View Scripts</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reading Recommendations -->
+    <section class="reading-recommendations">
+        <div class="container">
+            <h2 class="section-title">Personalized Recommendations</h2>
+            <div class="recommendations-content">
+                <div class="recommendation-engine">
+                    <h3>Get Your Next Read</h3>
+                    <p>Answer a few questions to get personalized book recommendations</p>
+                    <div class="recommendation-form">
+                        <div class="form-group">
+                            <label>What's your reading experience with the series?</label>
+                            <select id="experience-level">
+                                <option value="new">New to the series</option>
+                                <option value="partial">Read some books</option>
+                                <option value="veteran">Veteran reader</option>
+                                <option value="rereading">Re-reading the series</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>What genres do you enjoy most?</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" value="action"> Action/Adventure</label>
+                                <label><input type="checkbox" value="mystery"> Mystery</label>
+                                <label><input type="checkbox" value="horror"> Horror/Dark</label>
+                                <label><input type="checkbox" value="humor"> Comedy/Humor</label>
+                                <label><input type="checkbox" value="character"> Character Development</label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" id="get-recommendations">
+                            <i class="fas fa-magic"></i>
+                            Get Recommendations
+                        </button>
+                    </div>
+                    <div class="recommendation-results" id="recommendation-results" style="display: none;">
+                        <!-- Recommendations will be generated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Book Analysis</h3>
+                    <ul>
+                        <li><a href="#main-series">Main Series</a></li>
+                        <li><a href="#spin-offs">Spin-offs</a></li>
+                        <li><a href="#timeline">Interactive Timeline</a></li>
+                        <li><a href="#reading-guide">Reading Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Reading Tools</h3>
+                    <ul>
+                        <li><a href="#progress-tracker">Progress Tracker</a></li>
+                        <li><a href="#chapter-summaries">Chapter Summaries</a></li>
+                        <li><a href="#character-tracker">Character Tracker</a></li>
+                        <li><a href="#spoiler-free">Spoiler-Free Mode</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Analysis</h3>
+                    <ul>
+                        <li><a href="#themes">Themes & Symbolism</a></li>
+                        <li><a href="#quotes">Memorable Quotes</a></li>
+                        <li><a href="#literary-analysis">Literary Analysis</a></li>
+                        <li><a href="#recommendations">Recommendations</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/book-analysis.js"></script>
+</body>
+</html>

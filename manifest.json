@@ -1,0 +1,39 @@
+{
+    "name": "Skulduggery Pleasant Universe",
+    "short_name": "SP Universe",
+    "description": "The ultimate hub for Skulduggery Pleasant fans - explore lore, characters, magic systems, and more!",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0a0a",
+    "theme_color": "#d4af37",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "images/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "images/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["entertainment", "books", "fantasy"],
+    "screenshots": [
+        {
+            "src": "images/screenshot-mobile.png",
+            "sizes": "375x667",
+            "type": "image/png",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "images/screenshot-desktop.png",
+            "sizes": "1200x800",
+            "type": "image/png",
+            "form_factor": "wide"
+        }
+    ]
+}

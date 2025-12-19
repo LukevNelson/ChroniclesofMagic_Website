@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T.O.M.E. Mobile Companion - Flutter Application</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/project-page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>T.O.M.E.</h1>
+                <span>The Omniverse of Magical Education</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="quiz.html" class="nav-link">Take Quiz</a></li>
+                <li><a href="lore.html" class="nav-link">Lore</a></li>
+                <li><a href="disciplines.html" class="nav-link">Disciplines</a></li>
+                <li><a href="species.html" class="nav-link">Species</a></li>
+                <li><a href="database.html" class="nav-link">Player Database</a></li>
+                <li><a href="content-index.html" class="nav-link">Content Index</a></li>
+                <li><a href="mobile-app.html" class="nav-link active">Mobile App</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="project-hero app-hero">
+        <div class="hero-background">
+            <div class="app-particles"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-mobile-alt"></i>
+                Flutter Mobile App
+            </div>
+            <h1 class="hero-title">Skulduggery Pleasant <span class="highlight">Companion App</span></h1>
+            <p class="hero-subtitle">The ultimate mobile companion for fans - featuring comprehensive guides, interactive quizzes, character profiles, and exclusive content all in your pocket</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Characters</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">Books Covered</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Quiz Questions</div>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <button class="btn btn-primary large">
+                    <i class="fab fa-apple"></i>
+                    Download for iOS
+                </button>
+                <button class="btn btn-primary large">
+                    <i class="fab fa-google-play"></i>
+                    Download for Android
+                </button>
+            </div>
+            <div class="app-preview-hero">
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="app-screenshot">
+                                <div class="app-header">
+                                    <div class="app-title">SP Universe</div>
+                                    <div class="app-profile">
+                                        <i class="fas fa-user-circle"></i>
+                                    </div>
+                                </div>
+                                <div class="app-content">
+                                    <div class="feature-card-mini">
+                                        <i class="fas fa-book"></i>
+                                        <span>Book Guide</span>
+                                    </div>
+                                    <div class="feature-card-mini">
+                                        <i class="fas fa-users"></i>
+                                        <span>Characters</span>
+                                    </div>
+                                    <div class="feature-card-mini">
+                                        <i class="fas fa-magic"></i>
+                                        <span>Magic Guide</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Overview -->
+    <section class="project-overview">
+        <div class="container">
+            <div class="overview-content">
+                <div class="overview-text">
+                    <h2>Your Pocket-Sized Magical Companion</h2>
+                    <p class="overview-description">
+                        Built with Flutter for seamless cross-platform performance, our mobile app brings the entire Skulduggery Pleasant universe to your fingertips. Whether you're a longtime fan or just discovering the series, this app provides everything you need to explore Derek Landy's magical world.
+                    </p>
+                    <p>
+                        From detailed character biographies to interactive magic tutorials, from reading guides to trivia challenges, the app serves as your comprehensive companion for all things Skulduggery Pleasant. Available offline and regularly updated with new content.
+                    </p>
+                </div>
+                <div class="overview-features">
+                    <div class="feature-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Cross-Platform</h3>
+                        <p>Native performance on both iOS and Android with identical features</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-download"></i>
+                        <h3>Offline Access</h3>
+                        <p>Download content for reading without internet connection</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-sync"></i>
+                        <h3>Cloud Sync</h3>
+                        <p>Your progress and preferences sync across all devices</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="app-features">
+        <div class="container">
+            <h2 class="section-title">Core Features</h2>
+            
+            <div class="features-showcase">
+                <div class="feature-item">
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Complete Book Guide</h3>
+                        <p>
+                            Navigate through all 15 books in the main series plus spin-offs with detailed summaries, reading order recommendations, and spoiler-free guides for new readers. Each book entry includes character introductions, plot summaries, and thematic analysis.
+                        </p>
+                        <ul class="feature-details">
+                            <li>Spoiler-free reading guides for newcomers</li>
+                            <li>Detailed chapter summaries and analysis</li>
+                            <li>Character arcs and development tracking</li>
+                            <li>Reading order recommendations for optimal experience</li>
+                            <li>Book ratings and community reviews</li>
+                        </ul>
+                    </div>
+                    <div class="feature-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <div class="feature-screenshot">
+                                    <div class="book-list">
+                                        <div class="book-item">
+                                            <div class="book-cover"></div>
+                                            <div class="book-info">
+                                                <h4>Skulduggery Pleasant</h4>
+                                                <p>Book 1 - The Beginning</p>
+                                            </div>
+                                        </div>
+                                        <div class="book-item">
+                                            <div class="book-cover"></div>
+                                            <div class="book-info">
+                                                <h4>Playing with Fire</h4>
+                                                <p>Book 2 - The Adventure Continues</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-item reverse">
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Character Encyclopedia</h3>
+                        <p>
+                            Explore detailed profiles of over 500 characters from the series. Each profile includes biographical information, magical abilities, relationships, character development, and their role in the overarching story. Search by name, book appearance, or magical discipline.
+                        </p>
+                        <ul class="feature-details">
+                            <li>500+ detailed character profiles</li>
+                            <li>Magical abilities and discipline information</li>
+                            <li>Character relationship maps</li>
+                            <li>Appearance timeline across books</li>
+                            <li>Fan-favorite rankings and statistics</li>
+                        </ul>
+                    </div>
+                    <div class="feature-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <div class="feature-screenshot">
+                                    <div class="character-profile">
+                                        <div class="character-header">
+                                            <div class="character-avatar"></div>
+                                            <h3>Skulduggery Pleasant</h3>
+                                            <p>Living Skeleton Detective</p>
+                                        </div>
+                                        <div class="character-stats">
+                                            <div class="stat">Fire Elemental</div>
+                                            <div class="stat">Detective</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3>Interactive Magic Guide</h3>
+                        <p>
+                            Learn about the intricate magic system through interactive tutorials and detailed explanations. From elemental magic to adept disciplines, understand how magic works in the Skulduggery Pleasant universe with visual guides and practice exercises.
+                        </p>
+                        <ul class="feature-details">
+                            <li>Complete elemental and adept discipline guides</li>
+                            <li>Interactive spell tutorials and demonstrations</li>
+                            <li>Magic theory and practical applications</li>
+                            <li>Training exercises and progress tracking</li>
+                            <li>Famous practitioners and their techniques</li>
+                        </ul>
+                    </div>
+                    <div class="feature-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <div class="feature-screenshot">
+                                    <div class="magic-guide">
+                                        <h3>Fire Elemental</h3>
+                                        <div class="magic-demo">
+                                            <div class="flame-animation"></div>
+                                            <p>Tap to practice</p>
+                                        </div>
+                                        <div class="magic-progress"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-item reverse">
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h3>Trivia & Quiz System</h3>
+                        <p>
+                            Test your knowledge with over 1000 carefully crafted questions covering all aspects of the series. Multiple difficulty levels, category-specific quizzes, and daily challenges keep the experience fresh. Compete with friends and climb the leaderboards.
+                        </p>
+                        <ul class="feature-details">
+                            <li>1000+ trivia questions across all books</li>
+                            <li>Multiple difficulty levels and categories</li>
+                            <li>Daily challenges and special events</li>
+                            <li>Leaderboards and achievement system</li>
+                            <li>Multiplayer quiz battles with friends</li>
+                        </ul>
+                    </div>
+                    <div class="feature-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <div class="feature-screenshot">
+                                    <div class="quiz-screen">
+                                        <div class="question">
+                                            <h4>What is Skulduggery's favorite car?</h4>
+                                            <div class="options">
+                                                <div class="option">Bentley</div>
+                                                <div class="option">Aston Martin</div>
+                                                <div class="option">Jaguar</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section class="technical-specs">
+        <div class="container">
+            <h2 class="section-title">Built with Flutter</h2>
+            <div class="specs-content">
+                <div class="specs-text">
+                    <h3>Cross-Platform Excellence</h3>
+                    <p>
+                        Developed using Google's Flutter framework, our app delivers native performance on both iOS and Android while maintaining a single codebase. This ensures consistent features, faster updates, and optimal performance across all devices.
+                    </p>
+                </div>
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <div class="spec-icon">
+                            <i class="fab fa-android"></i>
+                        </div>
+                        <h4>Native Android Performance</h4>
+                        <p>Optimized for Android devices with Material Design components</p>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-icon">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                        <h4>Native iOS Performance</h4>
+                        <p>Seamless iOS integration with Cupertino design elements</p>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4>Local Storage</h4>
+                        <p>Efficient data caching for offline access and fast loading</p>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h4>Cloud Synchronization</h4>
+                        <p>Firebase backend for real-time data sync across devices</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Gallery -->
+    <section class="screenshots-gallery">
+        <div class="container">
+            <h2 class="section-title">App Screenshots</h2>
+            <div class="gallery-grid">
+                <div class="screenshot-item">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="screenshot-placeholder">
+                                <i class="fas fa-home"></i>
+                                <span>Home Screen</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Dashboard</h4>
+                    <p>Quick access to all features</p>
+                </div>
+                
+                <div class="screenshot-item">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="screenshot-placeholder">
+                                <i class="fas fa-book"></i>
+                                <span>Book Guide</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Book Library</h4>
+                    <p>Complete series overview</p>
+                </div>
+                
+                <div class="screenshot-item">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="screenshot-placeholder">
+                                <i class="fas fa-user"></i>
+                                <span>Character Profile</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Character Details</h4>
+                    <p>Comprehensive character info</p>
+                </div>
+                
+                <div class="screenshot-item">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="screenshot-placeholder">
+                                <i class="fas fa-magic"></i>
+                                <span>Magic Tutorial</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Magic Lessons</h4>
+                    <p>Interactive magic learning</p>
+                </div>
+                
+                <div class="screenshot-item">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="screenshot-placeholder">
+                                <i class="fas fa-question"></i>
+                                <span>Quiz Challenge</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Trivia Quiz</h4>
+                    <p>Test your knowledge</p>
+                </div>
+                
+                <div class="screenshot-item">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="screenshot-placeholder">
+                                <i class="fas fa-trophy"></i>
+                                <span>Achievements</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Progress Tracking</h4>
+                    <p>Achievements and statistics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download & Availability -->
+    <section class="download-section">
+        <div class="container">
+            <h2 class="section-title">Download Now</h2>
+            <div class="download-content">
+                <div class="download-info">
+                    <h3>Available on All Platforms</h3>
+                    <p>
+                        Get the Skulduggery Pleasant Companion App for free on both iOS and Android. Regular updates ensure you always have the latest content and features.
+                    </p>
+                    <div class="download-features">
+                        <div class="download-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Completely free with no ads</span>
+                        </div>
+                        <div class="download-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Regular content updates</span>
+                        </div>
+                        <div class="download-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Works offline</span>
+                        </div>
+                        <div class="download-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Cloud sync across devices</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="download-buttons">
+                    <a href="#" class="download-btn ios">
+                        <div class="btn-icon">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                        <div class="btn-text">
+                            <span class="btn-subtitle">Download on the</span>
+                            <span class="btn-title">App Store</span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="download-btn android">
+                        <div class="btn-icon">
+                            <i class="fab fa-google-play"></i>
+                        </div>
+                        <div class="btn-text">
+                            <span class="btn-subtitle">Get it on</span>
+                            <span class="btn-title">Google Play</span>
+                        </div>
+                    </a>
+                    
+                    <div class="qr-code">
+                        <div class="qr-placeholder">
+                            <i class="fas fa-qrcode"></i>
+                        </div>
+                        <p>Scan QR code to download</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Reviews & Ratings -->
+    <section class="user-reviews">
+        <div class="container">
+            <h2 class="section-title">User Reviews</h2>
+            <div class="reviews-overview">
+                <div class="rating-summary">
+                    <div class="overall-rating">
+                        <div class="rating-number">4.8</div>
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="rating-count">2,847 reviews</div>
+                    </div>
+                </div>
+                
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="reviewer-name">Sarah M.</div>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            "This app is absolutely perfect for any Skulduggery Pleasant fan! The character database is incredibly detailed and the quiz system is addictive. Love being able to access everything offline too."
+                        </p>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="reviewer-name">James K.</div>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            "The magic guide section is fantastic! Really helps you understand how all the different disciplines work. The interactive elements make it feel like you're actually learning magic."
+                        </p>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="reviewer-name">Emma L.</div>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            "Great app with tons of content. The book guides are really helpful for keeping track of the story. Only wish it had more frequent updates with new quiz questions!"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Is the app really free?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! The Skulduggery Pleasant Companion App is completely free with no ads, in-app purchases, or subscription fees. We're passionate fans creating this for the community.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Does it work offline?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! You can download all content for offline access. Perfect for reading on the go without worrying about data usage or internet connectivity.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How often is content updated?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We release updates monthly with new quiz questions, character information, and features. Major updates coincide with new book releases or significant series events.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can I suggest features or report bugs?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We have an active feedback system within the app and you can also contact us through our Discord community or email. We love hearing from users!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Skulduggery Pleasant Universe</h3>
+                    <p>Fan-made content celebrating Derek Landy's magical world</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Mobile App</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#screenshots">Screenshots</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/project-page.js"></script>
+</body>
+</html>

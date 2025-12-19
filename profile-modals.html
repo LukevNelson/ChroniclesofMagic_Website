@@ -1,0 +1,91 @@
+<!-- Profile Section Modals for profile.html -->
+<div id="modal-core-details" class="unified-modal" style="display:none;">
+  <div class="unified-modal-content">
+    <div class="unified-modal-header">
+      <h2>Core Details</h2>
+      <button class="unified-close-btn" data-modal-close="modal-core-details">&times;</button>
+    </div>
+    <div class="unified-modal-body">
+      <ul>
+        <li><strong>Age:</strong> <span id="modal-core-age"></span></li>
+        <li><strong>Species:</strong> <span id="modal-core-species"></span></li>
+        <li><strong>Magical Discipline:</strong> <span id="modal-core-discipline"></span></li>
+        <li><strong>Alignment:</strong> <span id="modal-core-alignment"></span></li>
+        <li><strong>Leadership:</strong> <span id="modal-core-leadership"></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="modal-in-game-stats" class="unified-modal" style="display:none;">
+  <div class="unified-modal-content">
+    <div class="unified-modal-header">
+      <h2>In-Game Stats</h2>
+      <button class="unified-close-btn" data-modal-close="modal-in-game-stats">&times;</button>
+    </div>
+    <div class="unified-modal-body">
+      <ul>
+        <li>Elemental: <span id="modal-stats-elemental"></span></li>
+        <li>Adept: <span id="modal-stats-adept"></span></li>
+        <li>Aggressive: <span id="modal-stats-aggressive"></span></li>
+        <li>Defensive: <span id="modal-stats-defensive"></span></li>
+        <li>Scholarly: <span id="modal-stats-scholarly"></span></li>
+        <li>Intuitive: <span id="modal-stats-intuitive"></span></li>
+        <li>Leader: <span id="modal-stats-leader"></span></li>
+        <li>Light: <span id="modal-stats-light"></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="modal-bio-traits" class="unified-modal" style="display:none;">
+  <div class="unified-modal-content">
+    <div class="unified-modal-header">
+      <h2>Bio & Traits</h2>
+      <button class="unified-close-btn" data-modal-close="modal-bio-traits">&times;</button>
+    </div>
+    <div class="unified-modal-body">
+      <ul>
+        <li><strong>Combat Style:</strong> <span id="modal-bio-combat-style"></span></li>
+        <li><strong>Preferred Magic:</strong> <span id="modal-bio-preferred-magic"></span></li>
+        <li><strong>Weakness:</strong> <span id="modal-bio-weakness"></span></li>
+        <li><strong>Greatest Strength:</strong> <span id="modal-bio-greatest-strength"></span></li>
+        <li><strong>Sanctuary Relationship:</strong> <span id="modal-bio-sanctuary-relationship"></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="modal-character-description" class="unified-modal" style="display:none;">
+  <div class="unified-modal-content">
+    <div class="unified-modal-header">
+      <h2>Character Description</h2>
+      <button class="unified-close-btn" data-modal-close="modal-character-description">&times;</button>
+    </div>
+    <div class="unified-modal-body">
+      <div><span id="modal-character-description-text"></span></div>
+    </div>
+  </div>
+</div>
+<div id="modal-abilities" class="unified-modal" style="display:none;">
+  <div class="unified-modal-content">
+    <div class="unified-modal-header">
+      <h2>Abilities</h2>
+      <button class="unified-close-btn" data-modal-close="modal-abilities">&times;</button>
+    </div>
+    <div class="unified-modal-body">
+      <div id="modal-abilities-grid" class="abilities-grid"></div>
+    </div>
+  </div>
+</div>
+<script>
+// Modal open/close logic for profile.html
+function openProfileModal(modalId) {
+  document.querySelectorAll('.unified-modal').forEach(m => m.style.display = 'none');
+  const modal = document.getElementById(modalId);
+  if (modal) modal.style.display = 'flex';
+}
+document.querySelectorAll('.unified-close-btn').forEach(btn => {
+  btn.onclick = function() {
+    const modalId = btn.getAttribute('data-modal-close');
+    if (modalId) document.getElementById(modalId).style.display = 'none';
+  };
+});
+</script>

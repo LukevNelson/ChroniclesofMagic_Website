@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Quiz Results</title>
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Firebase SDK -->
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+        <!-- Firebase Config (replace with your own for production) -->
+        <script src="js/firebase-config.js"></script>
+        <!-- Shared Database Wrapper (must come after Firebase config) -->
+        <script src="js/shared-database.js"></script>
+        <!-- Page-specific logic -->
+        <script src="js/results.js"></script>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="quiz.html">Take Quiz</a></li>
+            <li><a href="profile.html">Your Profile</a></li>
+            <li><a href="disciplines.html">Magical Disciplines</a></li>
+            <li><a href="content-index.html">Content Index</a></li>
+            <li><a href="database.html">Omniverse Database</a></li>
+            <li><a href="lore.html">Lore</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="magic-system.html">Magic System</a></li>
+            <li><a href="species.html">Species</a></li>
+            <li><a href="books.html">Books</a></li>
+
+        </ul>
+    </nav>
+    <div id="results-app">
+        <h1>Your Magical Profile</h1>
+        <div id="results-content">
+            <!-- Results will be loaded here -->
+        </div>
+    </div>
+</body>
+</html>

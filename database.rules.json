@@ -1,0 +1,14 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "quiz-profiles": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "taken-names": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    }
+  }
+}

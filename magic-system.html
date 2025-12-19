@@ -1,0 +1,1382 @@
+<!DOCT    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/magic-system.css">
+    <link rel="stylesheet" href="css/visual-enhancements.css">E html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Magic System - Skulduggery Pleasant Universe</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/magic-system.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-text">Skulduggery Pleasant</span>
+                <span class="brand-subtitle">Magic System</span>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="books.html" class="nav-link">Books</a></li>
+                <li class="nav-item"><a href="characters.html" class="nav-link">Characters</a></li>
+                <li class="nav-item"><a href="magic-system.html" class="nav-link active">Magic</a></li>
+                <li class="nav-item"><a href="species.html" class="nav-link">Species</a></li>
+                <li class="nav-item"><a href="codex.html" class="nav-link">Codex</a></li>
+                <li class="nav-item"><a href="quiz.html" class="nav-link">Quiz</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="magic-hero">
+        <div class="hero-background">
+            <div class="magic-particles"></div>
+            <div class="elemental-orbs">
+                <div class="orb fire-orb"></div>
+                <div class="orb water-orb"></div>
+                <div class="orb earth-orb"></div>
+                <div class="orb air-orb"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">Interactive Magic System</h1>
+                <p class="hero-subtitle">Master the ancient arts of sorcery and elemental magic</p>
+                
+                <div class="magic-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="total-spells">247</div>
+                            <div class="stat-label">Known Spells</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="magic-disciplines">8</div>
+                            <div class="stat-label">Magic Disciplines</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="active-mages">1,234</div>
+                            <div class="stat-label">Active Mages</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="training-modules">42</div>
+                            <div class="stat-label">Training Modules</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <button class="btn btn-primary" id="start-training-btn">
+                        <i class="fas fa-play"></i>
+                        Begin Training
+                    </button>
+                    <button class="btn btn-secondary" id="spell-simulator-btn">
+                        <i class="fas fa-flask"></i>
+                        Spell Simulator
+                    </button>
+                    <button class="btn btn-outline" id="magic-academy-btn">
+                        <i class="fas fa-university"></i>
+                        Magic Academy
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Magic Disciplines -->
+    <section class="magic-disciplines">
+        <div class="container">
+            <h2 class="section-title">Magic Disciplines</h2>
+            <p class="section-subtitle">Explore the different schools of magical study</p>
+
+            <!-- Magic Demonstrations Gallery -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="assets/images/magic/elemental-combat.jpg" alt="Elemental Combat" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">🔥</div>
+                    <div class="gallery-caption">
+                        Elemental masters demonstrating advanced combat techniques
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/magic/necromancy-ritual.jpg" alt="Necromancy Ritual" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">💀</div>
+                    <div class="gallery-caption">
+                        Necromancer performing ancient death magic rituals
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/magic/adept-powers.jpg" alt="Adept Powers" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">✨</div>
+                    <div class="gallery-caption">
+                        Various Adept disciplines showing unique abilities
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/magic/sigil-magic.jpg" alt="Sigil Magic" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="gallery-placeholder" style="display: none;">📜</div>
+                    <div class="gallery-caption">
+                        Ancient sigil magic symbols and their effects
+                    </div>
+                </div>
+            </div>
+
+            <!-- Magic Training Videos -->
+            <div class="magic-demo">
+                <div class="demo-header">
+                    <span class="demo-icon">🎥</span>
+                    <span class="demo-title">Magic Training Series</span>
+                </div>
+                <div class="demo-content">
+                    <div class="demo-description">
+                        Watch comprehensive training videos covering basic to advanced magical techniques across all disciplines. Perfect for new sorcerers beginning their magical education.
+                    </div>
+                    <div class="demo-visual">
+                                                <div class="gallery-item">
+                            <div class="gallery-placeholder">
+                                <a href="characters\skulduggery-pleasant.html">Fire Magic Mastery — full media</a>
+                            </div>
+                        </div>
+
+                        <div class="video-description">Complete fire elemental training course</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Water Magic Techniques</div>
+                        <div class="video-description">Advanced water manipulation skills</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Earth Magic Foundations</div>
+                        <div class="video-description">Solid earth elemental basics</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Air Magic Dynamics</div>
+                        <div class="video-description">Mastering atmospheric control</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Magic Demonstrations -->
+            <div class="video-showcase">
+                <div class="video-placeholder">
+                    <div class="play-button"></div>
+                    <div class="video-title">Legendary Spell Demonstrations</div>
+                    <div class="video-description">Witness the most powerful spells ever recorded, demonstrated by master sorcerers and legendary figures from magical history.</div>
+                </div>
+            </div>
+
+            <!-- Discipline-Specific Training Videos -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Necromancy Fundamentals</div>
+                        <div class="video-description">Death magic theory and practice</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Adept Disciplines Overview</div>
+                        <div class="video-description">Exploring unique magical abilities</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Sigil Magic Workshop</div>
+                        <div class="video-description">Ancient symbol magic techniques</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Combat Magic Strategies</div>
+                        <div class="video-description">Tactical magical warfare</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Magic Theory and History -->
+            <div class="magic-demo">
+                <div class="demo-header">
+                    <span class="demo-icon">📚</span>
+                    <span class="demo-title">Magic Theory Lecture Series</span>
+                </div>
+                <div class="demo-content">
+                    <div class="demo-description">
+                        Deep dive into magical theory with renowned scholars discussing the fundamental principles of magic, energy manipulation, and the metaphysical laws governing supernatural abilities.
+                    </div>
+                    <div class="demo-visual">
+                        <div class="video-placeholder">
+                            <div class="play-button"></div>
+                            <div>Theory Lectures</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Spell Casting -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Interactive Spell Practice</div>
+                        <div class="video-description">Virtual reality magic training</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Gesture Recognition Demo</div>
+                        <div class="video-description">Motion-controlled spell casting</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Voice Command Magic</div>
+                        <div class="video-description">Audio-based magical interfaces</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">AR Magic Visualization</div>
+                        <div class="video-description">Augmented reality spell effects</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Master Class Series -->
+            <div class="video-showcase">
+                <div class="video-placeholder">
+                    <div class="play-button"></div>
+                    <div class="video-title">Grand Mage Master Classes</div>
+                    <div class="video-description">Exclusive training sessions with the most powerful sorcerers in the magical world, covering advanced techniques and forbidden knowledge.</div>
+                </div>
+            </div>
+
+            <!-- Forbidden Magic Research -->
+            <div class="video-showcase">
+                <div class="video-placeholder">
+                    <div class="play-button"></div>
+                    <div class="video-title">Forbidden Magic Archive: Dangerous Arts</div>
+                    <div class="video-description">Restricted access documentation of forbidden magical practices, including soul magic, time manipulation, and reality-altering spells. Viewer discretion advised.</div>
+                </div>
+            </div>
+
+            <!-- Master Sorcerer Interviews -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Elder Interview: Ghastly Bespoke</div>
+                        <div class="video-description">Master tailor and magical theorist</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Sanctuary Elder: Eachan Meritorious</div>
+                        <div class="video-description">Former Grand Mage wisdom</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Adept Master: China Sorrows</div>
+                        <div class="video-description">Ancient sorcerer insights</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Necromancer Prime: Solomon Wreath</div>
+                        <div class="video-description">Death magic philosophy</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Spell Crafting -->
+            <div class="magic-demo">
+                <div class="demo-header">
+                    <span class="demo-icon">🔬</span>
+                    <span class="demo-title">Advanced Spell Crafting Laboratory</span>
+                </div>
+                <div class="demo-content">
+                    <div class="demo-description">
+                        Watch master artificers create custom spells from scratch, combining multiple magical disciplines to develop entirely new magical effects and enchantments.
+                    </div>
+                    <div class="demo-visual">
+                        <div class="video-placeholder">
+                            <div class="play-button"></div>
+                            <div>Spell Crafting</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Magical Disaster Response -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Containment Protocols</div>
+                        <div class="video-description">Managing magical disasters</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Dimensional Breach Response</div>
+                        <div class="video-description">Stopping otherworldly invasions</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Magical Plague Outbreak</div>
+                        <div class="video-description">Disease control techniques</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Time Rift Stabilization</div>
+                        <div class="video-description">Temporal anomaly management</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Magical Combat Championships -->
+            <div class="video-showcase">
+                <div class="video-placeholder">
+                    <div class="play-button"></div>
+                    <div class="video-title">Annual Sorcerer Combat Championships</div>
+                    <div class="video-description">Watch the most skilled magical combatants from around the world compete in structured duels, showcasing the pinnacle of offensive and defensive magic techniques.</div>
+                </div>
+            </div>
+
+            <!-- Magic Research Documentaries -->
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">The True Name Discovery</div>
+                        <div class="video-description">Revolutionary magical research</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Surge Studies Program</div>
+                        <div class="video-description">Magic amplification research</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Remnant Containment Project</div>
+                        <div class="video-description">Containing dangerous entities</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="video-placeholder">
+                        <div class="play-button"></div>
+                        <div class="video-title">Portal Magic Development</div>
+                        <div class="video-description">Interdimensional travel advances</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Magical Academy Student Life -->
+            <div class="magic-demo">
+                <div class="demo-header">
+                    <span class="demo-icon">🎓</span>
+                    <span class="demo-title">Magical Academy Experience</span>
+                </div>
+                <div class="demo-content">
+                    <div class="demo-description">
+                        Follow students through their magical education journey, from first-year fundamentals to advanced graduate research in specialized magical fields.
+                    </div>
+                    <div class="demo-visual">
+                        <div class="video-placeholder">
+                            <div class="play-button"></div>
+                            <div>Academy Life</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Original Family Divine Power Demonstrations -->
+            <section class="original-family-power-screenshots">
+                <h2 class="gallery-section-title">⚡ Original Family Divine Powers in Action</h2>
+                
+                <!-- Ultimate Power Displays -->
+                <div class="screenshot-section">
+                    <h3>💥 Ultimate Divine Power Unleashed</h3>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/powers/merlin-ultimate-memory-magic.jpg" alt="Merlin's Ultimate Memory Magic" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🧠</div>
+                            <div class="gallery-caption">
+                                Merlin accessing the collective memory of all existence
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/powers/morgana-reality-shift.jpg" alt="Morgana's Reality Shifting" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🌀</div>
+                            <div class="gallery-caption">
+                                Morgana shifting the very fabric of reality itself
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/powers/blood-sibling-army-creation.jpg" alt="Blood Army Creation" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🩸</div>
+                            <div class="gallery-caption">
+                                The Sibling of Blood creating an army of vampires
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/powers/light-sibling-divine-judgment.jpg" alt="Divine Light Judgment" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">⚡</div>
+                            <div class="gallery-caption">
+                                The Sibling of Light's devastating divine judgment blast
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combat Power Screenshots -->
+                <div class="screenshot-section">
+                    <h3>⚔️ Divine Combat Techniques</h3>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/powers/death-sibling-soul-harvest.jpg" alt="Death Sibling Soul Harvest" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">💀</div>
+                            <div class="gallery-caption">
+                                The Sibling of Death harvesting souls from a battlefield
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/powers/hunger-sibling-devouring.jpg" alt="Hunger Sibling Devouring" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🍽️</div>
+                            <div class="gallery-caption">
+                                The Sibling of Hunger consuming an entire realm's energy
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/powers/decay-sibling-plague-wave.jpg" alt="Decay Plague Wave" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">☣️</div>
+                            <div class="gallery-caption">
+                                The Sibling of Decay unleashing a continental plague wave
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/powers/chaos-sibling-reality-storm.jpg" alt="Chaos Reality Storm" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🌪️</div>
+                            <div class="gallery-caption">
+                                The Sibling of Chaos creating a reality-breaking storm
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Creation Magic Screenshots -->
+                <div class="screenshot-section">
+                    <h3>🌟 Divine Creation Powers</h3>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/powers/merlin-discipline-creation.jpg" alt="Merlin Creating Magic Disciplines" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">📚</div>
+                            <div class="gallery-caption">
+                                Merlin weaving the fundamental structure of magical disciplines
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/powers/light-sibling-realm-creation.jpg" alt="Light Realm Creation" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">✨</div>
+                            <div class="gallery-caption">
+                                The Sibling of Light creating the ethereal faerie realm
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/powers/death-sibling-undeath-bridge.jpg" alt="Death Bridge Creation" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🌉</div>
+                            <div class="gallery-caption">
+                                The Sibling of Death creating bridges between life and death
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/powers/morgana-transformation-matrix.jpg" alt="Transformation Matrix Creation" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🔄</div>
+                            <div class="gallery-caption">
+                                Morgana creating the universal transformation matrix
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Defensive Power Screenshots -->
+                <div class="screenshot-section">
+                    <h3>🛡️ Divine Protection & Defense</h3>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/powers/family-united-barrier.jpg" alt="United Family Barrier" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🛡️</div>
+                            <div class="gallery-caption">
+                                All eight siblings creating an impenetrable divine barrier
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/powers/light-sibling-purification.jpg" alt="Light Purification Wave" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🌟</div>
+                            <div class="gallery-caption">
+                                The Sibling of Light purifying corruption with divine radiance
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/powers/merlin-knowledge-shield.jpg" alt="Merlin's Knowledge Shield" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">📖</div>
+                            <div class="gallery-caption">
+                                Merlin using accumulated knowledge as an impenetrable shield
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/powers/morgana-reality-anchor.jpg" alt="Morgana's Reality Anchor" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">⚓</div>
+                            <div class="gallery-caption">
+                                Morgana anchoring reality against chaos-based attacks
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primordial Power Inheritance Screenshots -->
+                <div class="screenshot-section">
+                    <h3>🌌 Primordial Power Inheritance</h3>
+                    <div class="image-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/powers/primordial-power-channeling.jpg" alt="Primordial Power Channeling" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🌌</div>
+                            <div class="gallery-caption">
+                                Original Family channeling raw Primordial energy
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/powers/cosmic-authority-display.jpg" alt="Cosmic Authority Display" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">👑</div>
+                            <div class="gallery-caption">
+                                Displaying their divine authority over creation itself
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/powers/universal-law-manipulation.jpg" alt="Universal Law Manipulation" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">⚖️</div>
+                            <div class="gallery-caption">
+                                Manipulating the fundamental laws of the universe
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/screenshots/powers/dimensional-mastery.jpg" alt="Dimensional Mastery" class="gallery-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="gallery-placeholder" style="display: none;">🌀</div>
+                            <div class="gallery-caption">
+                                Complete mastery over dimensional space and time
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="disciplines-grid">
+                <div class="discipline-card" data-discipline="elemental">
+                    <div class="discipline-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Elemental Magic</h3>
+                    <p>Harness the raw power of fire, water, earth, and air. The most common and versatile magical discipline.</p>
+                    <div class="discipline-stats">
+                        <div class="stat">
+                            <span class="stat-label">Spells:</span>
+                            <span class="stat-value">89</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Difficulty:</span>
+                            <span class="difficulty-rating" data-rating="3">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary discipline-btn">
+                        <i class="fas fa-book-open"></i>
+                        Study Discipline
+                    </button>
+                </div>
+
+                <div class="discipline-card" data-discipline="death">
+                    <div class="discipline-icon">
+                        <i class="fas fa-skull"></i>
+                    </div>
+                    <h3>Death Magic</h3>
+                    <p>Command over shadows, necromancy, and the barrier between life and death. Powerful but dangerous.</p>
+                    <div class="discipline-stats">
+                        <div class="stat">
+                            <span class="stat-label">Spells:</span>
+                            <span class="stat-value">34</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Difficulty:</span>
+                            <span class="difficulty-rating" data-rating="5">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary discipline-btn">
+                        <i class="fas fa-book-open"></i>
+                        Study Discipline
+                    </button>
+                </div>
+
+                <div class="discipline-card" data-discipline="symbol">
+                    <div class="discipline-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Symbol Magic</h3>
+                    <p>Rare discipline focusing on sigils, runes, and symbolic power. Requires deep understanding of ancient languages.</p>
+                    <div class="discipline-stats">
+                        <div class="stat">
+                            <span class="stat-label">Spells:</span>
+                            <span class="stat-value">28</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Difficulty:</span>
+                            <span class="difficulty-rating" data-rating="4">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary discipline-btn">
+                        <i class="fas fa-book-open"></i>
+                        Study Discipline
+                    </button>
+                </div>
+
+                <div class="discipline-card" data-discipline="energy">
+                    <div class="discipline-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Energy Throwing</h3>
+                    <p>Project pure magical energy as devastating attacks. Favored by combat-focused sorcerers.</p>
+                    <div class="discipline-stats">
+                        <div class="stat">
+                            <span class="stat-label">Spells:</span>
+                            <span class="stat-value">45</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Difficulty:</span>
+                            <span class="difficulty-rating" data-rating="3">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary discipline-btn">
+                        <i class="fas fa-book-open"></i>
+                        Study Discipline
+                    </button>
+                </div>
+
+                <div class="discipline-card" data-discipline="sensitive">
+                    <div class="discipline-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Sensitive Magic</h3>
+                    <p>Psychic abilities including telepathy, precognition, and emotional manipulation. Requires mental discipline.</p>
+                    <div class="discipline-stats">
+                        <div class="stat">
+                            <span class="stat-label">Spells:</span>
+                            <span class="stat-value">31</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Difficulty:</span>
+                            <span class="difficulty-rating" data-rating="4">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary discipline-btn">
+                        <i class="fas fa-book-open"></i>
+                        Study Discipline
+                    </button>
+                </div>
+
+                <div class="discipline-card" data-discipline="adept">
+                    <div class="discipline-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Adept Magic</h3>
+                    <p>Specialized magical abilities unique to individual practitioners. Highly personal and powerful.</p>
+                    <div class="discipline-stats">
+                        <div class="stat">
+                            <span class="stat-label">Spells:</span>
+                            <span class="stat-value">20</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Difficulty:</span>
+                            <span class="difficulty-rating" data-rating="5">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary discipline-btn">
+                        <i class="fas fa-book-open"></i>
+                        Study Discipline
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Tools -->
+    <section class="magic-tools">
+        <div class="container">
+            <h2 class="section-title">Interactive Magic Tools</h2>
+            <p class="section-subtitle">Practice and perfect your magical abilities</p>
+
+            <div class="tools-grid">
+                <div class="tool-card" data-tool="spell-creator">
+                    <div class="tool-icon">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3>Spell Creator</h3>
+                    <p>Design and test your own magical spells with our interactive spell creation laboratory.</p>
+                    <div class="tool-features">
+                        <ul>
+                            <li>Element combination system</li>
+                            <li>Power level adjustment</li>
+                            <li>Effect simulation</li>
+                            <li>Spell validation testing</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary tool-btn">
+                        <i class="fas fa-play"></i>
+                        Launch Tool
+                    </button>
+                </div>
+
+                <div class="tool-card" data-tool="combat-simulator">
+                    <div class="tool-icon">
+                        <i class="fas fa-sword"></i>
+                    </div>
+                    <h3>Combat Simulator</h3>
+                    <p>Practice magical combat against AI opponents in realistic battle scenarios.</p>
+                    <div class="tool-features">
+                        <ul>
+                            <li>Multiple difficulty levels</li>
+                            <li>Various opponent types</li>
+                            <li>Real-time spell casting</li>
+                            <li>Performance analytics</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary tool-btn">
+                        <i class="fas fa-play"></i>
+                        Launch Tool
+                    </button>
+                </div>
+
+                <div class="tool-card" data-tool="element-mixer">
+                    <div class="tool-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Element Mixer</h3>
+                    <p>Experiment with elemental combinations to discover new magical effects and reactions.</p>
+                    <div class="tool-features">
+                        <ul>
+                            <li>Interactive element table</li>
+                            <li>Reaction predictions</li>
+                            <li>Safety warnings</li>
+                            <li>Discovery tracking</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary tool-btn">
+                        <i class="fas fa-play"></i>
+                        Launch Tool
+                    </button>
+                </div>
+
+                <div class="tool-card" data-tool="power-calculator">
+                    <div class="tool-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Power Calculator</h3>
+                    <p>Calculate magical power levels, energy requirements, and spell effectiveness ratings.</p>
+                    <div class="tool-features">
+                        <ul>
+                            <li>Spell power analysis</li>
+                            <li>Energy cost estimation</li>
+                            <li>Efficiency optimization</li>
+                            <li>Comparative analysis</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary tool-btn">
+                        <i class="fas fa-play"></i>
+                        Launch Tool
+                    </button>
+                </div>
+
+                <div class="tool-card" data-tool="sigil-designer">
+                    <div class="tool-icon">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <h3>Sigil Designer</h3>
+                    <p>Create powerful magical sigils and symbols using ancient design principles and modern tools.</p>
+                    <div class="tool-features">
+                        <ul>
+                            <li>Symbol library access</li>
+                            <li>Custom sigil creation</li>
+                            <li>Power assessment</li>
+                            <li>Historical references</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary tool-btn">
+                        <i class="fas fa-play"></i>
+                        Launch Tool
+                    </button>
+                </div>
+
+                <div class="tool-card" data-tool="meditation-guide">
+                    <div class="tool-icon">
+                        <i class="fas fa-om"></i>
+                    </div>
+                    <h3>Meditation Guide</h3>
+                    <p>Guided meditation sessions to improve magical focus, control, and spiritual connection.</p>
+                    <div class="tool-features">
+                        <ul>
+                            <li>Progressive difficulty</li>
+                            <li>Focus enhancement</li>
+                            <li>Breathing techniques</li>
+                            <li>Progress tracking</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary tool-btn">
+                        <i class="fas fa-play"></i>
+                        Launch Tool
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spell Database -->
+    <section class="spell-database">
+        <div class="container">
+            <h2 class="section-title">Comprehensive Spell Database</h2>
+            <p class="section-subtitle">Browse over 247 documented spells from the Skulduggery Pleasant universe</p>
+
+            <div class="database-controls">
+                <div class="search-container">
+                    <input type="text" id="spell-search" placeholder="Search spells by name, effect, or description...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <div class="filter-controls">
+                    <select id="discipline-filter">
+                        <option value="">All Disciplines</option>
+                        <option value="elemental">Elemental Magic</option>
+                        <option value="death">Death Magic</option>
+                        <option value="symbol">Symbol Magic</option>
+                        <option value="energy">Energy Throwing</option>
+                        <option value="sensitive">Sensitive Magic</option>
+                        <option value="adept">Adept Magic</option>
+                    </select>
+
+                    <select id="difficulty-filter">
+                        <option value="">All Difficulties</option>
+                        <option value="1">Novice</option>
+                        <option value="2">Apprentice</option>
+                        <option value="3">Adept</option>
+                        <option value="4">Expert</option>
+                        <option value="5">Master</option>
+                    </select>
+
+                    <select id="effect-filter">
+                        <option value="">All Effects</option>
+                        <option value="offensive">Offensive</option>
+                        <option value="defensive">Defensive</option>
+                        <option value="utility">Utility</option>
+                        <option value="healing">Healing</option>
+                        <option value="divination">Divination</option>
+                    </select>
+                </div>
+
+                <div class="view-controls">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th"></i>
+                        Grid
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <i class="fas fa-list"></i>
+                        List
+                    </button>
+                    <button class="view-btn" data-view="detailed">
+                        <i class="fas fa-info-circle"></i>
+                        Detailed
+                    </button>
+                </div>
+            </div>
+
+            <div class="spell-results" id="spell-results">
+                <div class="spells-grid" id="spells-grid">
+                    <!-- Spells will be dynamically loaded here -->
+                </div>
+            </div>
+
+            <div class="database-pagination">
+                <button class="btn btn-secondary" id="prev-page">
+                    <i class="fas fa-chevron-left"></i>
+                    Previous
+                </button>
+                <div class="page-info">
+                    <span id="current-page">1</span> of <span id="total-pages">12</span>
+                </div>
+                <button class="btn btn-secondary" id="next-page">
+                    Next
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Academy -->
+    <section class="training-academy">
+        <div class="container">
+            <h2 class="section-title">Magic Training Academy</h2>
+            <p class="section-subtitle">Structured learning paths for aspiring sorcerers</p>
+
+            <div class="academy-overview">
+                <div class="academy-stats">
+                    <div class="academy-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">Training Courses</div>
+                        </div>
+                    </div>
+                    <div class="academy-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">Certifications</div>
+                        </div>
+                    </div>
+                    <div class="academy-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">120</div>
+                            <div class="stat-label">Hours Content</div>
+                        </div>
+                    </div>
+                    <div class="academy-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">2,847</div>
+                            <div class="stat-label">Students</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="training-paths">
+                <div class="path-card beginner-path">
+                    <div class="path-header">
+                        <div class="path-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div class="path-info">
+                            <h3>Novice Path</h3>
+                            <p>Perfect for beginners to magic</p>
+                        </div>
+                        <div class="path-level">
+                            <span class="level-badge level-1">Level 1-3</span>
+                        </div>
+                    </div>
+                    <div class="path-content">
+                        <div class="path-description">
+                            <p>Start your magical journey with fundamental concepts, basic spell casting, and essential safety protocols.</p>
+                        </div>
+                        <div class="path-modules">
+                            <div class="module-item">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Introduction to Magic Theory</span>
+                                <span class="module-duration">45 min</span>
+                            </div>
+                            <div class="module-item">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Basic Elemental Control</span>
+                                <span class="module-duration">60 min</span>
+                            </div>
+                            <div class="module-item">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Safety Protocols & Protection</span>
+                                <span class="module-duration">30 min</span>
+                            </div>
+                            <div class="module-item">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Your First Spells</span>
+                                <span class="module-duration">90 min</span>
+                            </div>
+                        </div>
+                        <div class="path-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% Complete</span>
+                        </div>
+                        <button class="btn btn-primary path-btn">
+                            <i class="fas fa-play"></i>
+                            Start Learning
+                        </button>
+                    </div>
+                </div>
+
+                <div class="path-card intermediate-path">
+                    <div class="path-header">
+                        <div class="path-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <div class="path-info">
+                            <h3>Apprentice Path</h3>
+                            <p>Advanced techniques and specialization</p>
+                        </div>
+                        <div class="path-level">
+                            <span class="level-badge level-2">Level 4-6</span>
+                        </div>
+                    </div>
+                    <div class="path-content">
+                        <div class="path-description">
+                            <p>Develop specialized skills, learn complex spell combinations, and begin mastering your chosen discipline.</p>
+                        </div>
+                        <div class="path-modules">
+                            <div class="module-item">
+                                <i class="fas fa-lock"></i>
+                                <span>Advanced Elemental Mastery</span>
+                                <span class="module-duration">120 min</span>
+                            </div>
+                            <div class="module-item">
+                                <i class="fas fa-lock"></i>
+                                <span>Spell Combination Theory</span>
+                                <span class="module-duration">90 min</span>
+                            </div>
+                            <div class="module-item">
+                                <i class="fas fa-lock"></i>
+                                <span>Combat Applications</span>
+                                <span class="module-duration">150 min</span>
+                            </div>
+                            <div class="module-item">
+                                <i class="fas fa-lock"></i>
+                                <span>Discipline Specialization</span>
+                                <span class="module-duration">180 min</span>
+                            </div>
+                        </div>
+                        <div class="path-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">Locked - Complete Novice Path</span>
+                        </div>
+                        <button class="btn btn-secondary path-btn" disabled>
+                            <i class="fas fa-lock"></i>
+                            Requires Novice Completion
+                        </button>
+                    </div>
+                </div>
+
+                <div class="path-card advanced-path">
+                    <div class="path-header">
+                        <div class="path-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="path-info">
+                            <h3>Master Path</h3>
+                            <p>Elite magical mastery and teaching</p>
+                        </div>
+                        <div class="path-level">
+                            <span class="level-badge level-3">Level 7+</span>
+                        </div>
+                    </div>
+                    <div class="path-content">
+                        <div class="path-description">
+                            <p>Master the most advanced magical techniques, learn forbidden arts, and develop teaching capabilities.</p>
+                        </div>
+                        <div class="path-modules">
+                            <div class="module-item">
+                                <i class="fas fa-lock"></i>
+                                <span>Forbidden Techniques</span>
+                                <span class="module-duration">240 min</span>
+                            </div>
+                            <div class="module-item">
+                                <i class="fas fa-lock"></i>
+                                <span>Master-Level Combat</span>
+                                <span class="module-duration">300 min</span>
+                            </div>
+                            <div class="module-item">
+                                <i class="fas fa-lock"></i>
+                                <span>Teaching Methodology</span>
+                                <span class="module-duration">180 min</span>
+                            </div>
+                            <div class="module-item">
+                                <i class="fas fa-lock"></i>
+                                <span>Research & Innovation</span>
+                                <span class="module-duration">360 min</span>
+                            </div>
+                        </div>
+                        <div class="path-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">Locked - Complete Apprentice Path</span>
+                        </div>
+                        <button class="btn btn-secondary path-btn" disabled>
+                            <i class="fas fa-lock"></i>
+                            Requires Apprentice Completion
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Progress -->
+    <section class="user-progress">
+        <div class="container">
+            <h2 class="section-title">Your Magical Progress</h2>
+            <p class="section-subtitle">Track your journey through the magical arts</p>
+
+            <div class="progress-dashboard">
+                <div class="progress-card overall-progress">
+                    <h3>Overall Progress</h3>
+                    <div class="progress-circle">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="50" stroke="#e0e0e0" stroke-width="8" fill="none"/>
+                            <circle cx="60" cy="60" r="50" stroke="#ffd700" stroke-width="8" fill="none" 
+                                    stroke-dasharray="314" stroke-dashoffset="251" class="progress-ring"/>
+                        </svg>
+                        <div class="progress-percentage">20%</div>
+                    </div>
+                    <div class="progress-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Current Level:</span>
+                            <span class="detail-value">Novice</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Spells Learned:</span>
+                            <span class="detail-value">12/60</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Training Hours:</span>
+                            <span class="detail-value">8.5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-card discipline-progress">
+                    <h3>Discipline Mastery</h3>
+                    <div class="discipline-bars">
+                        <div class="discipline-bar">
+                            <div class="bar-label">Elemental Magic</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 45%"></div>
+                            </div>
+                            <div class="bar-percentage">45%</div>
+                        </div>
+                        <div class="discipline-bar">
+                            <div class="bar-label">Energy Throwing</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 30%"></div>
+                            </div>
+                            <div class="bar-percentage">30%</div>
+                        </div>
+                        <div class="discipline-bar">
+                            <div class="bar-label">Death Magic</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 15%"></div>
+                            </div>
+                            <div class="bar-percentage">15%</div>
+                        </div>
+                        <div class="discipline-bar">
+                            <div class="bar-label">Symbol Magic</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 8%"></div>
+                            </div>
+                            <div class="bar-percentage">8%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-card achievements">
+                    <h3>Recent Achievements</h3>
+                    <div class="achievement-list">
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <div class="achievement-info">
+                                <div class="achievement-title">First Flame</div>
+                                <div class="achievement-description">Successfully cast your first fire spell</div>
+                            </div>
+                            <div class="achievement-date">Today</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="achievement-info">
+                                <div class="achievement-title">Theory Scholar</div>
+                                <div class="achievement-description">Completed all theory modules</div>
+                            </div>
+                            <div class="achievement-date">2 days ago</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-shield"></i>
+                            </div>
+                            <div class="achievement-info">
+                                <div class="achievement-title">Safety First</div>
+                                <div class="achievement-description">Mastered all protection spells</div>
+                            </div>
+                            <div class="achievement-date">1 week ago</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-trophy"></i>
+                        View All Achievements
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SP Universe</h3>
+                    <p>Your ultimate destination for exploring the magical world of Skulduggery Pleasant.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="characters.html">Characters</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="magic-system.html">Magic</a></li>
+                        <li><a href="quiz.html">Quiz</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Reading Guide</a></li>
+                        <li><a href="#">Character Database</a></li>
+                        <li><a href="#">Magic System</a></li>
+                        <li><a href="#">Timeline</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="#">Forums</a></li>
+                        <li><a href="#">Fan Art</a></li>
+                        <li><a href="#">Fan Fiction</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SP Universe. This is a fan-made website dedicated to Derek Landy's Skulduggery Pleasant series.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/magic-system.js"></script>
+</body>
+</html>
